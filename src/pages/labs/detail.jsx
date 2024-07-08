@@ -62,7 +62,7 @@ function LabContentDetail() {
             {isLoading ? <Loading /> :
                 <Fragment>
                     <Navigation />
-                    <Link to={"/darmajr94/labs"} style={{ textDecoration: 'none' }}>
+                    <Link to={"/labs"} style={{ textDecoration: 'none' }}>
                         <Heading color={primaryFontColor} size={width > 768 ? 'lg' : 'sm'} my={4} ml={'15%'} style={{ cursor: 'pointer' }}>⬅️ Back to Lab</Heading>
                     </Link>
 
