@@ -13,9 +13,9 @@ function App() {
     <Fragment>
       <QueryClientProvider client={queryClient}>
         <Routes>
-          <Route path="/darmajr94/" element={<Index />} />
-          <Route path="/darmajr94/labs" element={<Labs />} />
-          <Route path='/darmajr94/lab/:blogId' element={<LabContentDetail />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/labs" element={<Labs />} />
+          <Route path='/lab/:blogId' element={<LabContentDetail />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </QueryClientProvider>
