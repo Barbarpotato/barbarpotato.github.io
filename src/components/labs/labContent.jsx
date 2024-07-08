@@ -46,7 +46,7 @@ function Items({ blog }) {
                                                     ? `${item.short_description.slice(0, 200)}...` // Truncate the string
                                                     : item.short_description}
                                             </Text>
-                                            <Button onClick={() => navigate(`/darmajr94/lab/${item.blog_id}`)} mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
+                                            <Button onClick={() => navigate(`/lab/${item.blog_id}`)} mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
                                         </Flex>
                                     </CardBody>
                                     <Divider />
