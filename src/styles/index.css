@@ -1,0 +1,321 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #292b37;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+#root {
+  background: #292b37;
+}
+
+::selection {
+  color: #cc7bc9;
+  background-color: #866bab;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282a36;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #866bab;
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cc7bc9;
+}
+
+.navbar {
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #cc7bc9;
+}
+
+.social-icon {
+  transition: transform 0.3s ease-in-out;
+  color: #866bab;
+}
+
+/* Animasi saat mengarahkan kursor ke ikon */
+.social-icon:hover {
+  transform: scale(1.3);
+  color: #cc7bc9;
+  /* Membuat ikon menjadi 20% lebih besar saat dihover */
+}
+
+.text-shpere {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagcloud {
+  z-index: 0;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.0625em;
+  font-size: 1.3em;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item {
+  color: #bd93f9;
+}
+
+.tagcloud--item:hover {
+  color: #cc7bc9;
+}
+
+.lighting-effect-pink {
+  border-radius: 10px;
+  /* Adjust the value as needed */
+  box-shadow: 10px 20px 45px #cc7bc9;
+}
+
+/* 
+  /** ABOUT SCREEN CSS
+*/
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.mobile-avatar {
+  /* Adjust width as needed */
+  /* Adjust height as needed */
+
+  background-color: #866bab;
+  /* Adjust color as needed */
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  background: #866bab;
+  font-size: 32px;
+  display: grid;
+  place-items: center;
+  /* Adjust rotation as needed */
+}
+
+.avatar {
+  transform:
+    perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  border: 5px solid #866bab;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+}
+
+/* 
+  /** THE END OF ABOUT SCREEN CSS
+*/
+
+
+/* 
+  /** Hero LABS CSS
+*/
+
+.labs {
+  transform:
+    perspective(800px) rotateY(-8deg);
+  transition: transform 1s ease 0s;
+
+  &:hover {
+    transform: perspective(800px) rotateY(-4deg);
+  }
+}
+
+
+.text-labs-hero {
+  border-radius: 42% 58% 0% 100% / 62% 40% 60% 38
+}
+
+/* 
+  /** THE END OF HERO LABS CSS
+*/
+
+
+
+/* 
+  /** LOADING SCREEN CSS
+*/
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #866bab;
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* 
+  /** THE END LOADING SCREEN CSS
+*/
+
+.react-chatbot-kit-chat-container {
+  z-index: 1;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  max-width: 300px;
+  background-color: #282a36;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-chatbot-kit-chat-message-container {
+  overflow-x: none;
+  background-color: #292b37;
+}
+
+.react-chatbot-kit-chat-header {
+  background-color: #ff79c6;
+  color: aliceblue;
+}
+
+.chatbot-toggle-button {
+  opacity: 70%;
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #ff79c6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: #f1f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  max-width: 100%;
+  align-self: flex-start;
+  /* Add any other styles you want for the bot message */
+}

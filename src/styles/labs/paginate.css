@@ -1,0 +1,60 @@
+/* Base styles */
+ul.react-paginate {
+    margin-block: 5rem;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+ul.react-paginate li a {
+    margin: 3px;
+    border-radius: 3px;
+    padding: 0.3rem 2rem;
+    border: gray 1px solid;
+    cursor: pointer;
+}
+
+ul.react-paginate li.previous a,
+ul.react-paginate li.next a,
+ul.react-paginate li.break a {
+    border-color: transparent;
+}
+
+ul.react-paginate li.selected a {
+    background-color: #bd93f9;
+    border-color: transparent;
+    color: white;
+    min-width: 12px;
+}
+
+ul.react-paginate li.disabled a {
+    color: grey;
+}
+
+ul.react-paginate li.disable,
+ul.react-paginate li.disabled a {
+    cursor: default;
+}
+
+li.previous,
+li.next {
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    ul.react-paginate {
+        margin-block: 4rem;
+    }
+
+    ul.react-paginate li a {
+        padding: 0.3rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    ul.react-paginate li a {
+        padding: 0.3rem 0.6rem;
+    }
+}
