@@ -250,7 +250,7 @@ function Hero() {
                                 />
                             </Text>
                             <Flex justifyContent={'center'} gap={5} py={5}>
-                                <Link to={'/darmajr94/labs'}>
+                                <Link to={'/labs'}>
                                     <Button fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
                                 </Link>
                                 <Button fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
