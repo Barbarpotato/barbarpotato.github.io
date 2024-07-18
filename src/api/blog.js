@@ -6,19 +6,12 @@ import { useQuery } from "react-query";
  * @return {Promise} A promise that resolves with the JSON response containing the fetched blogs.
  */
 const fetchBlogs = async (searchQuery) => {
-    const username = import.meta.env.VITE_USERNAME;
-    const password = import.meta.env.VITE_PASSWORD;
-
     let url = "";
     if (searchQuery != "") url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blogs/search?title=${searchQuery}`;
     else url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blogs/all`;
 
-    const headers = new Headers();
-    headers.set('Authorization', 'Basic ' + btoa(username + ':' + password));
-
     const response = await fetch(url, {
         method: 'GET',
-        headers: headers
     })
     if (!response.ok) throw new Error('Failed to fetch blogs')
     return response.json()
@@ -44,16 +37,12 @@ export const useDatablogs = (searchQuery) => {
  * @return {Promise} A promise that resolves with the JSON representation of the blog details
  */
 const fetchBlogDetail = async (blogId) => {
-    const username = import.meta.env.VITE_USERNAME;
-    const password = import.meta.env.VITE_PASSWORD;
     const url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blog/${blogId}`;
 
     const headers = new Headers();
-    headers.set('Authorization', 'Basic ' + btoa(username + ':' + password));
 
     const response = await fetch(url, {
         method: 'GET',
-        headers: headers
     })
     if (!response.ok) throw new Error('Failed to fetch blogs')
     return response.json()

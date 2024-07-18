@@ -29,19 +29,6 @@ function Footer() {
                             <Heading fontSize={'2xl'} color={primaryFontColor} size='md'><span style={{ color: secondaryColor, fontWeight: 'bold' }}>🚀D</span>armawan</Heading>
                         </Box>
                         <Spacer />
-                        {location.pathname === '/' && (
-                            <Flex>
-                                <Heading className='navbar' mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Projects</a></Heading>
-                                <Heading className='navbar' mx={6} fontWeight={'small'} color={primaryFontColor} size='md'>
-                                    <a href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=444c23eb-f434-4e8e-9f81-953134657a98"
-                                        download="Darmawan CV" target='_blank'>
-                                        Resume
-                                    </a>
-                                </Heading>
-                                <Heading className='navbar' mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#aboutme'>About Me</a> </Heading>
-                            </Flex>
-                        )}
-                        <Spacer />
                         <Flex>
                             <IconContext.Provider value={{ size: "2em" }}>
                                 <Box mx={1}>

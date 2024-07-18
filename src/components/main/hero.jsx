@@ -9,10 +9,14 @@ import Typewriter from 'typewriter-effect';
 import { Box, Flex, Text, Button, Divider } from '@chakra-ui/react'
 import useWindowSize from '../../hooks/useWindowSize';
 import { Link } from 'react-router-dom';
+import { useTypeWriter } from '../../api/hecate';
+import Loading from '../loading';
 
 function Hero() {
 
     const { width } = useWindowSize()
+
+    const { data: typeWriter, isLoading } = useTypeWriter();
 
     useEffect(() => {
         const container = ".tagcloud";
@@ -29,7 +33,11 @@ function Hero() {
             radius: radiusSize, maxSpeed: 'normal', initSpeed: 'fast', keep: true
         };
         TagCloud(container, texts, options);
-    }, []);
+    }, [isLoading]);
+
+    if (isLoading) return <Loading />
+
+    console.log(typeWriter)
 
     return (
         <Fragment>
@@ -50,13 +58,7 @@ function Hero() {
                         <Text fontWeight={'bold'} fontSize={'xl'} color={'#505d83'}>
                             <Typewriter
                                 options={{
-                                    strings: [
-                                        "Hello! My name is Darmawan, and I'm a software engineer.",
-                                        "I have extensive experience in software development.",
-                                        "I've been involved in various web & mobile app <br> development projects.",
-                                        "Proficient in programming languages such as <br> JS, TS, Python and PHP",
-                                        "Familiar with many frameworks like <br> React, React Native, Flask, etc.",
-                                        "Skilled in developing cloud-based applications <br> using services like AWS"],
+                                    strings: typeWriter,
                                     autoStart: true,
                                     loop: true,
                                     deleteSpeed: 15,
@@ -146,13 +148,7 @@ function Hero() {
                                 <Text fontWeight={'bold'} fontSize={'sm'} color={'#505d83'}>
                                     <Typewriter
                                         options={{
-                                            strings: [
-                                                "Hello! My name is Darmawan,<br> and I'm a software engineer.",
-                                                "I have extensive experience in software development.",
-                                                "I've been involved in various <br> web & mobile app development projects.",
-                                                "Proficient in programming languages <br> such as JS, TS, Python and PHP",
-                                                "Familiar with many frameworks <br> like React, React Native, Flask, etc.",
-                                                "Skilled in developing cloud-based applications <br> using services like AWS"],
+                                            strings: typeWriter,
                                             autoStart: true,
                                             loop: true,
                                             deleteSpeed: 15,
@@ -236,13 +232,7 @@ function Hero() {
                             <Text fontWeight={'bold'} fontSize={'sm'} color={'#505d83'}>
                                 <Typewriter
                                     options={{
-                                        strings: [
-                                            "Hello! My name is Darmawan,<br> and I'm a software engineer.",
-                                            "I have extensive experience in software development.",
-                                            "I've been involved in various <br> web & mobile app development projects.",
-                                            "Proficient in programming languages <br> such as JS, TS, Python and PHP",
-                                            "Familiar with many frameworks <br> like React, React Native, Flask, etc.",
-                                            "Skilled in developing cloud-based applications <br> using services like AWS"],
+                                        strings: typeWriter,
                                         autoStart: true,
                                         loop: true,
                                         deleteSpeed: 15,

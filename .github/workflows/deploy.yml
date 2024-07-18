@@ -41,8 +41,6 @@ jobs:
         run: npm run build
         env:
           VITE_CERBERRY_ENDPOINT: ${{ secrets.VITE_CERBERRY_ENDPOINT}}
-          VITE_USERNAME: ${{ secrets.VITE_USERNAME }}
-          VITE_PASSWORD: ${{ secrets.VITE_PASSWORD }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
