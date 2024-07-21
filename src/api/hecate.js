@@ -30,3 +30,34 @@ export const useTypeWriter = () => {
         }
     })
 }
+
+/**
+ * Fetches all aboutme from the backend server.
+ *
+ * @return {Promise} A promise that resolves with the JSON response containing the fetched aboutme data.
+ */
+const fetchAboutme = async () => {
+
+    const url = `https://hecate-cms.vercel.app/api/aboutme`;
+
+    const response = await fetch(url, {
+        method: 'GET',
+    })
+    if (!response.ok) throw new Error('Failed to fetch typewriter data')
+    return response.json()
+}
+
+/**
+ * Returns the result of a query for fetching typewriter data.
+ *
+ * @return {object} The result of the query for fetching typewriter data.
+ */
+export const useAboutme = () => {
+    return useQuery('aboutme-data', () => fetchAboutme(), {
+        cacheTime: 3600000,
+        select: (data) => {
+            if (data.length > 0) return data[0].content
+            else return ""
+        }
+    })
+}

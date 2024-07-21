@@ -37,8 +37,6 @@ function Hero() {
 
     if (isLoading) return <Loading />
 
-    console.log(typeWriter)
-
     return (
         <Fragment>
             {/* // ** DESKTOP SCREEN SIZE  */}
@@ -129,107 +127,17 @@ function Hero() {
             )
             }
 
-            {/* // ** TABLET SCREEN SIZE  */}
+
+
+            {/* // ** PHONE & TABLET SCREEN SIZE  */}
             {
-                width > 768 && width < 1280 && (
-                    <Flex py={10} justifyContent={'center'}>
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{
-                                duration: 0.5,
-                                delay: 0.5,
-                                ease: [0, 0.71, 0.2, 1.01]
-                            }}>
-                            <Box ml={4}>
-                                <Text fontWeight={'bold'} fontSize={'3xl'} color={primaryFontColor}>Hi,</Text>
-                                <Text fontWeight={'bold'} fontSize={'3xl'} color={primaryFontColor}>I'm Darmawan,</Text>
-                                <Text fontWeight={'bold'} fontSize={'3xl'} color={ternaryColor}>Software Engineer</Text>
-                                <Text fontWeight={'bold'} fontSize={'sm'} color={'#505d83'}>
-                                    <Typewriter
-                                        options={{
-                                            strings: typeWriter,
-                                            autoStart: true,
-                                            loop: true,
-                                            deleteSpeed: 15,
-                                        }}
-                                    />
-                                </Text>
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: 1,
-                                        ease: [0, 0.71, 0.2, 1.01]
-                                    }}>
-                                    <Flex gap={5} py={5}>
-                                        <Link to={'/labs'}>
-                                            <Button fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
-                                        </Link>
-                                        <Button fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
-                                            <a href='https://wa.me/6282148282424' target='_blank'>Contact Me</a>
-                                        </Button>
-                                    </Flex>
-                                </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: 1.5,
-                                        ease: [0, 0.71, 0.2, 1.01]
-                                    }}>
-                                    <Flex px={5} mt={6}>
-                                        <Divider height={'50px'} width={'3px'} colorScheme={"purple"} backgroundColor={'#b28be9'} borderRadius={'lg'} orientation='vertical' />
-                                    </Flex>
-                                    <IconContext.Provider value={{ color: "#615a87", size: "1.5em" }}>
-                                        <Box ml={2} mt={6}>
-                                            <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1'>
-                                                <FaInstagram />
-                                            </a>
-                                        </Box>
-                                        <Box ml={2} mt={6}>
-                                            <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/'>
-                                                <FaLinkedin />
-                                            </a>
-                                        </Box>
-                                        <Box ml={2} mt={6}>
-                                            <a target='_blank' href='https://github.com/Barbarpotato'>
-                                                <FaGithub />
-                                            </a>
-                                        </Box>
-                                    </IconContext.Provider>
-                                </motion.div>
-                            </Box>
-                        </motion.div>
-
-
-                        <Box m={10}>
-                            <motion.div className='text-shpere'
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: 2,
-                                    ease: [0, 0.71, 0.2, 1.01]
-                                }}>
-                                <span className='tagcloud'></span>
-                            </motion.div>
-                        </Box>
-                    </Flex>
-                )
-            }
-
-            {/* // ** PHONE SCREEN SIZE  */}
-            {
-                width <= 768 && (
+                width < 1280 && (
                     <Box >
                         <Box py={10} textAlign={'center'}>
-                            <Text fontWeight={'bold'} fontSize={'4xl'} color={primaryFontColor}>Hi,</Text>
-                            <Text fontWeight={'bold'} fontSize={'4xl'} color={primaryFontColor}>I'm Darmawan,</Text>
-                            <Text fontWeight={'bold'} fontSize={'4xl'} color={ternaryColor}>Software Engineer</Text>
-                            <Text fontWeight={'bold'} fontSize={'sm'} color={'#505d83'}>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '25px' : '60px' }} color={primaryFontColor}>Hi,</Text>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '25px' : '60px' }} color={primaryFontColor}>I'm Darmawan,</Text>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '25px' : '60px' }} color={ternaryColor}>Software Engineer</Text>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '14px' : '25px' }} color={'#505d83'}>
                                 <Typewriter
                                     options={{
                                         strings: typeWriter,
@@ -241,15 +149,15 @@ function Hero() {
                             </Text>
                             <Flex justifyContent={'center'} gap={5} py={5}>
                                 <Link to={'/labs'}>
-                                    <Button fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
+                                    <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
                                 </Link>
-                                <Button fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
+                                <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
                                     <a href='https://wa.me/6282148282424' target='_blank'>Contact Me</a>
                                 </Button>
                             </Flex>
 
                             <Flex justifyContent={'center'} gap={5}>
-                                <IconContext.Provider value={{ color: "#615a87", size: "1.5em" }}>
+                                <IconContext.Provider value={{ color: "#615a87", size: width < 768 ? "1.5em" : "2.5em" }}>
                                     <Box mt={6}>
                                         <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1'>
                                             <FaInstagram />
@@ -270,7 +178,7 @@ function Hero() {
 
                         </Box>
                         <div className='text-shpere'>
-                            <span className='tagcloud'></span>
+                            <span className='tagcloud' style={{ fontSize: width < 768 ? '12px' : '25px' }}></span>
                         </div>
                     </Box >
                 )

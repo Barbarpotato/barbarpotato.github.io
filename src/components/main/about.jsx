@@ -3,16 +3,22 @@ import { motion } from 'framer-motion'
 import React, { Fragment } from 'react'
 import { primaryFontColor } from '../../theme/globalTheme'
 import useWindowSize from '../../hooks/useWindowSize'
+import { useAboutme } from '../../api/hecate'
+import Loading from '../loading'
 
 function About() {
 
     const { width } = useWindowSize();
 
+    const { data: aboutMe, isLoading } = useAboutme();
+
+    if (isLoading) return <Loading />
+
     return (
         <Fragment>
             {/* // ** DESKTOP SCREEN SIZE  */}
             {width >= 1280 && (
-                <Flex py={20} px={20} >
+                <Flex py={20} px={20} alignItems={'center'}>
                     <motion.div
                         initial={{ opacity: 0 }}
                         transition={{ duration: 3 }}
@@ -41,15 +47,13 @@ function About() {
                             transition={{ duration: 3 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}>
-                            <Text textAlign={'justify'} py={4} fontSize={'xl'} fontWeight={'semibold'} color={primaryFontColor}>
-                                Hello, called me Darma. I have currently working as a Software Engineer. My flexibility in adapting to changing technologies
-                                and project demands makes me a valuable asset to development teams. Furthermore,
-                                I am always eager to expand my knowledge and keep up with the latest trends in the software development world.
-                            </Text>
-                            <Text textAlign={'justify'} py={4} fontSize={'xl'} fontWeight={'semibold'} color={primaryFontColor}>
-                                Additionally, I have a strong understanding of technical concepts such as system design, software testing, and project management.
-                                I believe that good code quality, solid teamwork, and effective communication are key to success in software development.
-                            </Text>
+                            <pre style={{
+                                marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
+                                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
+                                fontSize: '20px'
+                            }}>
+                                {aboutMe}
+                            </pre>
                             <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
                                 <a
                                     href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=444c23eb-f434-4e8e-9f81-953134657a98"
@@ -66,7 +70,7 @@ function About() {
             {width > 768 && width < 1280 && (
                 <Box pt={20} w={'100%'} position={'relative'} className='hero-medium'>
                     <Center>
-                        <Image className='avatar' borderBottomRadius={'2xl'} w={'600px'} height={'450px'} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
+                        <Image className='mobile-avatar' w={'500px'} height={'450px'} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
                     </Center>
 
                     <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
@@ -75,15 +79,13 @@ function About() {
                         </Heading>
 
                         <Box mx={12}>
-                            <Text fontSize={'xl'} fontWeight={'semibold'} color={primaryFontColor}>
-                                Hello, called me Darma. I have currently working as a Software Engineer. My flexibility in adapting to changing technologies
-                                and project demands makes me a valuable asset to development teams. Furthermore,
-                                I am always eager to expand my knowledge and keep up with the latest trends in the software development world.
-                            </Text>
-                            <Text py={4} fontSize={'xl'} fontWeight={'semibold'} color={primaryFontColor}>
-                                Additionally, I have a strong understanding of technical concepts such as system design, software testing, and project management.
-                                I believe that good code quality, solid teamwork, and effective communication are key to success in software development.
-                            </Text>
+                            <pre style={{
+                                marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
+                                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
+                                fontSize: '20px'
+                            }}>
+                                {aboutMe}
+                            </pre>
                             <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
                                 <a
                                     href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=444c23eb-f434-4e8e-9f81-953134657a98"
@@ -109,15 +111,13 @@ function About() {
                         </Heading>
 
                         <Box mx={2}>
-                            <Text textAlign={'justify'} fontSize={'md'} fontWeight={'semibold'} color={primaryFontColor}>
-                                Hello, called me Darma. I have currently working as a Software Engineer. My flexibility in adapting to changing technologies
-                                and project demands makes me a valuable asset to development teams. Furthermore,
-                                I am always eager to expand my knowledge and keep up with the latest trends in the software development world.
-                            </Text>
-                            <Text textAlign={'justify'} py={4} fontSize={'md'} fontWeight={'semibold'} color={primaryFontColor}>
-                                Additionally, I have a strong understanding of technical concepts such as system design, software testing, and project management.
-                                I believe that good code quality, solid teamwork, and effective communication are key to success in software development.
-                            </Text>
+                            <pre style={{
+                                marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
+                                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
+                                fontSize: '20px'
+                            }}>
+                                {aboutMe}
+                            </pre>
                             <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
                                 <a
                                     href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=444c23eb-f434-4e8e-9f81-953134657a98"
