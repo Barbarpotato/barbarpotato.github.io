@@ -41,7 +41,8 @@ function Items({ blog }) {
                                     <CardBody backgroundColor={primaryColor}>
                                         <Flex height={'200px'} mt='6' direction='column'>
                                             <Heading color={primaryFontColor} size='md'>{item.title}</Heading>
-                                            <Text color={primaryFontColor}>
+                                            <Text>Published: {item.timestamp}</Text>
+                                            <Text textAlign={"justify"} color={primaryFontColor}>
                                                 {item.short_description.length > 230
                                                     ? `${item.short_description.slice(0, 200)}...` // Truncate the string
                                                     : item.short_description}
@@ -82,7 +83,8 @@ function Items({ blog }) {
                                 <CardBody backgroundColor={primaryColor}>
                                     <Flex height={'220px'} mt={2} direction='column'>
                                         <Heading color={primaryFontColor} size='md'>{item.title}</Heading>
-                                        <Text color={primaryFontColor}>
+                                        <Text>Published: {item.timestamp}</Text>
+                                        <Text textAlign={"justify"} color={primaryFontColor}>
                                             {item.short_description.length > 230
                                                 ? `${item.short_description.slice(0, 200)}...` // Truncate the string
                                                 : item.short_description}
