@@ -65,34 +65,10 @@ function Footer() {
                 width < 768 && (
                     <Fragment>
                         <Spacer />
-                        {location.pathname === '/' && (
-                            <Flex gap={2} justifyContent={'center'}>
-                                <Heading my={3} fontWeight={'small'} color={primaryFontColor} size='sm'><a href='#myproject'>Projects</a></Heading>
-                                <Heading my={3} fontWeight={'small'} color={primaryFontColor} size='sm'>
-                                    <a href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=444c23eb-f434-4e8e-9f81-953134657a98"
-                                        download="Darmawan CV" target='_blank'>
-                                        Resume
-                                    </a>
-                                </Heading>
-                                <Heading my={3} fontWeight={'small'} color={primaryFontColor} size='sm'><a href='#aboutme'>About Me</a> </Heading>
-                            </Flex>
-                        )}
                         <Box mx={10} my={5}>
                             <Divider colorScheme='purple' backgroundColor={'#bd93f9'} height={'2px'} orientation='horizontal' />
                         </Box>
                         <Spacer />
-                        {location.pathname === '/' && (
-                            <Flex>
-                                <Heading className='navbar' mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Projects</a></Heading>
-                                <Heading className='navbar' mx={6} fontWeight={'small'} color={primaryFontColor} size='md'>
-                                    <a href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=444c23eb-f434-4e8e-9f81-953134657a98"
-                                        download="Darmawan CV" target='_blank'>
-                                        Resume
-                                    </a>
-                                </Heading>
-                                <Heading className='navbar' mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#aboutme'>About Me</a> </Heading>
-                            </Flex>
-                        )}
                         <Text py={5} textAlign={'center'} fontSize={'sm'} color={primaryFontColor}>© 2023 - {year} All Rights Reserved</Text>
                     </Fragment>
                 )

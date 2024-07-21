@@ -134,9 +134,9 @@ function Hero() {
                 width < 1280 && (
                     <Box >
                         <Box py={10} textAlign={'center'}>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '25px' : '60px' }} color={primaryFontColor}>Hi,</Text>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '25px' : '60px' }} color={primaryFontColor}>I'm Darmawan,</Text>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '25px' : '60px' }} color={ternaryColor}>Software Engineer</Text>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>Hi,</Text>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>I'm Darmawan,</Text>
+                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={ternaryColor}>Software Engineer</Text>
                             <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '14px' : '25px' }} color={'#505d83'}>
                                 <Typewriter
                                     options={{
