@@ -35,7 +35,7 @@ function About() {
                             transition={{ duration: 3 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}>
-                            <Box>
+                            <Box my={5}>
                                 <Heading id='aboutme' opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
                                 </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
                                 </Heading>

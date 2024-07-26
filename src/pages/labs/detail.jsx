@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import '../../styles/labs/detail.css'
 import Footer from '../../components/footer'
 import Navigation from '../../components/navigation'
-import { Box, Center, Heading, Image } from '@chakra-ui/react'
+import { Box, Center, Heading, Image, Text } from '@chakra-ui/react'
 import useWindowSize from '../../hooks/useWindowSize'
 import { primaryFontColor } from '../../theme/globalTheme'
 
@@ -23,12 +23,10 @@ function LabContentDetail() {
             const codeTags = contentDiv.querySelectorAll('code');
 
             preTags.forEach(tag => {
-                if (width <= 1024) {
-                    tag.style.width = "1024px";
-                    const parentDiv = tag.parentNode;
-                    parentDiv.style.overflowX = 'scroll';
-                    parentDiv.style.marginBlock = '15px';
-                }
+                tag.style.width = "1024px";
+                const parentDiv = tag.parentNode;
+                parentDiv.style.overflowX = 'scroll';
+                parentDiv.style.marginBlock = '15px';
 
                 tag.style.backgroundColor = '#272822';
                 tag.classList.add('custom-pre');
@@ -63,15 +61,16 @@ function LabContentDetail() {
                 <Fragment>
                     <Navigation />
                     <Link to={"/labs"} style={{ textDecoration: 'none' }}>
-                        <Heading color={primaryFontColor} size={width > 768 ? 'lg' : 'sm'} my={4} ml={'15%'} style={{ cursor: 'pointer' }}>⬅️ Back to Lab</Heading>
+                        <Heading color={primaryFontColor} size={width > 768 ? 'lg' : 'sm'} my={4} ml={'15%'} style={{ cursor: 'pointer' }}>⬅️ Back</Heading>
                     </Link>
 
-                    <h1 style={{ textAlign: 'center', paddingBlock: width > 768 ? '40px' : '20px', fontSize: width > 768 ? '2em' : '1.5em', marginBottom: '0.5em', color: 'whitesmoke', fontWeight: 'bold' }} color={'white'}>{blog?.title}</h1>
+                    <h1 style={{ paddingTop: width > 768 ? '40px' : '20px', textAlign: 'center', fontSize: width > 768 ? '2em' : '1.5em', color: 'whitesmoke', fontWeight: 'bold' }} color={'white'}>{blog?.title}</h1>
+                    <Text style={{ textAlign: 'center', color: 'whitesmoke', marginBottom: '0.5em', paddingBottom: width > 768 ? '40px' : '20px' }}>{blog?.timestamp}</Text>
                     <Center pt={2} pb={10}>
-                        <Image borderRadius={'lg'} w={'70%'} display={'flex'} justifyContent={'center'} src={blog?.image} />
+                        <Image borderRadius={'lg'} w={width > 1024 ? '35%' : '70%'} display={'flex'} justifyContent={'center'} src={blog?.image} />
                     </Center>
-                    <Box mx="auto" w="70%" display="flex" justifyContent="center" >
-                        <div class='content' style={{ overflowX: 'auto' }} dangerouslySetInnerHTML={{ __html: blog?.description }} />
+                    <Box mx="auto" w={width > 1024 ? '35%' : '70%'} display="flex" justifyContent="center" >
+                        <div class='content' style={{ overflowX: 'auto', fontSize: width > 768 ? '1.3em' : '1em' }} dangerouslySetInnerHTML={{ __html: blog?.description }} />
                     </Box>
                     <Footer />
                 </Fragment>
