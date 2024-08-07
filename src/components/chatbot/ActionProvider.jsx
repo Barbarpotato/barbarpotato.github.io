@@ -23,8 +23,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         sessionStorage.setItem("isPlaying", "false");
 
         const botMessage = createChatBotMessage(
-            "Well, He currently working as a Software Engineer in PT Samamaju Prima. He responsible with Design, Build and Maintain software for internal company used. Using internal company Model View Controller (MVC) framework engine call ingrid, for build new software and maintain currently used software.",
-            { withAvatar: false, delay: 1000, widget: 'initialMessage' }
+            "Well, He currently working as a Software Engineer in PT Samamaju Prima. He responsible with Design, Build and Maintain software",
+            { withAvatar: false, widget: 'initialMessage' }
         );
 
         setState((prev) => ({
@@ -40,7 +40,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
         const botMessage = createChatBotMessage(
             "Wow! 😱 Thank you for the opportunity. To send him a message and have a further discussion, I will redirect you to his LinkedIn",
-            { withAvatar: false, delay: 200, widget: 'initialMessage' }
+            { withAvatar: false, widget: 'initialMessage' }
         );
 
         setTimeout(() => {
