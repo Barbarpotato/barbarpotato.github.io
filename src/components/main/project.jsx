@@ -331,7 +331,7 @@ function Project() {
                         </Heading>
 
                         <Center mx={5}>
-                            <Card teext boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
+                            <Card boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
                                 <CardBody>
                                     <Image
                                         src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fsolopreneurs.jpg?alt=media&token=6de8e566-4cd6-4392-b3a4-05fe8f42d931"}
@@ -443,6 +443,48 @@ function Project() {
                             </Card>
                         </Center>
 
+                        <Center m={5}>
+                            <Card boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'xl'}>
+                                <CardBody>
+                                    <Image
+                                        src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fcerberry-project.png?alt=media&token=c3380e48-6525-4f86-83b7-91c6b410f209"}
+                                    />
+                                    <Stack mt='6' spacing='3'>
+                                        <Heading>Cerberry</Heading>
+                                        <Text fontWeight={'bold'}>Blog Backend Services</Text>
+                                        <Flex alignItems={'center'} >
+                                            <p align="center">
+                                                <a href="https://skillicons.dev">
+                                                    <img width={'350px'} src="https://skillicons.dev/icons?i=bootstrap,docker,python,flask,firebase,javascript,githubactions,github,vercel" />
+                                                </a>
+                                            </p>
+
+                                        </Flex>
+                                    </Stack>
+                                </CardBody>
+                            </Card>
+                        </Center>
+
+                        <Center m={5}>
+                            <Card boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'xl'}>
+                                <CardBody>
+                                    <Image
+                                        src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fhecate-project.png?alt=media&token=73b8cc1e-ea06-4896-993e-2563cbde4bab"}
+                                    />
+                                    <Stack mt='6' spacing='3'>
+                                        <Heading>Hecate</Heading>
+                                        <Text fontWeight={'bold'}>Fullstack App Portofolio CMS</Text>
+                                        <Flex alignItems={'center'} >
+                                            <p align="center">
+                                                <a href="https://skillicons.dev">
+                                                    <img width={'350px'} src="https://skillicons.dev/icons?i=javascript,next,vercel,graphql,prisma,react,mysql,apollo,githubactions,github" />
+                                                </a>
+                                            </p>
+                                        </Flex>
+                                    </Stack>
+                                </CardBody>
+                            </Card>
+                        </Center>
 
                     </Fragment>
                 )
