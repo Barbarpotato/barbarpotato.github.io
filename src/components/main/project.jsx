@@ -1,4 +1,4 @@
-import { Card, CardBody, Center, Divider, Flex, Heading, Image, Stack, Text, Box } from '@chakra-ui/react'
+import { Card, CardBody, Center, Flex, Heading, Image, Stack, Text, Box } from '@chakra-ui/react'
 import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
 import { motion } from "framer-motion"
 import React, { Fragment } from 'react'
@@ -97,7 +97,7 @@ function Project({ width }) {
                                                 src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Ftb-disease-prediction.png?alt=media&token=e38601b3-5c59-4bbe-af76-d2e663d363b7"}
                                             />
                                             <Stack mt='6' spacing='3'>
-                                                <Heading>TBC Prediction Web App</Heading>
+                                                <Heading>TBC Prediction</Heading>
                                                 <Text fontWeight={'bold'}>Tuberculosis Disease Prediction in Makassar City</Text>
                                                 <Flex alignItems={'center'} >
                                                     <p style={{ width: "400px" }} align="center">
@@ -300,7 +300,7 @@ function Project({ width }) {
                                             src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Ftb-disease-prediction.png?alt=media&token=e38601b3-5c59-4bbe-af76-d2e663d363b7'}
                                         />
                                         <Stack mt='6' spacing='3'>
-                                            <Heading>TBC Prediction Web App</Heading>
+                                            <Heading>TBC Prediction</Heading>
                                             <Text fontWeight={'bold'}>Tuberculosis Disease Prediction in Makassar City</Text>
                                             <Flex alignItems={'center'} >
                                                 <p style={{ width: "400px" }} align="center">
@@ -344,7 +344,6 @@ function Project({ width }) {
                                         </Flex>
                                     </Stack>
                                 </CardBody>
-                                <Divider />
                             </Card>
                         </Center>
 
@@ -368,7 +367,6 @@ function Project({ width }) {
                                         </Flex>
                                     </Stack>
                                 </CardBody>
-                                <Divider />
                             </Card>
                         </Center>
 
@@ -390,7 +388,6 @@ function Project({ width }) {
                                         </Flex>
                                     </Stack>
                                 </CardBody>
-                                <Divider />
                             </Card>
                         </Center>
 
@@ -413,7 +410,6 @@ function Project({ width }) {
                                         </Flex>
                                     </Stack>
                                 </CardBody>
-                                <Divider />
                             </Card>
                         </Center>
 
@@ -425,7 +421,7 @@ function Project({ width }) {
                                         src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Ftb-disease-prediction.png?alt=media&token=e38601b3-5c59-4bbe-af76-d2e663d363b7'}
                                     />
                                     <Stack mt='6' spacing='3'>
-                                        <Heading>TBC Prediction Web App</Heading>
+                                        <Heading>TBC Prediction</Heading>
                                         <Text fontWeight={'bold'}>Tuberculosis Disease Prediction in Makassar City</Text>
                                         <Flex alignItems={'center'} >
                                             <p style={{ width: "400px" }} align="center">

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Card, CardBody, Image, Flex, Heading, Text, Divider, Grid, Box, Button } from '@chakra-ui/react'
+import { Card, CardBody, Image, Flex, Heading, Text, Grid, Box, Button, Spacer } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import '../../styles/labs/paginate.css'
 import ReactPaginate from 'react-paginate';
@@ -24,7 +24,7 @@ function Items({ blog, width }) {
                         }}>
                         <Grid style={{ marginTop: '60px', marginInline: width > 768 ? '100px' : '20px' }} templateColumns={width < 1280 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'} gap={6} >
                             {blog?.map((item) => (
-                                <Card key={item.id} borderRadius={'2xl'} mb={20} height={width < 1280 ? '650px' : '500px'} boxShadow={'2xl'}>
+                                <Card key={item.id} borderRadius={'2xl'} mb={20} height={width < 1280 ? '650px' : '500px'} boxShadow={'dark-lg'}>
                                     <Box
                                         display="flex"
                                         justifyContent="center"
@@ -48,7 +48,6 @@ function Items({ blog, width }) {
                                             <Button onClick={() => navigate(`/lab/${item.blog_id}`)} mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
                                         </Flex>
                                     </CardBody>
-                                    <Divider />
                                 </Card>
                             ))}
                         </Grid>
@@ -66,7 +65,7 @@ function Items({ blog, width }) {
                             ease: [0, 0.71, 0.2, 1.01]
                         }}>
                         {blog.map((item) => (
-                            <Card m={5} style={{ marginTop: '100px' }} borderRadius={'2xl'} height={'500px'} boxShadow={'2xl'}>
+                            <Card marginInline={5} style={{ marginTop: '50px' }} borderRadius={'2xl'} height={'500px'} boxShadow={'dark-lg'}>
                                 <Box
                                     display="flex"
                                     justifyContent="center"
@@ -90,7 +89,6 @@ function Items({ blog, width }) {
                                         <Button onClick={() => navigate(`/lab/${item.blog_id}`)} mt={2} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'xl'} fontSize={'xs'}>Read More...</Button>
                                     </Flex>
                                 </CardBody>
-                                <Divider />
                             </Card>
                         ))}
                     </motion.div>
