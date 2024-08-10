@@ -3,7 +3,6 @@ import { primaryColor, primaryFontColor } from '../../theme/globalTheme'
 import React, { Fragment, useEffect } from 'react'
 import { Chrono } from 'react-chrono';
 import { motion } from 'framer-motion'
-import useWindowSize from '../../hooks/useWindowSize'
 
 const customContentDesktop = [
     <Flex>
@@ -150,7 +149,7 @@ const customContentMobile = [
 ]
 
 
-function Experience() {
+function Experience({ width }) {
 
     useEffect(() => {
         // Query the element to remove the toolbar timeline component
@@ -176,8 +175,6 @@ function Experience() {
             title: "February 2022 - July 2022"
         }
     ];
-
-    const { width } = useWindowSize()
 
     return (
         <Fragment>

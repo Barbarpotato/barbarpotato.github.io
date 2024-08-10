@@ -7,16 +7,9 @@ import { primaryFontColor, ternaryColor } from '../../theme/globalTheme';
 import { useEffect } from 'react'
 import Typewriter from 'typewriter-effect';
 import { Box, Flex, Text, Button, Divider } from '@chakra-ui/react'
-import useWindowSize from '../../hooks/useWindowSize';
 import { Link } from 'react-router-dom';
-import { useTypeWriter } from '../../api/hecate';
-import Loading from '../loading';
 
-function Hero() {
-
-    const { width } = useWindowSize()
-
-    const { data: typeWriter, isLoading } = useTypeWriter();
+function Hero({ typeWriter, width }) {
 
     useEffect(() => {
         const container = ".tagcloud";
@@ -33,9 +26,7 @@ function Hero() {
             radius: radiusSize, maxSpeed: 'normal', initSpeed: 'fast', keep: true
         };
         TagCloud(container, texts, options);
-    }, [isLoading]);
-
-    if (isLoading) return <Loading />
+    }, []);
 
     return (
         <Fragment>

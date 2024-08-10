@@ -5,10 +5,9 @@ import {
 import { Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
 import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
-import useWindowSize from '../../hooks/useWindowSize'
 import { sendContactMessage } from '../../api/form'
 
-function Contact() {
+function Contact({ width }) {
 
     const OverlaySendMessage = () => (
         <ModalOverlay
@@ -20,9 +19,6 @@ function Contact() {
     // ** Modal Utility
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [overlay, _setOverlay] = useState(<OverlaySendMessage />)
-
-    // ** Responsive
-    const { width } = useWindowSize()
 
     // ** Contact Utility
     const [contactMessage, setContactMessage] = useState({ name: '', email: '', message: '' })

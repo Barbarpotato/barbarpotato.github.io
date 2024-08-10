@@ -1,16 +1,14 @@
 import React, { Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardBody, Image, Flex, Heading, Text, Divider, Grid, Box, Button } from '@chakra-ui/react'
-import useWindowSize from '../../hooks/useWindowSize'
 import { useNavigate } from 'react-router-dom'
 import '../../styles/labs/paginate.css'
 import ReactPaginate from 'react-paginate';
 import { primaryColor, primaryFontColor } from '../../theme/globalTheme'
 
-function Items({ blog }) {
+function Items({ blog, width }) {
 
     const navigate = useNavigate()
-    const { width } = useWindowSize()
 
     return (
         <Fragment>
@@ -103,7 +101,7 @@ function Items({ blog }) {
 }
 
 
-function LabContent({ blog, itemsPerPage }) {
+function LabContent({ blog, itemsPerPage, width }) {
     // Here we use item offsets; we could also use page offsets
     // following the API or data you're working with.
     const [itemOffset, setItemOffset] = useState(0);
@@ -127,7 +125,7 @@ function LabContent({ blog, itemsPerPage }) {
 
     return (
         <>
-            <Items blog={currentItems} />
+            <Items blog={currentItems} width={width} />
             <ReactPaginate
                 className='react-paginate'
                 breakLabel="..."

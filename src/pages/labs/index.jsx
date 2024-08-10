@@ -88,7 +88,7 @@ function Labs() {
                         </motion.div>
 
                         {
-                            isFetching ? <Loading /> : <LabContent blog={blogs} itemsPerPage={9} />
+                            isFetching ? <Loading /> : <LabContent blog={blogs} itemsPerPage={9} width={width} />
                         }
                         <Box mt={200}>
                             <Footer />

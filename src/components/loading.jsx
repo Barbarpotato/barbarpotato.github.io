@@ -6,7 +6,6 @@ function Loading() {
         <Fragment>
             <Flex height={'100vh'} direction={'column'} alignItems={'center'} justifyContent={'center'}>
                 <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-
             </Flex>
         </Fragment>
     )

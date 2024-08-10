@@ -1,19 +1,9 @@
-import { Box, Flex, Heading, Image, Text, Button, Center } from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Button, Center } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React, { Fragment } from 'react'
 import { primaryFontColor } from '../../theme/globalTheme'
-import useWindowSize from '../../hooks/useWindowSize'
-import { useAboutme } from '../../api/hecate'
-import Loading from '../loading'
 
-function About() {
-
-    const { width } = useWindowSize();
-
-    const { data: aboutMe, isLoading } = useAboutme();
-
-    if (isLoading) return <Loading />
-
+function About({ aboutMe, width }) {
     return (
         <Fragment>
             {/* // ** DESKTOP SCREEN SIZE  */}

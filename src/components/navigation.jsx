@@ -1,15 +1,11 @@
-import { Flex, Heading, Spacer, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor, secondaryColor } from '../theme/globalTheme'
+import { Flex, Heading, Spacer } from '@chakra-ui/react'
+import { primaryFontColor, secondaryColor } from '../theme/globalTheme'
 import React, { Fragment } from 'react'
-import useWindowSize from '../hooks/useWindowSize'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-function Navigation() {
-
-    const { width } = useWindowSize()
+function Navigation({ width }) {
 
     const location = useLocation()
-
     const navigate = useNavigate()
 
     return (

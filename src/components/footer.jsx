@@ -1,16 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { FaGithub, FaInstagram, FaLinkedin, FaArrowAltCircleUp } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { secondaryColor, primaryFontColor } from '../theme/globalTheme'
-import { Flex, Heading, Box, Spacer, Divider, Text, Center } from '@chakra-ui/react'
-import useWindowSize from '../hooks/useWindowSize';
-import { useLocation } from 'react-router-dom';
+import { Flex, Heading, Box, Spacer, Divider, Text } from '@chakra-ui/react'
 
-function Footer() {
-
-    const location = useLocation()
-
-    const { width } = useWindowSize()
+function Footer({ width }) {
 
     const [year, setYear] = useState();
 

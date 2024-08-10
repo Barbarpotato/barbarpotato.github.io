@@ -1,13 +1,9 @@
 import { Card, CardBody, Center, Divider, Flex, Heading, Image, Stack, Text, Box } from '@chakra-ui/react'
+import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
 import { motion } from "framer-motion"
 import React, { Fragment } from 'react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
-import useWindowSize from '../../hooks/useWindowSize'
 
-function Project() {
-
-    const { width } = useWindowSize()
-
+function Project({ width }) {
     return (
         <Fragment>
             {/* // ** DESKTOP AND TABLET SCREEN SIZE  */}
