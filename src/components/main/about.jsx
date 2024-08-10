@@ -23,7 +23,7 @@ function About() {
                         initial={{ opacity: 0 }}
                         transition={{ duration: 3 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}>
+                        viewport={{ once: false }}>
                         <Box pl={20}  >
                             <Image className='avatar' src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
                         </Box>
@@ -68,68 +68,81 @@ function About() {
 
             {/* // ** TABLET SCREEN SIZE  */}
             {width > 768 && width < 1280 && (
-                <Box pt={20} w={'100%'} position={'relative'} className='hero-medium'>
-                    <Center>
-                        <Image className='mobile-avatar' w={'500px'} height={'450px'} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
-                    </Center>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 3 }}
+                    whileInView={{ opacity: 1 }}>
+                    <Box pt={20} w={'100%'} position={'relative'} className='hero-medium'>
+                        <Center>
+                            <Image className='mobile-avatar' w={'500px'} height={'450px'} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
+                        </Center>
 
-                    <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
-                        <Heading id='aboutme' my={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                        </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
-                        </Heading>
+                        <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
+                            <Heading id='aboutme' my={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
+                            </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                            </Heading>
 
-                        <Box mx={12}>
-                            <pre style={{
-                                marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
-                                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
-                                fontSize: '20px'
-                            }}>
-                                {aboutMe}
-                            </pre>
-                            <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
-                                <a
-                                    href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=e1d899ea-4b26-4449-b446-8d4374a2b07a"
-                                    download="Darmawan CV" target='_blank'>
-                                    My Resume
-                                </a>
-                            </Button>
+                            <Box mx={12}>
+                                <pre style={{
+                                    marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
+                                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
+                                    fontSize: '20px'
+                                }}>
+                                    {aboutMe}
+                                </pre>
+                                <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
+                                    <a
+                                        href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=e1d899ea-4b26-4449-b446-8d4374a2b07a"
+                                        download="Darmawan CV" target='_blank'>
+                                        My Resume
+                                    </a>
+                                </Button>
+                            </Box>
+
                         </Box>
-
-                    </Box>
-                </Box >
-            )}
+                    </Box >
+                </motion.div>
+            )
+            }
 
             {/* // ** MOBILE SCREEN SIZE  */}
-            {width <= 768 && (
-                <Box pt={5} w={'100%'} position={'relative'}>
-                    <Center>
-                        <Image className='mobile-avatar' w={'300px'} height={'300px'} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
-                    </Center>
-                    <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
-                        <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                        </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
-                        </Heading>
+            {
+                width <= 768 && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        transition={{ duration: 3 }}
+                        whileInView={{ opacity: 1 }}>
+                        <Box pt={5} w={'100%'} position={'relative'}>
+                            <Center>
+                                <Image className='mobile-avatar' w={'300px'} height={'300px'} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/blog-content%2FAvatar.png?alt=media&token=ed8991ba-7f53-423a-8eb9-baa94dd4d160"} />
+                            </Center>
+                            <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
+                                <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
+                                </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                                </Heading>
 
-                        <Box mx={2}>
-                            <pre style={{
-                                marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
-                                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
-                                fontSize: '20px'
-                            }}>
-                                {aboutMe}
-                            </pre>
-                            <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
-                                <a
-                                    href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=e1d899ea-4b26-4449-b446-8d4374a2b07a"
-                                    download="Darmawan CV" target='_blank'>
-                                    My Resume
-                                </a>
-                            </Button>
-                        </Box>
+                                <Box mx={2}>
+                                    <pre style={{
+                                        marginBottom: '10px', textAlign: 'justify', whiteSpace: 'pre-wrap',
+                                        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
+                                        fontSize: '20px'
+                                    }}>
+                                        {aboutMe}
+                                    </pre>
+                                    <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
+                                        <a
+                                            href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=e1d899ea-4b26-4449-b446-8d4374a2b07a"
+                                            download="Darmawan CV" target='_blank'>
+                                            My Resume
+                                        </a>
+                                    </Button>
+                                </Box>
 
-                    </Box>
-                </Box >
-            )}
+                            </Box>
+                        </Box >
+                    </motion.div>
+                )
+            }
         </Fragment >
     )
 }

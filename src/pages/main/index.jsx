@@ -8,6 +8,7 @@ import Experience from '../../components/main/experience'
 import Contact from '../../components/main/contact'
 import Footer from '../../components/footer'
 import 'react-chatbot-kit/build/main.css'
+import Achievement from '../../components/main/achievement'
 
 function Index() {
     return (
@@ -16,6 +17,7 @@ function Index() {
             <ChatbotButton />
             <Hero />
             <About />
+            {/* <Achievement /> */}
             <Project />
             <Experience />
             <Contact />

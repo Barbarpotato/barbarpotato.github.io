@@ -2,6 +2,7 @@ import { Heading, Box, Flex, Image, Text, Badge } from '@chakra-ui/react'
 import { primaryColor, primaryFontColor } from '../../theme/globalTheme'
 import React, { Fragment, useEffect } from 'react'
 import { Chrono } from 'react-chrono';
+import { motion } from 'framer-motion'
 import useWindowSize from '../../hooks/useWindowSize'
 
 const customContentDesktop = [
@@ -182,7 +183,11 @@ function Experience() {
         <Fragment>
             {/* // ** DESKTOP & TABLET SCREEN SIZE  */}
             {width >= 768 && (
-                <Fragment>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 3 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: false }}>
                     <Heading pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
                     </span>My Experience<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
                     </Heading>
@@ -199,14 +204,18 @@ function Experience() {
                         }}
                         mode="VERTICAL_ALTERNATING"
                         itemWidth={150}>{customContentDesktop}</Chrono>
-                </Fragment>
+                </motion.div>
             )
             }
 
             {/* // ** MOBILE SCREEN SIZE  */}
             {
                 width < 768 && (
-                    <Fragment>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        transition={{ duration: 3 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: false }}>
                         <Heading pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
                         </span>My Experience<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
                         </Heading>
@@ -223,7 +232,7 @@ function Experience() {
                             }}
                             mode="VERTICAL_ALTERNATING"
                             itemWidth={150}>{customContentMobile}</Chrono>
-                    </Fragment>
+                    </motion.div>
                 )
             }
         </Fragment >
