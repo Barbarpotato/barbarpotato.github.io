@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { useAboutme, useTypeWriter } from '../../api/hecate'
+import { useAboutme, useProjects, useTypeWriter } from '../../api/hecate'
 import Loading from '../../components/loading'
 import Navigation from '../../components/navigation'
 import ChatbotButton from '../../components/chatbot/ChatbotButton'
@@ -17,9 +17,10 @@ function Index() {
     // feteching all necessary data and pass it to the components
     const { data: typeWriter, isLoading: isLoadingTypeWriter } = useTypeWriter();
     const { data: aboutMe, isLoading: isLoadingAboutMe } = useAboutme();
+    const { data: projects, isLoading: isLoadingProject } = useProjects();
 
     // make sure all data is loaded before rendering
-    const isLoading = isLoadingTypeWriter || isLoadingAboutMe
+    const isLoading = isLoadingTypeWriter || isLoadingAboutMe || isLoadingProject
 
     // centralizing the width hook state
     const { width } = useWindowSize()
@@ -34,7 +35,7 @@ function Index() {
                     <ChatbotButton />
                     <Hero typeWriter={typeWriter} width={width} />
                     <About aboutMe={aboutMe} width={width} />
-                    <Project width={width} />
+                    <Project contents={projects} width={width} />
                     <Experience width={width} />
                     <Contact width={width} />
                     <Footer width={width} />

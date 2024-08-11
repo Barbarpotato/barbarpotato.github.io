@@ -61,3 +61,30 @@ export const useAboutme = () => {
         }
     })
 }
+
+/**
+ * Fetches all projects from the backend server.
+ *
+ * @return {Promise} A promise that resolves with the JSON response containing the fetched projects data.
+ */
+const fetchProjects = async () => {
+
+    const url = `https://hecate-cms.vercel.app/api/projects`;
+
+    const response = await fetch(url, {
+        method: 'GET',
+    })
+    if (!response.ok) throw new Error('Failed to fetch typewriter data')
+    return response.json()
+}
+
+/**
+ * Returns the result of a query for fetching projects data.
+ *
+ * @return {object} The result of the query for fetching projects data.
+ */
+export const useProjects = () => {
+    return useQuery('projects-data', () => fetchProjects(), {
+        cacheTime: 3600000
+    })
+}

@@ -6,60 +6,7 @@ import { motion } from "framer-motion"
 import { useState } from 'react'
 
 
-const contents = [
-    {
-        Id: 1,
-        Heading: "Workfrom",
-        Text: "Instant Online Coworking Space Dashboard",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fworkfrom.jpg?alt=media&token=0fc026ab-f0c3-4df0-a492-0631ec42bc44",
-        Skills_Url: "https://skillicons.dev/icons?i=javascript,react,aws,fastapi,github,python,vite,nginx,cloudflare"
-    },
-    {
-        Id: 2,
-        Heading: "Royal Progress",
-        Text: "Landing Page & Appointment Schedule",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Froyale_progress.jpg?alt=media&token=e8e0bb41-7a07-4154-84b3-782790d5878c",
-        Skills_Url: "https://skillicons.dev/icons?i=javascript,html,css,wordpress,github,figma,postman"
-    },
-    {
-        Id: 3,
-        Heading: "Solopreneurs AI",
-        Text: "AI Cutting-edge Technology Tools Dashboard",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fsolopreneurs.jpg?alt=media&token=6de8e566-4cd6-4392-b3a4-05fe8f42d931",
-        Skills_Url: "https://skillicons.dev/icons?i=react,javascript,aws,fastapi,github,python,vite,nginx,cloudflare"
-    },
-    {
-        Id: 4,
-        Heading: "TBC Prediction",
-        Text: "Tuberculosis Disease Prediction in Makassar City",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Ftb-disease-prediction.png?alt=media&token=e38601b3-5c59-4bbe-af76-d2e663d363b7",
-        Skills_Url: "https://skillicons.dev/icons?i=react,javascript,vitest,vite,fastapi,github,python,tensorflow"
-    },
-    {
-        Id: 5,
-        Heading: "FEHA",
-        Text: "Cyber Risk Assessments Dashboard",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Ffeha.jpg?alt=media&token=c2202693-bfdf-4bf9-949d-3120695c2348",
-        Skills_Url: "https://skillicons.dev/icons?i=javascript,react,flask,postgresql,github,python,vite,nginx,cloudflare"
-    },
-    {
-        Id: 6,
-        Heading: "Cerberry",
-        Text: "Blog Backend Services",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fcerberry-project.png?alt=media&token=c3380e48-6525-4f86-83b7-91c6b410f209",
-        Skills_Url: "https://skillicons.dev/icons?i=bootstrap,docker,python,flask,firebase,javascript,githubactions,github,vercel"
-    },
-    {
-        Id: 7,
-        Heading: "Hecate",
-        Text: "Fullstack App Portofolio CMS",
-        Image_Url: "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2Fhecate-project.png?alt=media&token=73b8cc1e-ea06-4896-993e-2563cbde4bab",
-        Skills_Url: "https://skillicons.dev/icons?i=javascript,next,vercel,graphql,prisma,react,mysql,apollo,githubactions,github"
-    }
-]
-
-
-function Project({ width }) {
+function Project({ contents, width }) {
 
     const [tabletContents, setTabletContents] = useState([])
     // the desktop screen implement left & right partitions elements
@@ -106,14 +53,14 @@ function Project({ width }) {
                                         {contentArray.length === 1 ? (
                                             <Card className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
-                                                    <Image src={contentArray[0].Image_Url} />
+                                                    <Image src={contentArray[0].imageUrl} />
                                                     <Stack mt='6' spacing='3'>
-                                                        <Heading>{contentArray[0].Heading}</Heading>
-                                                        <Text fontWeight={'bold'}>{contentArray[0].Text}</Text>
+                                                        <Heading>{contentArray[0].heading}</Heading>
+                                                        <Text fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
                                                                 <a href="https://skillicons.dev">
-                                                                    <img src={contentArray[0].Skills_Url} />
+                                                                    <img src={contentArray[0].skillsUrl} />
                                                                 </a>
                                                             </p>
                                                         </Flex>
@@ -128,15 +75,15 @@ function Project({ width }) {
                                                             <Image
                                                                 borderWidth={10}
                                                                 borderBottomColor={ternaryColor}
-                                                                src={object.Image_Url}
+                                                                src={object.imageUrl}
                                                             />
                                                             <Stack mt='6' spacing='3'>
-                                                                <Heading>{object.Heading}</Heading>
-                                                                <Text fontWeight={'bold'}>{object.Text}</Text>
+                                                                <Heading>{object.heading}</Heading>
+                                                                <Text fontWeight={'bold'}>{object.text}</Text>
                                                                 <Flex alignItems={'center'}>
                                                                     <p style={{ width: "400px" }} align="center">
                                                                         <a href="https://skillicons.dev">
-                                                                            <img src={object.Skills_Url} />
+                                                                            <img src={object.skillsUrl} />
                                                                         </a>
                                                                     </p>
                                                                 </Flex>
@@ -154,14 +101,14 @@ function Project({ width }) {
                                 {desktopContent?.rightPartitions.map((content, idx) => (
                                     <Card key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
                                         <CardBody>
-                                            <Image src={content.Image_Url} />
+                                            <Image src={content.imageUrl} />
                                             <Stack mt='6' spacing='3'>
-                                                <Heading>{content.Heading}</Heading>
-                                                <Text fontWeight={'bold'}>{content.Text}</Text>
+                                                <Heading>{content.heading}</Heading>
+                                                <Text fontWeight={'bold'}>{content.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p>
                                                         <a href="https://skillicons.dev">
-                                                            <img width={'350px'} src={content.Skills_Url} />
+                                                            <img width={'350px'} src={content.skillsUrl} />
                                                         </a>
                                                     </p>
                                                 </Flex>
@@ -196,15 +143,15 @@ function Project({ width }) {
                                             <Card margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
                                                     <Image
-                                                        src={contentArray[0].Image_Url}
+                                                        src={contentArray[0].imageUrl}
                                                     />
                                                     <Stack mt='6' spacing='3'>
-                                                        <Heading>{contentArray[0].Heading}</Heading>
-                                                        <Text fontWeight={'bold'}>{contentArray[0].Text}</Text>
+                                                        <Heading>{contentArray[0].heading}</Heading>
+                                                        <Text fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
                                                                 <a href="https://skillicons.dev">
-                                                                    <img src={contentArray[0].Skills_Url} />
+                                                                    <img src={contentArray[0].skillsUrl} />
                                                                 </a>
                                                             </p>
                                                         </Flex>
@@ -220,15 +167,15 @@ function Project({ width }) {
                                                         <Image
                                                             borderWidth={10}
                                                             borderBottomColor={ternaryColor}
-                                                            src={content.Image_Url}
+                                                            src={content.imageUrl}
                                                         />
                                                         <Stack mt='6' spacing='3'>
-                                                            <Heading>{content.Heading}</Heading>
-                                                            <Text fontWeight={'bold'}>{content.Text}</Text>
+                                                            <Heading>{content.heading}</Heading>
+                                                            <Text fontWeight={'bold'}>{content.text}</Text>
                                                             <Flex alignItems={'center'}>
                                                                 <p style={{ width: "400px" }} align="center">
                                                                     <a href="https://skillicons.dev">
-                                                                        <img src={content.Skills_Url} />
+                                                                        <img src={content.skillsUrl} />
                                                                     </a>
                                                                 </p>
                                                             </Flex>
@@ -263,16 +210,16 @@ function Project({ width }) {
                                     <Card boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
                                         <CardBody>
                                             <Image
-                                                src={object.Image_Url}
-                                                alt={`Image for ${object.Heading}`}
+                                                src={object.imageUrl}
+                                                alt={`Image for ${object.heading}`}
                                             />
                                             <Stack mt='6' spacing='3'>
-                                                <Heading>{object.Heading}</Heading>
-                                                <Text fontWeight={'bold'}>{object.Text}</Text>
+                                                <Heading>{object.heading}</Heading>
+                                                <Text fontWeight={'bold'}>{object.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p align="center">
                                                         <a href="https://skillicons.dev">
-                                                            <img src={object.Skills_Url} alt={`Skills for ${object.Heading}`} />
+                                                            <img src={object.skillsUrl} />
                                                         </a>
                                                     </p>
                                                 </Flex>
