@@ -1,9 +1,10 @@
-import { Card, CardBody, Center, Flex, Heading, Image, Stack, Text, Box } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../theme/globalTheme'
-import { chunkArray, partitionArray } from '../../utils/preprocessData'
+import { Card, CardBody, Center, Flex, Heading, Image, Stack, Text, Box, useDisclosure } from '@chakra-ui/react'
+import { primaryColor, primaryFontColor, ternaryColor } from '../../../theme/globalTheme'
+import { chunkArray, partitionArray } from '../../../utils/preprocessData'
 import React, { Fragment, useEffect } from 'react'
 import { motion } from "framer-motion"
 import { useState } from 'react'
+import ProjectModal from './modal'
 
 
 function Project({ contents, width }) {
@@ -14,6 +15,12 @@ function Project({ contents, width }) {
         leftPartitions: [],
         rightPartitions: []
     })
+
+    //this is used for the project detail modal functionality
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
+    // this state is used for the project id data
+    const [projectData, setProjectData] = useState({})
 
     useEffect(() => {
         // ** using if statement to prevent over used memory
@@ -31,8 +38,18 @@ function Project({ contents, width }) {
         }
     }, [width])
 
+    const handleOnClickProjectCard = (objectData) => {
+        // set the value to the project id. projectId state will be passed to the detail modal project
+        setProjectData(objectData)
+        // open the modal if the detail of the project exist
+        if (objectData.htmlContent || objectData.htmlImage) {
+            onOpen()
+        }
+    }
+
     return (
         <Fragment>
+            <ProjectModal isOpen={isOpen} onClose={onClose} projectData={projectData} width={width} />
             {/* // ** DESKTOP AND TABLET SCREEN SIZE  */}
             {width >= 1280 && (
                 <motion.div
@@ -51,15 +68,19 @@ function Project({ contents, width }) {
                                 {desktopContent?.leftPartitions.map((contentArray, idx) => (
                                     <Fragment key={`left-partitions-${idx}`}>
                                         {contentArray.length === 1 ? (
-                                            <Card className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
+                                            <Card
+                                                onClick={() => handleOnClickProjectCard(contentArray[0])} cursor={'pointer'}
+                                                className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
-                                                    <Image src={contentArray[0].imageUrl} />
+                                                    <Box className='zoom-container'>
+                                                        <Image src={contentArray[0].imageUrl} />
+                                                    </Box>
                                                     <Stack mt='6' spacing='3'>
                                                         <Heading>{contentArray[0].heading}</Heading>
                                                         <Text fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
-                                                                <a href="https://skillicons.dev">
+                                                                <a>
                                                                     <img src={contentArray[0].skillsUrl} />
                                                                 </a>
                                                             </p>
@@ -70,19 +91,23 @@ function Project({ contents, width }) {
                                         ) : (
                                             <Flex>
                                                 {contentArray.map((object, index) => (
-                                                    <Card key={index} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
+                                                    <Card
+                                                        onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
+                                                        key={index} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                         <CardBody>
-                                                            <Image
-                                                                borderWidth={10}
-                                                                borderBottomColor={ternaryColor}
-                                                                src={object.imageUrl}
-                                                            />
+                                                            <Box className='zoom-container'>
+                                                                <Image
+                                                                    borderWidth={10}
+                                                                    borderBottomColor={ternaryColor}
+                                                                    src={object.imageUrl}
+                                                                />
+                                                            </Box>
                                                             <Stack mt='6' spacing='3'>
                                                                 <Heading>{object.heading}</Heading>
                                                                 <Text fontWeight={'bold'}>{object.text}</Text>
                                                                 <Flex alignItems={'center'}>
                                                                     <p style={{ width: "400px" }} align="center">
-                                                                        <a href="https://skillicons.dev">
+                                                                        <a>
                                                                             <img src={object.skillsUrl} />
                                                                         </a>
                                                                     </p>
@@ -99,15 +124,19 @@ function Project({ contents, width }) {
 
                             <Box>
                                 {desktopContent?.rightPartitions.map((content, idx) => (
-                                    <Card key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
+                                    <Card
+                                        onClick={() => handleOnClickProjectCard(content)} cursor={'pointer'}
+                                        key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
                                         <CardBody>
-                                            <Image src={content.imageUrl} />
+                                            <Box className='zoom-container'>
+                                                <Image src={content.imageUrl} />
+                                            </Box>
                                             <Stack mt='6' spacing='3'>
                                                 <Heading>{content.heading}</Heading>
                                                 <Text fontWeight={'bold'}>{content.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p>
-                                                        <a href="https://skillicons.dev">
+                                                        <a>
                                                             <img width={'350px'} src={content.skillsUrl} />
                                                         </a>
                                                     </p>
@@ -140,7 +169,9 @@ function Project({ contents, width }) {
                                 <Fragment key={idx}>
                                     {contentArray.length === 1 ? (
                                         <Flex key={`tablet-project-large-${idx}`}>
-                                            <Card margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
+                                            <Card
+                                                onClick={() => handleOnClickProjectCard(contentArray[0])} cursor={'pointer'}
+                                                margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
                                                     <Image
                                                         src={contentArray[0].imageUrl}
@@ -150,7 +181,7 @@ function Project({ contents, width }) {
                                                         <Text fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
-                                                                <a href="https://skillicons.dev">
+                                                                <a>
                                                                     <img src={contentArray[0].skillsUrl} />
                                                                 </a>
                                                             </p>
@@ -162,7 +193,9 @@ function Project({ contents, width }) {
                                     ) : (
                                         <Flex key={idx}>
                                             {contentArray.map((content, contentIdx) => (
-                                                <Card key={`tablet-project-small-${contentIdx}`} margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
+                                                <Card
+                                                    onClick={() => handleOnClickProjectCard(content)} cursor={'pointer'}
+                                                    key={`tablet-project-small-${contentIdx}`} margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                     <CardBody>
                                                         <Image
                                                             borderWidth={10}
@@ -174,7 +207,7 @@ function Project({ contents, width }) {
                                                             <Text fontWeight={'bold'}>{content.text}</Text>
                                                             <Flex alignItems={'center'}>
                                                                 <p style={{ width: "400px" }} align="center">
-                                                                    <a href="https://skillicons.dev">
+                                                                    <a>
                                                                         <img src={content.skillsUrl} />
                                                                     </a>
                                                                 </p>
@@ -207,7 +240,9 @@ function Project({ contents, width }) {
                         {
                             contents.map((object, idx) => (
                                 <Center mx={5} my={5} key={`project-regular-${idx}`}>
-                                    <Card boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
+                                    <Card
+                                        onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
+                                        boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
                                         <CardBody>
                                             <Image
                                                 src={object.imageUrl}
@@ -218,7 +253,7 @@ function Project({ contents, width }) {
                                                 <Text fontWeight={'bold'}>{object.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p align="center">
-                                                        <a href="https://skillicons.dev">
+                                                        <a>
                                                             <img src={object.skillsUrl} />
                                                         </a>
                                                     </p>
