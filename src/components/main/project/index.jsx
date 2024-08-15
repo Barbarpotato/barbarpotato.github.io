@@ -76,8 +76,8 @@ function Project({ contents, width }) {
                                                         <Image src={contentArray[0].imageUrl} />
                                                     </Box>
                                                     <Stack mt='6' spacing='3'>
-                                                        <Heading>{contentArray[0].heading}</Heading>
-                                                        <Text fontWeight={'bold'}>{contentArray[0].text}</Text>
+                                                        <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
+                                                        <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
                                                                 <a>
@@ -103,8 +103,8 @@ function Project({ contents, width }) {
                                                                 />
                                                             </Box>
                                                             <Stack mt='6' spacing='3'>
-                                                                <Heading>{object.heading}</Heading>
-                                                                <Text fontWeight={'bold'}>{object.text}</Text>
+                                                                <Heading color={primaryFontColor}>{object.heading}</Heading>
+                                                                <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                                                 <Flex alignItems={'center'}>
                                                                     <p style={{ width: "400px" }} align="center">
                                                                         <a>
@@ -132,8 +132,8 @@ function Project({ contents, width }) {
                                                 <Image src={content.imageUrl} />
                                             </Box>
                                             <Stack mt='6' spacing='3'>
-                                                <Heading>{content.heading}</Heading>
-                                                <Text fontWeight={'bold'}>{content.text}</Text>
+                                                <Heading color={primaryFontColor}>{content.heading}</Heading>
+                                                <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p>
                                                         <a>
@@ -177,8 +177,8 @@ function Project({ contents, width }) {
                                                         src={contentArray[0].imageUrl}
                                                     />
                                                     <Stack mt='6' spacing='3'>
-                                                        <Heading>{contentArray[0].heading}</Heading>
-                                                        <Text fontWeight={'bold'}>{contentArray[0].text}</Text>
+                                                        <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
+                                                        <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
                                                                 <a>
@@ -203,8 +203,8 @@ function Project({ contents, width }) {
                                                             src={content.imageUrl}
                                                         />
                                                         <Stack mt='6' spacing='3'>
-                                                            <Heading>{content.heading}</Heading>
-                                                            <Text fontWeight={'bold'}>{content.text}</Text>
+                                                            <Heading color={primaryFontColor}>{content.heading}</Heading>
+                                                            <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                                             <Flex alignItems={'center'}>
                                                                 <p style={{ width: "400px" }} align="center">
                                                                     <a>
@@ -249,8 +249,8 @@ function Project({ contents, width }) {
                                                 alt={`Image for ${object.heading}`}
                                             />
                                             <Stack mt='6' spacing='3'>
-                                                <Heading>{object.heading}</Heading>
-                                                <Text fontWeight={'bold'}>{object.text}</Text>
+                                                <Heading color={primaryFontColor}>{object.heading}</Heading>
+                                                <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p align="center">
                                                         <a>
