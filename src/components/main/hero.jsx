@@ -1,15 +1,20 @@
-import { Fragment } from 'react'
+import { Fragment, useCallback, useEffect, useMemo } from 'react';
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import TagCloud from 'TagCloud';
 import { primaryFontColor, ternaryColor } from '../../theme/globalTheme';
-import { useEffect } from 'react'
 import Typewriter from 'typewriter-effect';
-import { Box, Flex, Text, Button, Divider } from '@chakra-ui/react'
+import { Box, Flex, Text, Button, Divider } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 function Hero({ typeWriter, width }) {
+
+    const radiusSize = useMemo(() => {
+        if (width >= 1280) return 330;
+        if (width >= 768 && width < 1280) return 250;
+        return 120;
+    }, [width]);
 
     useEffect(() => {
         const container = ".tagcloud";
@@ -18,20 +23,26 @@ function Hero({ typeWriter, width }) {
             "MySQL", "PostgreSQL", "Git", "Python", "PHP", "TypeScript", "Flask", "Cloud",
             "Firebase", "AWS", "CI/CD", "Docker", "Kubernetes", "Linux", "TDD/BDD", "GraphQL", 'REST API'
         ];
-        let radiusSize;
-        if (width >= 1280) radiusSize = 330;
-        else if (width >= 768 && width < 1280) radiusSize = 250;
-        else radiusSize = 120;
         const options = {
             radius: radiusSize, maxSpeed: 'normal', initSpeed: 'fast', keep: true
         };
         TagCloud(container, texts, options);
-    }, []);
+    }, [radiusSize]);
+
+    const renderTypewriter = useCallback(() => (
+        <Typewriter
+            options={{
+                strings: typeWriter,
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 15,
+            }}
+        />
+    ), [typeWriter]);
 
     return (
         <Fragment>
-            {/* // ** DESKTOP SCREEN SIZE  */}
-            {width >= 1280 && (
+            {width >= 1280 ? (
                 <Flex py={10} alignItems={'center'} justifyContent={'center'}>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -45,15 +56,7 @@ function Hero({ typeWriter, width }) {
                         <Text fontWeight={'bold'} fontSize={'7xl'} color={primaryFontColor}>I'm Darmawan,</Text>
                         <Text fontWeight={'bold'} fontSize={'7xl'} color={ternaryColor}>Software Engineer</Text>
                         <Text width={"90%"} fontWeight={'bold'} fontSize={'xl'} color={'#505d83'}>
-                            <Typewriter
-
-                                options={{
-                                    strings: typeWriter,
-                                    autoStart: true,
-                                    loop: true,
-                                    deleteSpeed: 15,
-                                }}
-                            />
+                            {renderTypewriter()}
                         </Text>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
@@ -68,7 +71,7 @@ function Hero({ typeWriter, width }) {
                                     <Button fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
                                 </Link>
                                 <Button fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
-                                    <a href='https://wa.me/6282148282424' target='_blank'>Contact Me </a>
+                                    <a href='https://wa.me/6282148282424' target='_blank' rel="noreferrer">Contact Me</a>
                                 </Button>
                             </Flex>
                         </motion.div>
@@ -85,17 +88,17 @@ function Hero({ typeWriter, width }) {
                             </Flex>
                             <IconContext.Provider value={{ size: "2.5em" }}>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1'>
+                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer">
                                         <FaInstagram className='social-icon' />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/'>
+                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer">
                                         <FaLinkedin className='social-icon' />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://github.com/Barbarpotato'>
+                                    <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer">
                                         <FaGithub className='social-icon' />
                                     </a>
                                 </Box>
@@ -115,69 +118,53 @@ function Hero({ typeWriter, width }) {
                             <span className='tagcloud'></span>
                         </motion.div>
                     </Box>
-                </Flex >
-            )
-            }
+                </Flex>
+            ) : (
+                <Box>
+                    <Box py={10} textAlign={'center'}>
+                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>Hi,</Text>
+                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>I'm Darmawan,</Text>
+                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={ternaryColor}>Software Engineer</Text>
+                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '14px' : '25px' }} color={'#505d83'}>
+                            {renderTypewriter()}
+                        </Text>
+                        <Flex justifyContent={'center'} gap={5} py={5}>
+                            <Link to={'/labs'}>
+                                <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
+                            </Link>
+                            <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
+                                <a href='https://wa.me/6282148282424' target='_blank' rel="noreferrer">Contact Me</a>
+                            </Button>
+                        </Flex>
 
+                        <Flex justifyContent={'center'} gap={5}>
+                            <IconContext.Provider value={{ color: "#615a87", size: width < 768 ? "1.5em" : "2.5em" }}>
+                                <Box mt={6}>
+                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer">
+                                        <FaInstagram />
+                                    </a>
+                                </Box>
+                                <Box mt={6}>
+                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer">
+                                        <FaLinkedin />
+                                    </a>
+                                </Box>
+                                <Box mt={6}>
+                                    <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer">
+                                        <FaGithub />
+                                    </a>
+                                </Box>
+                            </IconContext.Provider>
+                        </Flex>
 
-
-            {/* // ** PHONE & TABLET SCREEN SIZE  */}
-            {
-                width < 1280 && (
-                    <Box >
-                        <Box py={10} textAlign={'center'}>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>Hi,</Text>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>I'm Darmawan,</Text>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={ternaryColor}>Software Engineer</Text>
-                            <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '14px' : '25px' }} color={'#505d83'}>
-                                <Typewriter
-                                    options={{
-                                        strings: typeWriter,
-                                        autoStart: true,
-                                        loop: true,
-                                        deleteSpeed: 15,
-                                    }}
-                                />
-                            </Text>
-                            <Flex justifyContent={'center'} gap={5} py={5}>
-                                <Link to={'/labs'}>
-                                    <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
-                                </Link>
-                                <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
-                                    <a href='https://wa.me/6282148282424' target='_blank'>Contact Me</a>
-                                </Button>
-                            </Flex>
-
-                            <Flex justifyContent={'center'} gap={5}>
-                                <IconContext.Provider value={{ color: "#615a87", size: width < 768 ? "1.5em" : "2.5em" }}>
-                                    <Box mt={6}>
-                                        <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1'>
-                                            <FaInstagram />
-                                        </a>
-                                    </Box>
-                                    <Box mt={6}>
-                                        <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/'>
-                                            <FaLinkedin />
-                                        </a>
-                                    </Box>
-                                    <Box mt={6}>
-                                        <a target='_blank' href='https://github.com/Barbarpotato'>
-                                            <FaGithub />
-                                        </a>
-                                    </Box>
-                                </IconContext.Provider>
-                            </Flex>
-
-                        </Box>
-                        <div className='text-shpere'>
-                            <span className='tagcloud' style={{ fontSize: width < 768 ? '12px' : '25px' }}></span>
-                        </div>
-                    </Box >
-                )
-            }
-
-        </Fragment >
-    )
+                    </Box>
+                    <div className='text-shpere'>
+                        <span className='tagcloud' style={{ fontSize: width < 768 ? '12px' : '25px' }}></span>
+                    </div>
+                </Box>
+            )}
+        </Fragment>
+    );
 }
 
-export default Hero
+export default Hero;

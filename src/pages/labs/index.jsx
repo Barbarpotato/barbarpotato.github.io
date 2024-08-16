@@ -32,7 +32,7 @@ function Labs() {
                 isLoading ? <Loading />
                     :
                     <Fragment>
-                        <Navigation />
+                        <Navigation width={width} />
                         <Herolabs />
                         <ChatbotButton />
 

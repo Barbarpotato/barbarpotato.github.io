@@ -73,7 +73,7 @@ function Project({ contents, width }) {
                                                 className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
                                                     <Box className='zoom-container'>
-                                                        <Image src={contentArray[0].imageUrl} />
+                                                        <Image src={contentArray[0].imageUrl} width={"300px"} height={"300px"} />
                                                     </Box>
                                                     <Stack mt='6' spacing='3'>
                                                         <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
@@ -96,7 +96,7 @@ function Project({ contents, width }) {
                                                         key={index} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                         <CardBody>
                                                             <Box className='zoom-container'>
-                                                                <Image
+                                                                <Image width={"300px"} height={"300px"}
                                                                     borderWidth={10}
                                                                     borderBottomColor={ternaryColor}
                                                                     src={object.imageUrl}
@@ -129,7 +129,7 @@ function Project({ contents, width }) {
                                         key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
                                         <CardBody>
                                             <Box className='zoom-container'>
-                                                <Image src={content.imageUrl} />
+                                                <Image width={"300px"} height={"300px"} src={content.imageUrl} />
                                             </Box>
                                             <Stack mt='6' spacing='3'>
                                                 <Heading color={primaryFontColor}>{content.heading}</Heading>
@@ -173,7 +173,7 @@ function Project({ contents, width }) {
                                                 onClick={() => handleOnClickProjectCard(contentArray[0])} cursor={'pointer'}
                                                 margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
-                                                    <Image
+                                                    <Image width={"1280px"} height={"600px"}
                                                         src={contentArray[0].imageUrl}
                                                     />
                                                     <Stack mt='6' spacing='3'>
@@ -197,7 +197,7 @@ function Project({ contents, width }) {
                                                     onClick={() => handleOnClickProjectCard(content)} cursor={'pointer'}
                                                     key={`tablet-project-small-${contentIdx}`} margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                     <CardBody>
-                                                        <Image
+                                                        <Image width={"1280px"} height={"300px"}
                                                             borderWidth={10}
                                                             borderBottomColor={ternaryColor}
                                                             src={content.imageUrl}
@@ -244,7 +244,7 @@ function Project({ contents, width }) {
                                         onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
                                         boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
                                         <CardBody>
-                                            <Image
+                                            <Image width={"768px"} height={"200px"}
                                                 src={object.imageUrl}
                                                 alt={`Image for ${object.heading}`}
                                             />
