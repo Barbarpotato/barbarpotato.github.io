@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 const customContentDesktop = [
     <Flex>
         <Box>
-            <Image width={"300px"} height={"150px"} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fkurniawan.webp?alt=media&token=3684e683-1b96-4840-af84-4b2295ee7991"} />
+            <Image alt={"kurniawan"} width={"300px"} height={"150px"} src={"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fkurniawan.webp?alt=media&token=3684e683-1b96-4840-af84-4b2295ee7991"} />
         </Box>
         <Box m={5}>
             <Heading fontSize={'2xl'} color={primaryFontColor}>PT. Samamaju Prima
@@ -26,7 +26,7 @@ const customContentDesktop = [
     </Flex>,
     <Flex>
         <Box>
-            <Image width={"300px"} height={"150px"} src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fnocode.png?alt=media&token=56103f52-ed60-4914-9c07-d856abb74bb0'} />
+            <Image alt={"nocode"} width={"300px"} height={"150px"} src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fnocode.png?alt=media&token=56103f52-ed60-4914-9c07-d856abb74bb0'} />
         </Box>
         <Box m={5}>
             <Heading fontSize={'3xl'} color={primaryFontColor}>Nocode Magician
@@ -44,7 +44,7 @@ const customContentDesktop = [
     </Flex>,
     <Flex>
         <Box>
-            <Image width={"300px"} height={"150px"} src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fbcf.webp?alt=media&token=d410cdbe-224c-41e8-abf3-81ae88e72f29'} />
+            <Image alt={"yamali tb"} width={"300px"} height={"150px"} src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fbcf.webp?alt=media&token=d410cdbe-224c-41e8-abf3-81ae88e72f29'} />
         </Box>
         <Box m={5}>
             <Heading fontSize={'3xl'} color={primaryFontColor}>YAMALI TB
@@ -62,7 +62,7 @@ const customContentDesktop = [
     </Flex>,
     <Flex>
         <Box>
-            <Image width={"500px"} height={"150px"} src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fbangkit.webp?alt=media&token=877ecb68-92e6-4beb-ad66-37490ef6bb84'} />
+            <Image alt={"bangkit"} width={"500px"} height={"150px"} src={'https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fexperiences%2Fbangkit.webp?alt=media&token=877ecb68-92e6-4beb-ad66-37490ef6bb84'} />
         </Box>
         <Box m={5}>
             <Heading fontSize={'3xl'} color={primaryFontColor}>Bangkit Academy

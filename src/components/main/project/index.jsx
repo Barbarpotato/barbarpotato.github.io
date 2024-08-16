@@ -73,16 +73,14 @@ function Project({ contents, width }) {
                                                 className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
                                                     <Box className='zoom-container'>
-                                                        <Image src={contentArray[0].imageUrl} width={"300px"} height={"300px"} />
+                                                        <Image alt={contentArray[0].heading} src={contentArray[0].imageUrl} width={"300px"} height={"300px"} />
                                                     </Box>
                                                     <Stack mt='6' spacing='3'>
                                                         <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
                                                         <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
-                                                                <a>
-                                                                    <img src={contentArray[0].skillsUrl} />
-                                                                </a>
+                                                                <img src={contentArray[0].skillsUrl} alt="skills" />
                                                             </p>
                                                         </Flex>
                                                     </Stack>
@@ -100,6 +98,7 @@ function Project({ contents, width }) {
                                                                     borderWidth={10}
                                                                     borderBottomColor={ternaryColor}
                                                                     src={object.imageUrl}
+                                                                    alt={object.heading}
                                                                 />
                                                             </Box>
                                                             <Stack mt='6' spacing='3'>
@@ -107,9 +106,7 @@ function Project({ contents, width }) {
                                                                 <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                                                 <Flex alignItems={'center'}>
                                                                     <p style={{ width: "400px" }} align="center">
-                                                                        <a>
-                                                                            <img src={object.skillsUrl} />
-                                                                        </a>
+                                                                        <img src={object.skillsUrl} alt="skills" />
                                                                     </p>
                                                                 </Flex>
                                                             </Stack>
@@ -129,16 +126,14 @@ function Project({ contents, width }) {
                                         key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
                                         <CardBody>
                                             <Box className='zoom-container'>
-                                                <Image width={"300px"} height={"300px"} src={content.imageUrl} />
+                                                <Image alt={content.heading} width={"300px"} height={"300px"} src={content.imageUrl} />
                                             </Box>
                                             <Stack mt='6' spacing='3'>
                                                 <Heading color={primaryFontColor}>{content.heading}</Heading>
                                                 <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p>
-                                                        <a>
-                                                            <img width={'350px'} src={content.skillsUrl} />
-                                                        </a>
+                                                        <img width={'350px'} src={content.skillsUrl} alt="skills" />
                                                     </p>
                                                 </Flex>
                                             </Stack>
@@ -174,16 +169,14 @@ function Project({ contents, width }) {
                                                 margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                 <CardBody>
                                                     <Image width={"1280px"} height={"600px"}
-                                                        src={contentArray[0].imageUrl}
+                                                        src={contentArray[0].imageUrl} alt={contentArray[0].heading}
                                                     />
                                                     <Stack mt='6' spacing='3'>
                                                         <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
                                                         <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
-                                                                <a>
-                                                                    <img src={contentArray[0].skillsUrl} />
-                                                                </a>
+                                                                <img src={contentArray[0].skillsUrl} alt={"Skills"} />
                                                             </p>
                                                         </Flex>
                                                     </Stack>
@@ -197,7 +190,9 @@ function Project({ contents, width }) {
                                                     onClick={() => handleOnClickProjectCard(content)} cursor={'pointer'}
                                                     key={`tablet-project-small-${contentIdx}`} margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
                                                     <CardBody>
-                                                        <Image width={"1280px"} height={"300px"}
+                                                        <Image
+                                                            alt={content.heading}
+                                                            width={"1280px"} height={"300px"}
                                                             borderWidth={10}
                                                             borderBottomColor={ternaryColor}
                                                             src={content.imageUrl}
@@ -207,9 +202,7 @@ function Project({ contents, width }) {
                                                             <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                                             <Flex alignItems={'center'}>
                                                                 <p style={{ width: "400px" }} align="center">
-                                                                    <a>
-                                                                        <img src={content.skillsUrl} />
-                                                                    </a>
+                                                                    <img src={content.skillsUrl} alt={"Skills"} />
                                                                 </p>
                                                             </Flex>
                                                         </Stack>
@@ -253,9 +246,7 @@ function Project({ contents, width }) {
                                                 <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p align="center">
-                                                        <a>
-                                                            <img src={object.skillsUrl} />
-                                                        </a>
+                                                        <img src={object.skillsUrl} alt={'Skills'} />
                                                     </p>
                                                 </Flex>
                                             </Stack>

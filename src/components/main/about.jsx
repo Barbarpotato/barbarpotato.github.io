@@ -25,7 +25,7 @@ function About({ aboutMe, width }) {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: false }}>
                         <Box pl={20}  >
-                            <Image className='avatar' src={avatarUrl} />
+                            <Image alt='Darmawan Avatar' className='avatar' src={avatarUrl} />
                         </Box>
                     </motion.div >
 
@@ -71,7 +71,7 @@ function About({ aboutMe, width }) {
                     whileInView={{ opacity: 1 }}>
                     <Box pt={20} w={'100%'} position={'relative'} className='hero-medium'>
                         <Center>
-                            <Image className='mobile-avatar' w={'500px'} height={'450px'} src={avatarUrl} />
+                            <Image alt='Darmawan Avatar' className='mobile-avatar' w={'500px'} height={'450px'} src={avatarUrl} />
                         </Center>
 
                         <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
@@ -108,7 +108,7 @@ function About({ aboutMe, width }) {
                         whileInView={{ opacity: 1 }}>
                         <Box pt={5} w={'100%'} position={'relative'}>
                             <Center>
-                                <Image className='mobile-avatar' w={'300px'} height={'300px'} src={avatarUrl} />
+                                <Image alt='Darmawan Avatar' className='mobile-avatar' w={'300px'} height={'300px'} src={avatarUrl} />
                             </Center>
                             <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
                                 <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
