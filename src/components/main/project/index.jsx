@@ -80,7 +80,7 @@ function Project({ contents, width }) {
                                                         <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
-                                                                <img src={contentArray[0].skillsUrl} alt="skills" />
+                                                                <img width={"400px"} height={"50px"} src={contentArray[0].skillsUrl} alt="skills" />
                                                             </p>
                                                         </Flex>
                                                     </Stack>
@@ -106,7 +106,7 @@ function Project({ contents, width }) {
                                                                 <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                                                 <Flex alignItems={'center'}>
                                                                     <p style={{ width: "400px" }} align="center">
-                                                                        <img src={object.skillsUrl} alt="skills" />
+                                                                        <img width={"400px"} height={"50px"} src={object.skillsUrl} alt="skills" />
                                                                     </p>
                                                                 </Flex>
                                                             </Stack>
@@ -133,7 +133,7 @@ function Project({ contents, width }) {
                                                 <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p>
-                                                        <img width={'350px'} src={content.skillsUrl} alt="skills" />
+                                                        <img width={'350px'} height={"50px"} src={content.skillsUrl} alt="skills" />
                                                     </p>
                                                 </Flex>
                                             </Stack>
@@ -176,7 +176,7 @@ function Project({ contents, width }) {
                                                         <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
                                                         <Flex alignItems={'center'}>
                                                             <p style={{ width: "400px" }} align="center">
-                                                                <img src={contentArray[0].skillsUrl} alt={"Skills"} />
+                                                                <img width={"500px"} height={"100px"} src={contentArray[0].skillsUrl} alt={"Skills"} />
                                                             </p>
                                                         </Flex>
                                                     </Stack>
@@ -202,7 +202,7 @@ function Project({ contents, width }) {
                                                             <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                                             <Flex alignItems={'center'}>
                                                                 <p style={{ width: "400px" }} align="center">
-                                                                    <img src={content.skillsUrl} alt={"Skills"} />
+                                                                    <img width={"500px"} height={"100px"} src={content.skillsUrl} alt={"Skills"} />
                                                                 </p>
                                                             </Flex>
                                                         </Stack>
@@ -237,7 +237,7 @@ function Project({ contents, width }) {
                                         onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
                                         boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
                                         <CardBody>
-                                            <Image width={"768px"} height={"200px"}
+                                            <Image width={width} height={"250px"}
                                                 src={object.imageUrl}
                                                 alt={`Image for ${object.heading}`}
                                             />
@@ -246,7 +246,7 @@ function Project({ contents, width }) {
                                                 <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                                 <Flex alignItems={'center'}>
                                                     <p align="center">
-                                                        <img src={object.skillsUrl} alt={'Skills'} />
+                                                        <img width={"250px"} height={"50px"} src={object.skillsUrl} alt={'Skills'} />
                                                     </p>
                                                 </Flex>
                                             </Stack>

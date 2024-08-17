@@ -70,8 +70,17 @@ function Hero({ typeWriter, width }) {
                                 <Link to={"/labs"}>
                                     <Button fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
                                 </Link>
-                                <Button fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
-                                    <a href='https://wa.me/6282148282424' target='_blank' rel="noreferrer">Contact Me</a>
+                                <Button
+                                    fontWeight="bold"
+                                    colorScheme="purple"
+                                    variant="outline"
+                                    as="a"
+                                    href="https://wa.me/6282148282424"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label="Contact me via WhatsApp"
+                                >
+                                    Contact Me
                                 </Button>
                             </Flex>
                         </motion.div>
@@ -88,18 +97,18 @@ function Hero({ typeWriter, width }) {
                             </Flex>
                             <IconContext.Provider value={{ size: "2.5em" }}>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer">
-                                        <FaInstagram className='social-icon' />
+                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer" aria-label="Visit Darmawan's Instagram profile">
+                                        <FaInstagram />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer">
-                                        <FaLinkedin className='social-icon' />
+                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer" aria-label="Visit Darmawan's LinkedIn profile">
+                                        <FaLinkedin />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer">
-                                        <FaGithub className='social-icon' />
+                                    <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer" aria-label="Visit Darmawan's GitHub profile">
+                                        <FaGithub />
                                     </a>
                                 </Box>
                             </IconContext.Provider>
@@ -132,25 +141,35 @@ function Hero({ typeWriter, width }) {
                             <Link to={'/labs'}>
                                 <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
                             </Link>
-                            <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' variant={'outline'}>
-                                <a href='https://wa.me/6282148282424' target='_blank' rel="noreferrer">Contact Me</a>
+                            <Button
+                                size={"sm"}
+                                fontWeight="bold"
+                                colorScheme="purple"
+                                variant="outline"
+                                as="a"
+                                href="https://wa.me/6282148282424"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Contact me via WhatsApp"
+                            >
+                                Contact Me
                             </Button>
                         </Flex>
 
                         <Flex justifyContent={'center'} gap={5}>
                             <IconContext.Provider value={{ color: "#615a87", size: width < 768 ? "1.5em" : "2.5em" }}>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer">
+                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer" aria-label="Visit Darmawan's Instagram profile">
                                         <FaInstagram />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer">
+                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer" aria-label="Visit Darmawan's LinkedIn profile">
                                         <FaLinkedin />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
-                                    <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer">
+                                    <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer" aria-label="Visit Darmawan's GitHub profile">
                                         <FaGithub />
                                     </a>
                                 </Box>

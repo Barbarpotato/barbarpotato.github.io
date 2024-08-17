@@ -6,7 +6,6 @@ import ActionProvider from './ActionProvider'
 import { Fragment, useState } from 'react'
 
 function ChatbotButton() {
-
     const [activeChatBot, setActiveChatBot] = useState(false)
 
     return (
@@ -18,12 +17,15 @@ function ChatbotButton() {
                     actionProvider={ActionProvider}
                 />
             }
-            <button onClick={() => setActiveChatBot(!activeChatBot)} className='chatbot-toggle-button'>
+            <button
+                onClick={() => setActiveChatBot(!activeChatBot)}
+                className='chatbot-toggle-button'
+                aria-label={activeChatBot ? 'Close chatbot' : 'Open chatbot'}
+            >
                 <MdSupportAgent size={30} color={'white'} />
             </button>
         </Fragment>
-
     )
 }
 
-export default ChatbotButton
+export default ChatbotButton;
