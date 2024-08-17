@@ -50,13 +50,19 @@ function About({ aboutMe, width }) {
                             <pre style={textStyle}>
                                 {aboutMe}
                             </pre>
-
-                            <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
-                                <a
-                                    href={resumeUrl}
-                                    download="Darmawan CV" target='_blank'>
-                                    My Resume
-                                </a>
+                            <Button
+                                as="a"
+                                href={resumeUrl}
+                                download="Darmawan CV"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Download my resume"
+                                color="white"
+                                fontWeight="bold"
+                                variant="outline"
+                                colorScheme="purple"
+                            >
+                                See My Resume
                             </Button>
                         </motion.div>
                     </Box>
@@ -83,13 +89,19 @@ function About({ aboutMe, width }) {
                                 <pre style={textStyle}>
                                     {aboutMe}
                                 </pre>
-
-                                <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
-                                    <a
-                                        href={resumeUrl}
-                                        download="Darmawan CV" target='_blank'>
-                                        My Resume
-                                    </a>
+                                <Button
+                                    as="a"
+                                    href={resumeUrl}
+                                    download="Darmawan CV"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label="Download my resume"
+                                    color="white"
+                                    fontWeight="bold"
+                                    variant="outline"
+                                    colorScheme="purple"
+                                >
+                                    See My Resume
                                 </Button>
                             </Box>
 
@@ -119,13 +131,22 @@ function About({ aboutMe, width }) {
                                     <pre style={textStyle}>
                                         {aboutMe}
                                     </pre>
-                                    <Button fontWeight={'bold'} colorScheme='purple' borderRadius={'xl'} color={'black'}>
-                                        <a
-                                            href={resumeUrl}
-                                            download="Darmawan CV" target='_blank'>
-                                            My Resume
-                                        </a>
+
+                                    <Button
+                                        as="a"
+                                        href={resumeUrl}
+                                        download="Darmawan CV"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        aria-label="Download my resume"
+                                        color="white"
+                                        fontWeight="bold"
+                                        variant="outline"
+                                        colorScheme="purple"
+                                    >
+                                        See My Resume
                                     </Button>
+
                                 </Box>
 
                             </Box>

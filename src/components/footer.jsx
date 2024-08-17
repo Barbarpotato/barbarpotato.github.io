@@ -26,18 +26,33 @@ function Footer({ width }) {
                         <Flex>
                             <IconContext.Provider value={{ size: "2em" }}>
                                 <Box mx={1}>
-                                    <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1'>
-                                        <FaInstagram className='social-icon' />
+                                    <a
+                                        target="_blank"
+                                        href="https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1"
+                                        rel="noreferrer"
+                                        aria-label="Visit my Instagram profile"
+                                    >
+                                        <FaInstagram className="social-icon" />
                                     </a>
                                 </Box>
                                 <Box mx={1}>
-                                    <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/'>
-                                        <FaLinkedin className='social-icon' />
+                                    <a
+                                        target="_blank"
+                                        href="https://www.linkedin.com/in/darmawan-jr-b16135220/"
+                                        rel="noreferrer"
+                                        aria-label="Visit my LinkedIn profile"
+                                    >
+                                        <FaLinkedin className="social-icon" />
                                     </a>
                                 </Box>
                                 <Box mx={1}>
-                                    <a target='_blank' href='https://github.com/Barbarpotato'>
-                                        <FaGithub className='social-icon' />
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/Barbarpotato"
+                                        rel="noreferrer"
+                                        aria-label="Visit my GitHub profile"
+                                    >
+                                        <FaGithub className="social-icon" />
                                     </a>
                                 </Box>
                             </IconContext.Provider>

@@ -95,20 +95,20 @@ function Hero({ typeWriter, width }) {
                             <Flex px={5} mt={6}>
                                 <Divider height={'70px'} width={'5px'} colorScheme={"purple"} backgroundColor={'#b28be9'} borderRadius={'lg'} orientation='vertical' />
                             </Flex>
-                            <IconContext.Provider value={{ size: "2.5em" }}>
+                            <IconContext.Provider value={{ color: "#615a87", size: width < 768 ? "1.5em" : "2.5em" }}>
                                 <Box mt={6}>
                                     <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer" aria-label="Visit Darmawan's Instagram profile">
-                                        <FaInstagram />
+                                        <FaInstagram className='social-icon' />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
                                     <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer" aria-label="Visit Darmawan's LinkedIn profile">
-                                        <FaLinkedin />
+                                        <FaLinkedin className='social-icon' />
                                     </a>
                                 </Box>
                                 <Box mt={6}>
                                     <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer" aria-label="Visit Darmawan's GitHub profile">
-                                        <FaGithub />
+                                        <FaGithub className='social-icon' />
                                     </a>
                                 </Box>
                             </IconContext.Provider>

@@ -200,15 +200,30 @@ function Experience({ width }) {
                     initial={{ opacity: 0 }}
                     transition={{ duration: 3 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: false }}>
-                    <Heading pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                    </span>My Experience<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                    viewport={{ once: false }}
+                    role="region" // Optional, can be used for defining a section of the page
+                    aria-labelledby="experience-heading" // Links the heading with the section
+                >
+                    <Heading
+                        id="experience-heading" // ID for linking with aria-labelledby
+                        pt={20}
+                        pb={10}
+                        textAlign={'center'}
+                        opacity={0.8}
+                        color={primaryFontColor}
+                    >
+                        <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}</span>
+                        My Experience
+                        <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
                     </Heading>
                     <Chrono
                         parseDetailsAsHTML
                         items={itemsTimeline}
                         theme={{
-                            primary: "violet", secondary: "#292b37", cardBgColor: "#292b37", titleColor: "#bd93f9",
+                            primary: "violet",
+                            secondary: "#292b37",
+                            cardBgColor: "#292b37",
+                            titleColor: "#bd93f9",
                             cardTitleColor: "violet",
                             toolbarBgColor: "#292b37",
                             toolbarBtnBgColor: "violet",
@@ -216,8 +231,13 @@ function Experience({ width }) {
                             titleColorActive: "violet",
                         }}
                         mode="VERTICAL_ALTERNATING"
-                        itemWidth={150}>{customContentDesktop}</Chrono>
+                        itemWidth={150}
+                        aria-label="Timeline of experiences" // Provides a label for screen readers
+                    >
+                        {customContentDesktop}
+                    </Chrono>
                 </motion.div>
+
             )
             }
 
@@ -228,15 +248,32 @@ function Experience({ width }) {
                         initial={{ opacity: 0 }}
                         transition={{ duration: 3 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: false }}>
-                        <Heading pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                        </span>My Experience<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                        viewport={{ once: false }}
+                        role="region" // Defines a region of the page
+                        aria-labelledby="experience-heading" // Links the heading to this region
+                    >
+                        <Heading
+                            id="experience-heading" // ID to link with aria-labelledby
+                            pt={20}
+                            pb={10}
+                            textAlign={'center'}
+                            opacity={0.8}
+                            color={primaryFontColor}
+                            role="heading" // Explicitly define the heading role
+                            aria-level={1} // Define the level of the heading
+                        >
+                            <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}</span>
+                            My Experience
+                            <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
                         </Heading>
                         <Chrono
                             parseDetailsAsHTML
                             items={itemsTimeline}
                             theme={{
-                                primary: "violet", secondary: "#292b37", cardBgColor: "#292b37", titleColor: "#bd93f9",
+                                primary: "violet",
+                                secondary: "#292b37",
+                                cardBgColor: "#292b37",
+                                titleColor: "#bd93f9",
                                 cardTitleColor: "violet",
                                 toolbarBgColor: "#292b37",
                                 toolbarBtnBgColor: "violet",
@@ -244,7 +281,11 @@ function Experience({ width }) {
                                 titleColorActive: "violet",
                             }}
                             mode="VERTICAL_ALTERNATING"
-                            itemWidth={150}>{customContentMobile}</Chrono>
+                            itemWidth={150}
+                            aria-label="Timeline of experiences" // Descriptive label for the timeline
+                        >
+                            {customContentMobile}
+                        </Chrono>
                     </motion.div>
                 )
             }
