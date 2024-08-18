@@ -1,11 +1,13 @@
-import { Card, CardBody, Center, Flex, Heading, Image, Stack, Text, Box, useDisclosure } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../../theme/globalTheme'
-import { chunkArray, partitionArray } from '../../../utils/preprocessData'
-import React, { Fragment, useEffect } from 'react'
-import { motion } from "framer-motion"
-import { useState } from 'react'
+import { Suspense, lazy, useState, useEffect } from 'react'
+import { partitionArray, chunkArray } from '../../../utils/preprocessData';
+import { useDisclosure } from '@chakra-ui/react';
 import ProjectModal from './modal'
+import Loading from '../../loading';
 
+// load necessary components when needed
+const ProjectDesktop = lazy(() => import('./desktop/index'));
+const ProjectTablet = lazy(() => import('./tablet/index'));
+const ProjectMobile = lazy(() => import('./mobile/index'));
 
 function Project({ contents, width }) {
 
@@ -48,218 +50,15 @@ function Project({ contents, width }) {
     }
 
     return (
-        <Fragment>
+        <Suspense fallback={<Loading />}>
             <ProjectModal isOpen={isOpen} onClose={onClose} projectData={projectData} width={width} />
-            {/* // ** DESKTOP AND TABLET SCREEN SIZE  */}
-            {width >= 1280 && (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    transition={{ duration: 3 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: false }}>
-                    <Fragment>
-
-                        <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-                        </span>My Projects<span>{'>'}</span>
-                        </Heading>
-
-                        <Flex justifyContent={'center'} marginInline={"15%"}>
-                            <Box width={'70%'}>
-                                {desktopContent?.leftPartitions.map((contentArray, idx) => (
-                                    <Fragment key={`left-partitions-${idx}`}>
-                                        {contentArray.length === 1 ? (
-                                            <Card
-                                                onClick={() => handleOnClickProjectCard(contentArray[0])} cursor={'pointer'}
-                                                className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
-                                                <CardBody>
-                                                    <Box className='zoom-container'>
-                                                        <Image alt={contentArray[0].heading} src={contentArray[0].imageUrl} width={"300px"} height={"300px"} />
-                                                    </Box>
-                                                    <Stack mt='6' spacing='3'>
-                                                        <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
-                                                        <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
-                                                        <Flex alignItems={'center'}>
-                                                            <p style={{ width: "400px" }} align="center">
-                                                                <img width={"400px"} height={"50px"} src={contentArray[0].skillsUrl} alt="skills" />
-                                                            </p>
-                                                        </Flex>
-                                                    </Stack>
-                                                </CardBody>
-                                            </Card>
-                                        ) : (
-                                            <Flex>
-                                                {contentArray.map((object, index) => (
-                                                    <Card
-                                                        onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
-                                                        key={index} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
-                                                        <CardBody>
-                                                            <Box className='zoom-container'>
-                                                                <Image width={"300px"} height={"300px"}
-                                                                    borderWidth={10}
-                                                                    borderBottomColor={ternaryColor}
-                                                                    src={object.imageUrl}
-                                                                    alt={object.heading}
-                                                                />
-                                                            </Box>
-                                                            <Stack mt='6' spacing='3'>
-                                                                <Heading color={primaryFontColor}>{object.heading}</Heading>
-                                                                <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
-                                                                <Flex alignItems={'center'}>
-                                                                    <p style={{ width: "400px" }} align="center">
-                                                                        <img width={"400px"} height={"50px"} src={object.skillsUrl} alt="skills" />
-                                                                    </p>
-                                                                </Flex>
-                                                            </Stack>
-                                                        </CardBody>
-                                                    </Card>
-                                                ))}
-                                            </Flex>
-                                        )}
-                                    </Fragment>
-                                ))}
-                            </Box>
-
-                            <Box>
-                                {desktopContent?.rightPartitions.map((content, idx) => (
-                                    <Card
-                                        onClick={() => handleOnClickProjectCard(content)} cursor={'pointer'}
-                                        key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
-                                        <CardBody>
-                                            <Box className='zoom-container'>
-                                                <Image alt={content.heading} width={"300px"} height={"300px"} src={content.imageUrl} />
-                                            </Box>
-                                            <Stack mt='6' spacing='3'>
-                                                <Heading color={primaryFontColor}>{content.heading}</Heading>
-                                                <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
-                                                <Flex alignItems={'center'}>
-                                                    <p>
-                                                        <img width={'350px'} height={"50px"} src={content.skillsUrl} alt="skills" />
-                                                    </p>
-                                                </Flex>
-                                            </Stack>
-                                        </CardBody>
-                                    </Card>
-                                ))}
-                            </Box>
-                        </Flex>
-                    </Fragment >
-                </motion.div >
-            )
-            }
-
             {
-                width >= 768 && width < 1280 && (
-                    <Fragment>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            transition={{ duration: 3 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: false }}>
-
-                            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-                            </span>My Projects<span>{'>'}</span>
-                            </Heading>
-
-                            {tabletContents.map((contentArray, idx) => (
-                                <Fragment key={idx}>
-                                    {contentArray.length === 1 ? (
-                                        <Flex key={`tablet-project-large-${idx}`}>
-                                            <Card
-                                                onClick={() => handleOnClickProjectCard(contentArray[0])} cursor={'pointer'}
-                                                margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
-                                                <CardBody>
-                                                    <Image width={"1280px"} height={"600px"}
-                                                        src={contentArray[0].imageUrl} alt={contentArray[0].heading}
-                                                    />
-                                                    <Stack mt='6' spacing='3'>
-                                                        <Heading color={primaryFontColor}>{contentArray[0].heading}</Heading>
-                                                        <Text color={primaryFontColor} fontWeight={'bold'}>{contentArray[0].text}</Text>
-                                                        <Flex alignItems={'center'}>
-                                                            <p style={{ width: "400px" }} align="center">
-                                                                <img width={"500px"} height={"100px"} src={contentArray[0].skillsUrl} alt={"Skills"} />
-                                                            </p>
-                                                        </Flex>
-                                                    </Stack>
-                                                </CardBody>
-                                            </Card>
-                                        </Flex>
-                                    ) : (
-                                        <Flex key={idx}>
-                                            {contentArray.map((content, contentIdx) => (
-                                                <Card
-                                                    onClick={() => handleOnClickProjectCard(content)} cursor={'pointer'}
-                                                    key={`tablet-project-small-${contentIdx}`} margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor}>
-                                                    <CardBody>
-                                                        <Image
-                                                            alt={content.heading}
-                                                            width={"1280px"} height={"300px"}
-                                                            borderWidth={10}
-                                                            borderBottomColor={ternaryColor}
-                                                            src={content.imageUrl}
-                                                        />
-                                                        <Stack mt='6' spacing='3'>
-                                                            <Heading color={primaryFontColor}>{content.heading}</Heading>
-                                                            <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
-                                                            <Flex alignItems={'center'}>
-                                                                <p style={{ width: "400px" }} align="center">
-                                                                    <img width={"500px"} height={"100px"} src={content.skillsUrl} alt={"Skills"} />
-                                                                </p>
-                                                            </Flex>
-                                                        </Stack>
-                                                    </CardBody>
-                                                </Card>
-                                            ))}
-                                        </Flex>
-                                    )}
-                                </Fragment>
-                            ))}
-
-                        </motion.div>
-                    </Fragment>
-                )
+                width >= 1280 ? <ProjectDesktop desktopContent={desktopContent} handleOnClickProjectCard={handleOnClickProjectCard} /> :
+                    width >= 768 && width < 1280 ? <ProjectTablet tabletContents={tabletContents} handleOnClickProjectCard={handleOnClickProjectCard} /> :
+                        <ProjectMobile contents={contents} width={width} handleOnClickProjectCard={handleOnClickProjectCard} />
             }
-
-            {/* // ** MOBILE SCREEN SIZE  */}
-            {
-                width < 768 && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        transition={{ duration: 3 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: false }}>
-                        <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-                        </span>My Projects<span>{'>'}</span>
-                        </Heading>
-                        {
-                            contents.map((object, idx) => (
-                                <Center mx={5} my={5} key={`project-regular-${idx}`}>
-                                    <Card
-                                        onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
-                                        boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
-                                        <CardBody>
-                                            <Image width={width} height={"250px"}
-                                                src={object.imageUrl}
-                                                alt={`Image for ${object.heading}`}
-                                            />
-                                            <Stack mt='6' spacing='3'>
-                                                <Heading color={primaryFontColor}>{object.heading}</Heading>
-                                                <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
-                                                <Flex alignItems={'center'}>
-                                                    <p align="center">
-                                                        <img width={"250px"} height={"50px"} src={object.skillsUrl} alt={'Skills'} />
-                                                    </p>
-                                                </Flex>
-                                            </Stack>
-                                        </CardBody>
-                                    </Card>
-                                </Center>
-                            ))
-                        }
-                    </motion.div>
-                )
-            }
-        </Fragment>
+        </Suspense>
     )
 }
 
-export default Project  
+export default Project

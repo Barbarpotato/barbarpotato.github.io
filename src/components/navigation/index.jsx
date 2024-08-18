@@ -1,5 +1,5 @@
 import { Flex, Heading, Spacer } from '@chakra-ui/react'
-import { primaryFontColor, secondaryColor } from '../theme/globalTheme'
+import { primaryFontColor, secondaryColor } from '../../theme/globalTheme'
 import React, { Fragment } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
