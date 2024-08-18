@@ -212,9 +212,9 @@ function Experience({ width }) {
                         opacity={0.8}
                         color={primaryFontColor}
                     >
-                        <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}</span>
+                        <span>{"<"}</span>
                         My Experience
-                        <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                        <span>{'>'}</span>
                     </Heading>
                     <Chrono
                         parseDetailsAsHTML
@@ -262,9 +262,9 @@ function Experience({ width }) {
                             role="heading" // Explicitly define the heading role
                             aria-level={1} // Define the level of the heading
                         >
-                            <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}</span>
+                            <span>{"<"}</span>
                             My Experience
-                            <span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                            <span>{'>'}</span>
                         </Heading>
                         <Chrono
                             parseDetailsAsHTML

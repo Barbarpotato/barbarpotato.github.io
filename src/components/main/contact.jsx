@@ -73,8 +73,8 @@ function Contact({ width }) {
                         transition={{ duration: 3 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: false }}>
-                        <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                        </span>Contact Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                        <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                        </span>Contact Me<span>{'>'}</span>
                         </Heading>
                         <Flex mx={1} padding={5} justifyContent={'center'}>
                             <Flex mx={10} p={4} className='lighting-effect-pink' borderRadius={'2xl'} alignItems={'center'} backgroundColor={primaryColor}>
@@ -111,8 +111,8 @@ function Contact({ width }) {
                             transition={{ duration: 3 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: false }}>
-                            <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                            </span>Contact Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                            <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                            </span>Contact Me<span>{'>'}</span>
                             </Heading>
                             <Flex mx={1} px={5} pb={20} justifyContent={'center'}>
                                 <Box p={4} className='lighting-effect-pink' borderRadius={'2xl'} alignItems={'center'} backgroundColor={primaryColor}>

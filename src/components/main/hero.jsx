@@ -131,10 +131,10 @@ function Hero({ typeWriter, width }) {
             ) : (
                 <Box>
                     <Box py={10} textAlign={'center'}>
-                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>Hi,</Text>
-                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={primaryFontColor}>I'm Darmawan,</Text>
-                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '40px' : '60px' }} color={ternaryColor}>Software Engineer</Text>
-                        <Text fontWeight={'bold'} style={{ fontSize: width < 768 ? '14px' : '25px' }} color={'#505d83'}>
+                        <Text fontWeight={'bold'} fontSize={width < 768 ? '40px' : '60px'} color={primaryFontColor}>Hi,</Text>
+                        <Text fontWeight={'bold'} fontSize={width < 768 ? '40px' : '60px'} color={primaryFontColor}>I'm Darmawan,</Text>
+                        <Text fontWeight={'bold'} fontSize={width < 768 ? '40px' : '60px'} color={ternaryColor}>Software Engineer</Text>
+                        <Text fontWeight={'bold'} paddingInline={'20px'} fontSize={width < 768 ? '14px' : '60px'} color={'#505d83'}>
                             {renderTypewriter()}
                         </Text>
                         <Flex justifyContent={'center'} gap={5} py={5}>
@@ -178,7 +178,7 @@ function Hero({ typeWriter, width }) {
 
                     </Box>
                     <div className='text-shpere'>
-                        <span className='tagcloud' style={{ fontSize: width < 768 ? '12px' : '25px' }}></span>
+                        <span className='tagcloud'></span>
                     </div>
                 </Box>
             )}

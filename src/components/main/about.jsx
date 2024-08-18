@@ -36,8 +36,8 @@ function About({ aboutMe, width }) {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}>
                             <Box my={5}>
-                                <Heading id='aboutme' opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                                </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                                <Heading id='aboutme' opacity={0.8} color={primaryFontColor}><span>{"<"}
+                                </span>About Me<span>{'>'}</span>
                                 </Heading>
                             </Box>
                         </motion.div>
@@ -81,8 +81,8 @@ function About({ aboutMe, width }) {
                         </Center>
 
                         <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
-                            <Heading id='aboutme' my={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                            </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                            <Heading id='aboutme' my={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                            </span>About Me<span>{'>'}</span>
                             </Heading>
 
                             <Box mx={12}>
@@ -123,8 +123,8 @@ function About({ aboutMe, width }) {
                                 <Image alt='Darmawan Avatar' className='mobile-avatar' w={'300px'} height={'300px'} src={avatarUrl} />
                             </Center>
                             <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
-                                <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                                </span>About Me<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                                <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                                </span>About Me<span>{'>'}</span>
                                 </Heading>
 
                                 <Box mx={2}>

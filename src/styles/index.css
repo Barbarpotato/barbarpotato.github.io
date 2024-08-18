@@ -14,7 +14,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
+span {
+  color: rgba(134, 107, 171, 0.8)
+}
 
 #root {
   background: #292b37;
@@ -91,6 +93,12 @@
   font-weight: 600;
   letter-spacing: 0.0625em;
   font-size: 1.3em;
+}
+
+@media (max-width: 767px) {
+  .tagcloud {
+    font-size: 12px;
+  }
 }
 
 /* Change color of each text in sphere on hover   */

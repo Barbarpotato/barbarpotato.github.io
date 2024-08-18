@@ -59,8 +59,8 @@ function Project({ contents, width }) {
                     viewport={{ once: false }}>
                     <Fragment>
 
-                        <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                        </span>My Projects<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                        <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                        </span>My Projects<span>{'>'}</span>
                         </Heading>
 
                         <Flex justifyContent={'center'} marginInline={"15%"}>
@@ -156,8 +156,8 @@ function Project({ contents, width }) {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: false }}>
 
-                            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                            </span>My Projects<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                            </span>My Projects<span>{'>'}</span>
                             </Heading>
 
                             {tabletContents.map((contentArray, idx) => (
@@ -227,8 +227,8 @@ function Project({ contents, width }) {
                         transition={{ duration: 3 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: false }}>
-                        <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{"<"}
-                        </span>My Projects<span style={{ color: 'rgba(134, 107, 171, 0.8)' }}>{'>'}</span>
+                        <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
+                        </span>My Projects<span>{'>'}</span>
                         </Heading>
                         {
                             contents.map((object, idx) => (
