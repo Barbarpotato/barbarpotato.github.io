@@ -42,7 +42,7 @@ function HeroMobile({ renderTypewriter, width }) {
                 <Text fontWeight={'bold'} fontSize={width < 768 ? '30px' : '60px'} color={primaryFontColor}>Hi,</Text>
                 <Text fontWeight={'bold'} fontSize={width < 768 ? '30px' : '60px'} color={primaryFontColor}>I'm Darmawan,</Text>
                 <Text fontWeight={'bold'} fontSize={width < 768 ? '30px' : '60px'} color={ternaryColor}>Software Engineer</Text>
-                <Text fontWeight={'bold'} paddingInline={'20px'} fontSize={width < 768 ? '14px' : '20px'} color={'#505d83'}>
+                <Text fontWeight={'bold'} paddingInline={'20px'} fontSize={width < 768 ? '14px' : '20px'} color={primaryFontColor}>
                     {renderTypewriter()}
                 </Text>
                 <Flex justifyContent={'center'} gap={5} py={5}>

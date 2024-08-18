@@ -5,7 +5,7 @@ import { Chrono } from 'react-chrono';
 
 const customContentMobile = [
     <Fragment key="kurniawan-mobile">
-        <Box p={4}>
+        <Box m={1}>
             <Heading fontSize="2xl" color={primaryFontColor}>
                 PT. Samamaju Prima
                 <Badge fontSize="0.6em" colorScheme="purple">Software Engineer</Badge>
@@ -21,7 +21,7 @@ const customContentMobile = [
         </Box>
     </Fragment>,
     <Fragment key="nocode-mobile">
-        <Box m={5}>
+        <Box m={1}>
             <Heading fontSize="2xl" color={primaryFontColor}>
                 Nocode Magician
                 <Badge fontSize="0.6em" colorScheme="purple">Front-End Developer</Badge>
@@ -38,7 +38,7 @@ const customContentMobile = [
         </Box>
     </Fragment>,
     <Fragment key="yamali-tb-mobile" boxShadow="dark-lg" className="lighting-effect-blue" w="80%" borderRadius="xl" mx={2} my={10} backgroundColor={primaryColor}>
-        <Box m={5}>
+        <Box m={1}>
             <Heading fontSize="2xl" color={primaryFontColor}>
                 YAMALI TB
                 <Badge fontSize="0.6em" colorScheme="purple">IT & Database</Badge>
@@ -54,10 +54,10 @@ const customContentMobile = [
         </Box>
     </Fragment>,
     <Fragment key="bangkit-mobile">
-        <Box m={5}>
+        <Box m={1}>
             <Heading fontSize="2xl" color={primaryFontColor}>
                 Bangkit Academy
-                <Badge fontSize="0.6em" colorScheme="purple">Machine Learning Path Cohort</Badge>
+                <Badge fontSize="0.6em" colorScheme="purple">ML Path Cohort</Badge>
             </Heading>
             <Text color={primaryFontColor} opacity={0.5} fontWeight="bold">by Google, GoTo, Traveloka</Text>
             <Text color={primaryFontColor} my={4}>January 2023 - December 2023</Text>

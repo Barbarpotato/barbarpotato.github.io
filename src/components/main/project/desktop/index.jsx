@@ -80,14 +80,14 @@ function ProjectDesktop({ desktopContent, handleOnClickProjectCard }) {
                                 key={`right-partition-${idx}`} className='project-card' margin={5} boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW={'sm'}>
                                 <CardBody>
                                     <Box className='zoom-container'>
-                                        <Image alt={content.heading} width={"300px"} height={"300px"} src={content.imageUrl} />
+                                        <Image loading='lazy' alt={content.heading} width={"300px"} height={"300px"} src={content.imageUrl} />
                                     </Box>
                                     <Stack mt='6' spacing='3'>
                                         <Heading color={primaryFontColor}>{content.heading}</Heading>
                                         <Text color={primaryFontColor} fontWeight={'bold'}>{content.text}</Text>
                                         <Flex alignItems={'center'}>
                                             <p>
-                                                <img width={'350px'} height={"50px"} src={content.skillsUrl} alt="skills" />
+                                                <img loading='lazy' width={'350px'} height={"50px"} src={content.skillsUrl} alt="skills" />
                                             </p>
                                         </Flex>
                                     </Stack>

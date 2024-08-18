@@ -5,7 +5,7 @@ function AboutMobile({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
     return (
         <Box pt={5} w={'100%'} position={'relative'}>
             <Center>
-                <Image alt='Darmawan Avatar' className='mobile-avatar' w={'300px'} height={'300px'} src={avatarUrl} />
+                <Image loading='lazy' alt='Darmawan Avatar' className='mobile-avatar' w={'300px'} height={'300px'} src={avatarUrl} />
             </Center>
             <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
                 <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}

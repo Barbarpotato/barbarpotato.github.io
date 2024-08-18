@@ -15,7 +15,7 @@ function ProjectMobile({ contents, width, handleOnClickProjectCard }) {
                             onClick={() => handleOnClickProjectCard(object)} cursor={'pointer'}
                             boxShadow={'dark-lg'} backgroundColor={primaryColor} maxW='xl'>
                             <CardBody>
-                                <Image width={width} height={"250px"}
+                                <Image loading='lazy' width={width} height={"250px"}
                                     src={object.imageUrl}
                                     alt={`Image for ${object.heading}`}
                                 />
@@ -24,7 +24,7 @@ function ProjectMobile({ contents, width, handleOnClickProjectCard }) {
                                     <Text color={primaryFontColor} fontWeight={'bold'}>{object.text}</Text>
                                     <Flex alignItems={'center'}>
                                         <p align="center">
-                                            <img width={"250px"} height={"50px"} src={object.skillsUrl} alt={'Skills'} />
+                                            <img loading='lazy' width={"250px"} height={"50px"} src={object.skillsUrl} alt={'Skills'} />
                                         </p>
                                     </Flex>
                                 </Stack>

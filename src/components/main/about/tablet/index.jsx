@@ -10,7 +10,7 @@ function AboutTablet({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
             whileInView={{ opacity: 1 }}>
             <Box pt={20} w={'100%'} position={'relative'} className='hero-medium'>
                 <Center>
-                    <Image alt='Darmawan Avatar' className='mobile-avatar' w={'500px'} height={'450px'} src={avatarUrl} />
+                    <Image loading='lazy' alt='Darmawan Avatar' className='mobile-avatar' w={'500px'} height={'450px'} src={avatarUrl} />
                 </Center>
 
                 <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>

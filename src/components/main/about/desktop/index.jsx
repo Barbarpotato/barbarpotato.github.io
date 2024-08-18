@@ -11,7 +11,7 @@ function AboutDesktop({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}>
                 <Box pl={20}  >
-                    <Image alt='Darmawan Avatar' className='avatar' src={avatarUrl} />
+                    <Image loading='lazy' alt='Darmawan Avatar' className='avatar' src={avatarUrl} />
                 </Box>
             </motion.div >
 

@@ -41,7 +41,7 @@ function HeroDesktop({ renderTypewriter, width }) {
                 <Text fontWeight={'bold'} fontSize={'7xl'} color={primaryFontColor}>Hi,</Text>
                 <Text fontWeight={'bold'} fontSize={'7xl'} color={primaryFontColor}>I'm Darmawan,</Text>
                 <Text fontWeight={'bold'} fontSize={'7xl'} color={ternaryColor}>Software Engineer</Text>
-                <Text width={"90%"} fontWeight={'bold'} fontSize={'xl'} color={'#505d83'}>
+                <Text width={"90%"} fontWeight={'bold'} fontSize={'xl'} color={primaryFontColor}>
                     {renderTypewriter()}
                 </Text>
                 <motion.div

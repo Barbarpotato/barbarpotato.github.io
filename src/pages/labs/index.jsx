@@ -3,13 +3,13 @@ import useWindowSize from '../../hooks/useWindowSize'
 import { motion } from 'framer-motion'
 import { primaryFontColor, ternaryColor } from '../../theme/globalTheme'
 import { Box, Text, Input, Flex, Button, Heading } from '@chakra-ui/react'
-import Navigation from '../../components/navigation'
+import Navigation from '../../components/navigation/index'
 import { useDatablogs } from '../../api/blog'
-import Herolabs from '../../components/labs/heroLabs'
+import Herolabs from '../../components/labs/hero/index'
 import ChatbotButton from '../../components/chatbot/ChatbotButton'
-import LabContent from '../../components/labs/labContent'
-import Footer from '../../components/footer'
-import Loading from '../../components/loading'
+import Content from '../../components/labs/content/index'
+import Footer from '../../components/footer/index'
+import Loading from '../../components/loading/index'
 
 function Labs() {
 
@@ -33,7 +33,9 @@ function Labs() {
                     :
                     <Fragment>
                         <Navigation width={width} />
+
                         <Herolabs />
+
                         <ChatbotButton />
 
                         <motion.div
@@ -88,7 +90,7 @@ function Labs() {
                         </motion.div>
 
                         {
-                            isFetching ? <Loading /> : <LabContent blog={blogs} itemsPerPage={9} width={width} />
+                            isFetching ? <Loading /> : <Content blog={blogs} itemsPerPage={9} width={width} />
                         }
                         <Box mt={200}>
                             <Footer />
