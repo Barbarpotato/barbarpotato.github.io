@@ -271,14 +271,14 @@
 
 .react-chatbot-kit-chat-container {
   z-index: 1;
-  position: fixed;
+  position: fixed !important;
   bottom: 100px;
   right: 20px;
   max-width: 300px;
   background-color: #282a36;
   border: 1px solid #ccc;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .react-chatbot-kit-chat-message-container {
@@ -287,8 +287,8 @@
 }
 
 .react-chatbot-kit-chat-header {
-  background-color: #ff79c6;
-  color: aliceblue;
+  background-color: #ff79c6 !important;
+  color: aliceblue !important;
 }
 
 .chatbot-toggle-button {
