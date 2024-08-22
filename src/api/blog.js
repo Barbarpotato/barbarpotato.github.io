@@ -25,7 +25,8 @@ const fetchBlogs = async (searchQuery) => {
  */
 export const useDatablogs = (searchQuery) => {
     return useQuery('blogs-data', () => fetchBlogs(searchQuery), {
-        cacheTime: 3600000
+        cacheTime: 3600000,
+        staleTime: 1800000
     })
 }
 
@@ -38,8 +39,6 @@ export const useDatablogs = (searchQuery) => {
  */
 const fetchBlogDetail = async (blogId) => {
     const url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blog/${blogId}`;
-
-    const headers = new Headers();
 
     const response = await fetch(url, {
         method: 'GET',
@@ -58,6 +57,7 @@ const fetchBlogDetail = async (blogId) => {
 export const useDataBlogDetail = (blogId) => {
     return useQuery(['blog', blogId], () => fetchBlogDetail(blogId), {
         cacheTime: 3600000,
+        staleTime: 1800000,
         select: (data) => {
             if (data.length > 0) {
                 return data[0]

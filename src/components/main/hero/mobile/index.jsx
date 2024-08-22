@@ -50,7 +50,7 @@ function HeroMobile({ renderTypewriter, width }) {
                         <Button size={width < 768 ? 'sm' : 'lg'} fontWeight={'bold'} colorScheme='purple' color={'black'}>My Lab 🧪</Button>
                     </Link>
                     <Button
-                        size={"sm"}
+                        size={width < 768 ? 'sm' : 'lg'}
                         fontWeight="bold"
                         colorScheme="purple"
                         variant="outline"

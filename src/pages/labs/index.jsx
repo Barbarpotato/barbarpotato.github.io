@@ -17,7 +17,7 @@ function Labs() {
 
     const [searchQuery, setSearchQuery] = useState("");
 
-    const { data: blogs, isLoading, isError, isFetching, refetch } = useDatablogs(searchQuery)
+    const { data: blogs, isLoading, isError, refetch } = useDatablogs(searchQuery)
 
     return (
         <Fragment>
@@ -28,76 +28,73 @@ function Labs() {
                     </Fragment>
                 )
             }
-            {
-                isLoading ? <Loading />
-                    :
-                    <Fragment>
-                        <Navigation width={width} />
 
-                        <Herolabs />
+            <Fragment>
+                <Navigation width={width} />
 
-                        <ChatbotButton />
+                <Herolabs />
 
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                duration: 0.5,
-                                delay: 1.5,
-                                ease: [0, 0.71, 0.2, 1.01]
-                            }}>
-                            <Heading textAlign={'center'} size={width > 768 ? 'xl' : 'md'} marginTop={width > 768 ? '100px' : '30px'} marginBottom={'30px'} color={primaryFontColor}>What Are You Looking For?</Heading>
-                            <Flex
-                                width={'100%'}
-                                justifyContent={'center'}
-                                alignItems={'center'}
-                                mt={4} // Optional: to add some top margin
+                <ChatbotButton />
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        duration: 0.5,
+                        delay: 1.5,
+                        ease: [0, 0.71, 0.2, 1.01]
+                    }}>
+                    <Heading textAlign={'center'} size={width > 768 ? 'xl' : 'md'} marginTop={width > 768 ? '100px' : '30px'} marginBottom={'30px'} color={primaryFontColor}>What Are You Looking For?</Heading>
+                    <Flex
+                        width={'100%'}
+                        justifyContent={'center'}
+                        alignItems={'center'}
+                        mt={4} // Optional: to add some top margin
+                    >
+                        <Flex
+                            width={width >= 1280 ? '50%' : '80%'}
+                            justifyContent={'center'}
+                            alignItems={'center'}
+                        >
+                            <Input
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                value={searchQuery}
+                                placeholder='Search Content Labs...'
+                                color={primaryFontColor}
+                                borderTopLeftRadius={'2xl'}
+                                borderBottomLeftRadius={'2xl'}
+                                borderTopRightRadius={'0'}
+                                borderBottomRightRadius={'0'}
+                                size={width > 768 ? 'lg' : 'md'}
+                                borderWidth={3}
+                                colorScheme='purple'
+                                borderColor={"#536189"}
+                                focusBorderColor={ternaryColor}
+                            />
+                            <Button
+                                borderTopLeftRadius={'0'}
+                                borderBottomLeftRadius={'0'}
+                                size={width > 768 ? 'lg' : 'md'}
+                                onClick={() => refetch()}
+                                fontWeight={'bold'}
+                                colorScheme='purple'
+                                color={'black'}
                             >
-                                <Flex
-                                    width={width >= 1280 ? '50%' : '80%'}
-                                    justifyContent={'center'}
-                                    alignItems={'center'}
-                                >
-                                    <Input
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                        value={searchQuery}
-                                        placeholder='Search Content Labs...'
-                                        color={primaryFontColor}
-                                        borderTopLeftRadius={'2xl'}
-                                        borderBottomLeftRadius={'2xl'}
-                                        borderTopRightRadius={'0'}
-                                        borderBottomRightRadius={'0'}
-                                        size={width > 768 ? 'lg' : 'md'}
-                                        borderWidth={3}
-                                        colorScheme='purple'
-                                        borderColor={"#536189"}
-                                        focusBorderColor={ternaryColor}
-                                    />
-                                    <Button
-                                        borderTopLeftRadius={'0'}
-                                        borderBottomLeftRadius={'0'}
-                                        size={width > 768 ? 'lg' : 'md'}
-                                        onClick={() => refetch()}
-                                        fontWeight={'bold'}
-                                        colorScheme='purple'
-                                        color={'black'}
-                                    >
-                                        Search
-                                    </Button>
-                                </Flex>
-                            </Flex>
+                                Search
+                            </Button>
+                        </Flex>
+                    </Flex>
 
-                        </motion.div>
-
-                        {
-                            isFetching ? <Loading /> : <Content blog={blogs} itemsPerPage={9} width={width} />
-                        }
-                        <Box mt={200}>
-                            <Footer />
-                        </Box>
-
-                    </Fragment>
-            }
+                </motion.div>
+                {
+                    isLoading ? <Loading />
+                        :
+                        <Content blog={blogs} itemsPerPage={9} width={width} />
+                }
+                <Box mt={200}>
+                    <Footer />
+                </Box>
+            </Fragment>
         </Fragment >
     )
 }

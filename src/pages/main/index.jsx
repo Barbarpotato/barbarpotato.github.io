@@ -15,32 +15,36 @@ import useWindowSize from '../../hooks/useWindowSize'
 function Index() {
 
     // feteching all necessary data and pass it to the components
-    const { data: typeWriter, isLoading: isLoadingTypeWriter } = useTypeWriter();
+    const { data: typeWriter } = useTypeWriter();
     const { data: aboutMe, isLoading: isLoadingAboutMe } = useAboutme();
     const { data: projects, isLoading: isLoadingProject } = useProjects();
 
     // make sure all data is loaded before rendering
-    const isLoading = isLoadingTypeWriter || isLoadingAboutMe || isLoadingProject
+    const isLoading = isLoadingAboutMe || isLoadingProject
 
     // centralizing the width hook state
     const { width } = useWindowSize()
 
     return (
         <Fragment>
-            {isLoading ?
-                <Loading />
-                :
-                <Fragment>
-                    <Navigation width={width} />
-                    <ChatbotButton />
-                    <Hero typeWriter={typeWriter} width={width} />
-                    <About aboutMe={aboutMe} width={width} />
-                    <Project contents={projects} width={width} />
-                    <Experience width={width} />
-                    <Contact width={width} />
-                    <Footer width={width} />
-                </Fragment>
-            }
+
+            <Fragment>
+                <Navigation width={width} />
+                <ChatbotButton />
+                <Hero typeWriter={typeWriter} width={width} />
+                {
+                    isLoading ? <Loading />
+                        :
+                        <Fragment>
+                            <About aboutMe={aboutMe} width={width} />
+                            <Project contents={projects} width={width} />
+                            <Experience width={width} />
+                            <Contact width={width} />
+                        </Fragment>
+                }
+                <Footer width={width} />
+            </Fragment>
+
         </Fragment>
     )
 }

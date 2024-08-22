@@ -24,6 +24,7 @@ const fetchTypewriter = async () => {
 export const useTypeWriter = () => {
     return useQuery('typwriter-data', () => fetchTypewriter(), {
         cacheTime: 3600000,
+        staleTime: 3600000,
         select: (data) => {
             if (data.length > 0) return data.map(object => object.title)
             else return []
@@ -55,6 +56,7 @@ const fetchAboutme = async () => {
 export const useAboutme = () => {
     return useQuery('aboutme-data', () => fetchAboutme(), {
         cacheTime: 3600000,
+        staleTime: 3600000,
         select: (data) => {
             if (data.length > 0) return data[0].content
             else return ""
@@ -85,6 +87,7 @@ const fetchProjects = async () => {
  */
 export const useProjects = () => {
     return useQuery('projects-data', () => fetchProjects(), {
-        cacheTime: 3600000
+        cacheTime: 3600000,
+        staleTime: 3600000,
     })
 }

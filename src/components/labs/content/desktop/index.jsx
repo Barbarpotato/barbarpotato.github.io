@@ -20,7 +20,7 @@ function Items({ blog, width }) {
                     delay: 1,
                     ease: [0, 0.71, 0.2, 1.01]
                 }}>
-                <Grid style={{ marginTop: '60px', marginInline: width > 768 ? '100px' : '20px' }} templateColumns={width < 1280 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'} gap={6} >
+                <Grid marginTop={"60px"} marginInline={width > 768 ? '12%' : '20px'} templateColumns={width < 1280 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)'} gap={6} >
                     {blog?.map((item) => (
                         <Card key={item.id} borderRadius={'2xl'} mb={20} height={width < 1280 ? '650px' : '500px'} boxShadow={'dark-lg'}>
                             <Box
