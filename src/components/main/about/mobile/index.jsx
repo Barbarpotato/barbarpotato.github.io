@@ -1,7 +1,7 @@
-import { Box, Heading, Image, Button, Center, Skeleton } from '@chakra-ui/react'
+import { Box, Heading, Image, Button, Center } from '@chakra-ui/react'
 import { primaryFontColor } from '../../../../theme/globalTheme'
 
-function AboutMobile({ isLoading, aboutMe, contentStyle, avatarUrl, resumeUrl }) {
+function AboutMobile({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
     return (
         <Box pt={5} w={'100%'} position={'relative'}>
             <Center>
@@ -13,11 +13,9 @@ function AboutMobile({ isLoading, aboutMe, contentStyle, avatarUrl, resumeUrl })
                 </Heading>
 
                 <Box mx={2}>
-                    <Skeleton isLoaded={!isLoading} startColor='purple.500' endColor='black.800' rounded={'2xl'}>
-                        <pre style={contentStyle}>
-                            {aboutMe}
-                        </pre>
-                    </Skeleton>
+                    <pre style={contentStyle}>
+                        {aboutMe}
+                    </pre>
                     <Button
                         as="a"
                         href={resumeUrl}

@@ -1,9 +1,8 @@
-import { Box, Flex, Heading, Image, Button, SkeletonText } from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Button } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { primaryFontColor } from '../../../../theme/globalTheme'
 
-function AboutDesktop({ isLoading, aboutMe, contentStyle, avatarUrl, resumeUrl }) {
-
+function AboutDesktop({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
     return (
         <Flex py={20} px={20} alignItems={'center'}>
             <motion.div
@@ -34,11 +33,9 @@ function AboutDesktop({ isLoading, aboutMe, contentStyle, avatarUrl, resumeUrl }
                     transition={{ duration: 3 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}>
-                    <SkeletonText isLoaded={!isLoading} startColor='purple.500' endColor='black.800' rounded={'2xl'}>
-                        <pre style={contentStyle}>
-                            {aboutMe}
-                        </pre>
-                    </SkeletonText>
+                    <pre style={contentStyle}>
+                        {aboutMe}
+                    </pre>
                     <Button
                         as="a"
                         href={resumeUrl}

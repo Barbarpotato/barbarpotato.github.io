@@ -1,8 +1,8 @@
-import { Box, Heading, Image, Button, Center, Skeleton } from '@chakra-ui/react'
+import { Box, Heading, Image, Button, Center } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { primaryFontColor } from '../../../../theme/globalTheme'
 
-function AboutTablet({ isLoading, aboutMe, contentStyle, avatarUrl, resumeUrl }) {
+function AboutTablet({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -19,11 +19,9 @@ function AboutTablet({ isLoading, aboutMe, contentStyle, avatarUrl, resumeUrl })
                     </Heading>
 
                     <Box mx={12}>
-                        <Skeleton isLoaded={!isLoading} startColor='purple.500' endColor='black.800' rounded={'2xl'}>
-                            <pre style={contentStyle}>
-                                {aboutMe}
-                            </pre>
-                        </Skeleton>
+                        <pre style={contentStyle}>
+                            {aboutMe}
+                        </pre>
                         <Button
                             as="a"
                             href={resumeUrl}
