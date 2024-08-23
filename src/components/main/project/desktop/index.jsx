@@ -7,8 +7,8 @@ import { motion } from "framer-motion"
 function ProjectDesktop({ isLoading, contents, handleOnClickProjectCard }) {
 
     const [desktopContent, setDesktopContent] = useState({
-        leftPartitions: [],
-        rightPartitions: []
+        leftPartitions: Array(5).fill({ imageUrl: '', heading: '', text: '', skillsUrl: '' }),
+        rightPartitions: Array(5).fill({ imageUrl: '', heading: '', text: '', skillsUrl: '' })
     })
 
     useEffect(() => {
