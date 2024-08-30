@@ -41,6 +41,7 @@ jobs:
         run: npm run build
         env:
           VITE_CERBERRY_ENDPOINT: ${{ secrets.VITE_CERBERRY_ENDPOINT}}
+          VITE_DARWIN_AI: ${{ secrets.VITE_DARWIN_AI}}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

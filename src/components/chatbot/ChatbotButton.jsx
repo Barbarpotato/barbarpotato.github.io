@@ -1,22 +1,26 @@
 import { MdSupportAgent } from "react-icons/md";
-import Chatbot from 'react-chatbot-kit'
 import config from "./config";
+import Loading from '../loading/index'
 import MessageParser from './MessageParser'
 import ActionProvider from './ActionProvider'
-import { Fragment, useState } from 'react'
+import { memo, Fragment, useState, lazy, Suspense } from 'react'
+
+const Chatbot = lazy(() => import('react-chatbot-kit'));
 
 function ChatbotButton() {
     const [activeChatBot, setActiveChatBot] = useState(false)
 
     return (
         <Fragment>
-            {
-                activeChatBot && <Chatbot
-                    config={config}
-                    messageParser={MessageParser}
-                    actionProvider={ActionProvider}
-                />
-            }
+            {activeChatBot && (
+                <Suspense fallback={<Loading />}>
+                    <Chatbot
+                        config={config}
+                        messageParser={MessageParser}
+                        actionProvider={ActionProvider}
+                    />
+                </Suspense>
+            )}
             <button
                 onClick={() => setActiveChatBot(!activeChatBot)}
                 className='chatbot-toggle-button'
@@ -28,4 +32,4 @@ function ChatbotButton() {
     )
 }
 
-export default ChatbotButton;
+export default memo(ChatbotButton);

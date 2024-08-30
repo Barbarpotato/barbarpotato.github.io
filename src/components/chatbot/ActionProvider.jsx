@@ -1,11 +1,100 @@
-import { dictionaryAPI } from '../../api/chatbot';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
-    const handleHello = () => {
+    const [darwinMessage, setDarwinMessage] = useState([
+        {
+            role: "system",
+            content:
+                "You are a helpful assistant named Darwin. Darmawan created you to assist with personal questions about him. " +
+                "Your primary role is to provide accurate and helpful responses based on the information you have about Darmawan. " +
+                "Darmawan is a Software Engineer who works at PT. Samamaju Prima to build and maintain software." +
+                "Darmawan is always eager to expand knowledge and keep up with the latest trends in software development. " +
+                "Darmawan is a good team player and always willing to help others. " +
+                "He is a good communicator and always willing to listen to others. " +
+                "He willing to learn others. not just programming" +
+                "Sometimes he create a blog in this website. he name it labs. because all the blog he post is about experiment and his learning." +
+                "Make sure to maintain a friendly and professional tone in your responses and offer help based on the details provided." +
+                "Make sure only responses that are relevant questions are provided."
+        }
+    ]);
 
-        sessionStorage.setItem("isPlaying", "false");
+    const handleComplexQuestions = async (message) => {
+        try {
+
+            if (!message) return;
+
+            const newMessages = [...darwinMessage, { role: "user", content: message }];
+            setDarwinMessage(newMessages);
+
+            const url = "https://api.arliai.com/v1/chat/completions";
+            const Darwin_API_KEY = import.meta.env.VITE_DARWIN_AI;
+
+            const payload = {
+                model: "Meta-Llama-3.1-8B-Instruct",
+                messages: newMessages,
+                repetition_penalty: 1.1,
+                temperature: 0.7,
+                top_p: 0.9,
+                top_k: 40,
+                max_tokens: 600,
+                stream: true
+            };
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${Darwin_API_KEY}`
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let completeContent = '';
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                const chunk = decoder.decode(value, { stream: true });
+                const lines = chunk.split('\n').filter(Boolean);
+                for (const line of lines) {
+                    const lineContent = line.trim();
+                    if (lineContent.startsWith('data:')) {
+                        const jsonData = lineContent.slice(5).trim();
+                        if (jsonData !== '[DONE]') {
+                            try {
+                                const parsed = JSON.parse(jsonData);
+                                if (parsed.choices && parsed.choices[0].delta.content) {
+                                    completeContent += parsed.choices[0].delta.content;
+                                }
+                            } catch (error) {
+                                handleHello();
+                            }
+                        }
+                    }
+                }
+            }
+
+            const botMessage = createChatBotMessage(completeContent, { withAvatar: false, widget: 'stopPlaying' });
+
+            // appending the history converstation with user
+            setDarwinMessage([...darwinMessage, { role: 'assistant', content: completeContent }]);
+
+            // caching all the messages for react chatbot kit lib
+            setState((prev) => ({
+                ...prev,
+                messages: [...prev.messages, botMessage],
+            }));
+
+        } catch (error) {
+            handleHello();
+        }
+    }
+
+
+    const handleHello = () => {
 
         const botMessage = createChatBotMessage(
             "oh, Hello!😁 Hopefully you have a wonderful day! I hope you've enjoyed browsing my website. Can I help you with anything else?",
@@ -18,9 +107,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         }))
     }
 
-    const handlePersonalInformation = () => {
 
-        sessionStorage.setItem("isPlaying", "false");
+    const handlePersonalInformation = () => {
 
         const botMessage = createChatBotMessage(
             "Well, He currently working as a Software Engineer in PT Samamaju Prima. He responsible with Design, Build and Maintain software",
@@ -35,8 +123,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
 
     const handleHiringReaction = () => {
-
-        sessionStorage.setItem("isPlaying", "false");
 
         const botMessage = createChatBotMessage(
             "Wow! 😱 Thank you for the opportunity. To send him a message and have a further discussion, I will redirect you to his LinkedIn",
@@ -53,105 +139,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         }))
     }
 
-    const handleInitiateDictionary = () => {
-
-        sessionStorage.setItem("isPlaying", "true");
-
-        const botMessage = createChatBotMessage(
-            "Great!!!🥰 Let's Play Dictionary game. You will ask me anything about the english word. and i will give you an answer about that word. Ready for your word!!!🤔",
-            { withAvatar: false }
-        );
-
-        setState((prev) => ({
-            ...prev,
-            messages: [...prev.messages, botMessage],
-        }))
-    }
-
-    const handleDictionaryApi = async (searchQuery) => {
-        try {
-
-            const response = await dictionaryAPI(searchQuery);
-
-            let messages = ""
-            const partOfSpeech = []
-
-            if (response.length > 0) {
-                if (response[0].meanings.length > 0) {
-                    sessionStorage.setItem("meaningDictionaries", JSON.stringify(response[0].meanings))
-                    messages = "Here are the list of meaning according to my knowledge base:"
-                    for (let i = 0; i < response[0].meanings.length; i++) {
-                        partOfSpeech.push(response[0].meanings[i].partOfSpeech)
-                    }
-                }
-            } else {
-                messages = "Sorry, I can't find any meaning for that word. Please give me another word."
-            }
-            sessionStorage.setItem("userQuery", searchQuery)
-            sessionStorage.setItem("partOfSpeech", JSON.stringify(partOfSpeech))
-
-            const botMessage = createChatBotMessage(messages,
-                { withAvatar: false, widget: 'partsOfSpeech' }
-            );
-
-            setState((prev) => ({
-                ...prev,
-                messages: [...prev.messages, botMessage],
-            }))
-
-        } catch (error) {
-            let messages = "Sorry, I can't find any meaning for that word. Please give me another word."
-
-            const botMessage = createChatBotMessage(messages, { withAvatar: false, widget: 'stopPlaying' });
-
-            setState((prev) => ({
-                ...prev,
-                messages: [...prev.messages, botMessage],
-            }))
-        }
-    }
-
-    const handleSpeechOptions = (value) => {
-
-        const dictionaries = JSON.parse(sessionStorage.getItem("meaningDictionaries"))
-
-        let meaning = dictionaries.filter((dictionary) => dictionary.partOfSpeech === value)
-
-        if (meaning.length > 0) meaning = meaning[0]
-
-        const definition = meaning.definitions[Math.floor(Math.random() * meaning.definitions.length)]
-
-        if (definition) {
-            const botMessage = createChatBotMessage(
-                `"${sessionStorage.getItem("userQuery")}" is ${definition.definition}. \n ${definition.example ? `For example: ${definition.example}` : ''} `,
-                {
-                    withAvatar: false,
-                    widget: "stopPlaying"
-                });
-            setState((prev) => ({
-                ...prev,
-                messages: [...prev.messages, botMessage],
-            }))
-        }
-
-    }
-
-    const handleStopPlaying = () => {
-
-        sessionStorage.setItem("isPlaying", "false");
-
-        const botMessage = createChatBotMessage(
-            "Okey Cool It was fun! Thanks for playing with me 🥰. Can I help you with anything else?",
-            { withAvatar: false, widget: 'initialMessage' }
-        );
-
-        setState((prev) => ({
-            ...prev,
-            messages: [...prev.messages, botMessage],
-        }))
-    }
-
-
     return (
         <div>
             {React.Children.map(children, (child) => {
@@ -160,10 +147,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                         handleHello,
                         handlePersonalInformation,
                         handleHiringReaction,
-                        handleInitiateDictionary,
-                        handleDictionaryApi,
-                        handleSpeechOptions,
-                        handleStopPlaying
+                        handleComplexQuestions,
                     },
                 });
             })}

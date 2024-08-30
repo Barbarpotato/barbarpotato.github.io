@@ -15,11 +15,7 @@ function InitialMessage({ actionProvider }) {
         {
             "message": "We'd like to hire you",
             "action": () => actionProvider.handleHiringReaction()
-        },
-        {
-            "message": "I want to play a game with you!",
-            "action": () => actionProvider.handleInitiateDictionary()
-        },
+        }
     ]
 
     return (

@@ -1,7 +1,5 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import SpeechOptions from './dictionaryGame/SpeechOptions';
 import InitialMessage from './InitialMessage';
-import StopPlaying from './dictionaryGame/StopPlaying';
 
 const config = {
     initialMessages: [
@@ -13,16 +11,7 @@ const config = {
         {
             widgetName: 'initialMessage',
             widgetFunc: (props) => <InitialMessage {...props} />
-        },
-        {
-            widgetName: 'partsOfSpeech',
-            widgetFunc: (props) => <SpeechOptions {...props} />
-        },
-        {
-            widgetName: 'stopPlaying',
-            widgetFunc: (props) => <StopPlaying {...props} />
         }
-
     ],
     customStyles: {
         botMessageBox: {

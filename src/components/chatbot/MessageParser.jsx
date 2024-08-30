@@ -3,10 +3,10 @@ import React from 'react';
 const MessageParser = ({ children, actions }) => {
 
     const parse = (message) => {
-        if (sessionStorage.getItem("isPlaying") === "true") {
-            actions.handleDictionaryApi(message)
+        if (!message) {
+            actions.handleHello();
         } else {
-            actions.handleHello()
+            actions.handleComplexQuestions(message);
         }
     };
 
