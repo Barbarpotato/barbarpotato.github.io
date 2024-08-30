@@ -50,6 +50,11 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                 body: JSON.stringify(payload)
             });
 
+            // handle properly if response is not ok
+            if (!response.ok) {
+                handleHello();
+            }
+
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
             let completeContent = '';
