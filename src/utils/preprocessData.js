@@ -12,7 +12,7 @@ export const chunkArray = (array, modulo) => {
     for (let i = 1; i <= array.length; i++) {
         if (i % modulo != 0) {
             if (i == array.length) {
-                chunkedArr.push([array[i - 1]]);
+                chunkedArr.push([...tempArr, array[i - 1]]);
             } else {
                 tempArr.push(array[i - 1]);
             }
@@ -28,7 +28,7 @@ export const chunkArray = (array, modulo) => {
 };
 
 /**
- * Preprocesing the data become the partitioned array
+ * Preprocesing the data become 2 partitioned array
  * create a function that returned two elements in an array
  * for example if the array parameter has length of 7
  * the function will return two elements in an array
@@ -39,10 +39,9 @@ export const chunkArray = (array, modulo) => {
 export const partitionArray = (array) => {
 
     const leftPartition = Math.round(array.length / 2);
-    const rightPartition = array.length - leftPartition;
 
     return [
         array.slice(0, leftPartition),
-        array.slice(rightPartition + 1, array.length)
+        array.slice(leftPartition, array.length + 1)
     ];
 }
