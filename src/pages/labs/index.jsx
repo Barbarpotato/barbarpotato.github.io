@@ -17,7 +17,7 @@ function Labs() {
 
     const [searchQuery, setSearchQuery] = useState("");
 
-    const { data: blogs, isLoading, isError, refetch } = useDatablogs(searchQuery)
+    const { data: blogs, isLoading, isError, refetch, isFetching } = useDatablogs(searchQuery)
 
     return (
         <Fragment>
@@ -57,6 +57,7 @@ function Labs() {
                             alignItems={'center'}
                         >
                             <Input
+                                isDisabled={isFetching}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 value={searchQuery}
                                 placeholder='Search Content Labs...'
@@ -70,8 +71,14 @@ function Labs() {
                                 colorScheme='purple'
                                 borderColor={"#536189"}
                                 focusBorderColor={ternaryColor}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        refetch();
+                                    }
+                                }}
                             />
                             <Button
+                                isLoading={isFetching}
                                 borderTopLeftRadius={'0'}
                                 borderBottomLeftRadius={'0'}
                                 size={width > 768 ? 'lg' : 'md'}
@@ -87,7 +94,7 @@ function Labs() {
 
                 </motion.div>
                 {
-                    isLoading ? <Loading />
+                    isFetching ? <Loading />
                         :
                         <Content blog={blogs} itemsPerPage={9} width={width} />
                 }
