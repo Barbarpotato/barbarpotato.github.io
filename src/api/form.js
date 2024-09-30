@@ -6,7 +6,7 @@
  */
 export const sendContactMessage = async (reqBody) => {
 
-    const url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/form/contact_us`;
+    const url = `${import.meta.env.VITE_HECATE_ENDPOINT}/api/forms`;
 
     const response = await fetch(url, {
         method: 'POST',

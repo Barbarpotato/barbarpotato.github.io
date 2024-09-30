@@ -7,7 +7,7 @@ import { useQuery } from "react-query";
  */
 const fetchTypewriter = async () => {
 
-    const url = `https://hecate-cms.vercel.app/api/typewriter`;
+    const url = `${import.meta.env.VITE_HECATE_ENDPOINT}/api/typewriter`;
 
     const response = await fetch(url, {
         method: 'GET',
@@ -39,7 +39,7 @@ export const useTypeWriter = () => {
  */
 const fetchAboutme = async () => {
 
-    const url = `https://hecate-cms.vercel.app/api/aboutme`;
+    const url = `${import.meta.env.VITE_HECATE_ENDPOINT}/api/aboutme`;
 
     const response = await fetch(url, {
         method: 'GET',
@@ -71,7 +71,7 @@ export const useAboutme = () => {
  */
 const fetchProjects = async () => {
 
-    const url = `https://hecate-cms.vercel.app/api/projects`;
+    const url = `${import.meta.env.VITE_HECATE_ENDPOINT}/api/projects`;
 
     const response = await fetch(url, {
         method: 'GET',
