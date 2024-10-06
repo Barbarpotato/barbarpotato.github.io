@@ -1,5 +1,5 @@
 import { Card, CardBody, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, ternaryColor, secondaryColor } from '../../../../theme/globalTheme'
 import { Fragment } from 'react'
 import { motion } from "framer-motion"
 
@@ -11,8 +11,8 @@ function ProjectTablet({ tabletContents, handleOnClickProjectCard }) {
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}>
 
-            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-            </span>My Projects<span>{'>'}</span>
+            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+            </span>Projects<span style={{ color: secondaryColor }}>{' />'}</span>
             </Heading>
 
             {tabletContents.map((contentArray, idx) => (

@@ -21,7 +21,7 @@ function Hero({ typeWriter, width }) {
 
     return (
         <Suspense fallback={<Loading />}>
-            {width >= 1280 ?
+            {width >= 1440 ?
                 <HeroDesktop renderTypewriter={renderTypewriter} width={width} />
                 :
                 <HeroMobile renderTypewriter={renderTypewriter} width={width} />}

@@ -1,5 +1,5 @@
 import { Card, CardBody, Flex, Heading, Image, Stack, Text, Box } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, secondaryColor, ternaryColor } from '../../../../theme/globalTheme'
 import { Fragment } from 'react'
 import { motion } from "framer-motion"
 
@@ -13,8 +13,8 @@ function ProjectDesktop({ desktopContent, handleOnClickProjectCard }) {
             viewport={{ once: false }}>
             <Fragment>
 
-                <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-                </span>My Projects<span>{'>'}</span>
+                <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+                </span>Projects<span style={{ color: secondaryColor }}>{' />'}</span>
                 </Heading>
 
                 <Flex justifyContent={'center'} marginInline={"15%"}>

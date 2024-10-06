@@ -32,6 +32,35 @@ export const useDatablogs = (searchQuery) => {
 
 
 /**
+ * Fetches the latest blog from the backend server.
+ * 
+ * @return {Promise} A promise that resolves with the JSON response containing the fetched blog.
+ */
+const fetchBlogLatest = async () => {
+
+    const url = `${import.meta.env.VITE_CERBERRY_ENDPOINT}/blogs/latest`;
+
+    const response = await fetch(url, {
+        method: 'GET',
+    })
+    if (!response.ok) throw new Error('Failed to fetch blogs')
+    return response.json()
+}
+
+
+/**
+ * Returns the result of a query for fetching latest blog data.
+ * 
+ * @return {object} The result of the query for fetching latest blog data.
+ */
+export const useDataBlogLatest = () => {
+    return useQuery('blog-latest', () => fetchBlogLatest(), {
+        cacheTime: 3600000,
+        staleTime: 1800000
+    })
+}
+
+/**
  * Fetches the details of a blog using the blog ID.
  *
  * @param {String} blogId - The ID of the blog to fetch details for

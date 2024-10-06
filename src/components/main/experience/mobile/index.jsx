@@ -1,5 +1,5 @@
 import { Heading, Box, Text, Badge } from '@chakra-ui/react'
-import { primaryFontColor, primaryColor } from '../../../../theme/globalTheme';
+import { primaryFontColor, primaryColor, secondaryColor } from '../../../../theme/globalTheme';
 import React, { Fragment, useEffect } from 'react'
 import { Chrono } from 'react-chrono';
 
@@ -85,18 +85,16 @@ function Experience({ itemsTimeline }) {
         <Fragment>
 
             <Heading
-                id="experience-heading" // ID to link with aria-labelledby
+                id="experience-heading" // ID for linking with aria-labelledby
                 pt={20}
                 pb={10}
                 textAlign={'center'}
                 opacity={0.8}
                 color={primaryFontColor}
-                role="heading" // Explicitly define the heading role
-                aria-level={1} // Define the level of the heading
             >
-                <span>{"<"}</span>
-                My Experience
-                <span>{'>'}</span>
+                <span style={{ color: secondaryColor }}>{"<"}</span>
+                Experience
+                <span style={{ color: secondaryColor }}>{' />'}</span>
             </Heading>
 
             <Chrono

@@ -9,7 +9,7 @@ function Navigation({ width }) {
     const navigate = useNavigate()
 
     return (
-        <Flex p={width > 768 ? 10 : 2} alignItems='center' gap='2'>
+        <Flex id='navigation' p={width > 768 ? 10 : 2} alignItems='center' gap='2'>
             <Flex p='2'>
                 <Heading onClick={() => navigate('/')} cursor={'pointer'} id='navigation' fontSize={'2xl'} color={primaryFontColor} size='md'><span style={{ color: secondaryColor, fontWeight: 'bold' }}>🚀D</span>armawan</Heading>
             </Flex>
@@ -31,7 +31,15 @@ function Navigation({ width }) {
                 {location.pathname === '/labs' && (
                     <Fragment>
                         <Link to={'/'}>
-                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Home</a></Heading>
+                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Back to Home</a></Heading>
+                        </Link>
+                    </Fragment>
+                )}
+
+                {location.pathname.includes('/lab/') && (
+                    <Fragment>
+                        <Link to={'/labs'}>
+                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Back to Labs</a></Heading>
                         </Link>
                     </Fragment>
                 )}

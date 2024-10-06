@@ -83,17 +83,37 @@ function HeroDesktop({ renderTypewriter, width }) {
                     </Flex>
                     <IconContext.Provider value={{ color: "#615a87", size: width < 768 ? "1.5em" : "2.5em" }}>
                         <Box mt={6}>
-                            <a target='_blank' href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1' rel="noreferrer" aria-label="Visit Darmawan's Instagram profile">
+                            <a
+                                style={{ display: 'inline-block' }}
+                                target='_blank'
+                                href='https://www.instagram.com/darmajr94?igsh=OGgwNTRnaGFxeTY1'
+                                rel="noreferrer"
+                                aria-label="Visit Darmawan's Instagram profile"
+                            >
                                 <FaInstagram className='social-icon' />
                             </a>
                         </Box>
+
                         <Box mt={6}>
-                            <a target='_blank' href='https://www.linkedin.com/in/darmawan-jr-b16135220/' rel="noreferrer" aria-label="Visit Darmawan's LinkedIn profile">
+                            <a
+                                style={{ display: 'inline-block' }}
+                                target='_blank'
+                                href='https://www.linkedin.com/in/darmawan-jr-b16135220/'
+                                rel="noreferrer"
+                                aria-label="Visit Darmawan's LinkedIn profile"
+                            >
                                 <FaLinkedin className='social-icon' />
                             </a>
                         </Box>
+
                         <Box mt={6}>
-                            <a target='_blank' href='https://github.com/Barbarpotato' rel="noreferrer" aria-label="Visit Darmawan's GitHub profile">
+                            <a
+                                style={{ display: 'inline-block' }}
+                                target='_blank'
+                                href='https://github.com/Barbarpotato'
+                                rel="noreferrer"
+                                aria-label="Visit Darmawan's GitHub profile"
+                            >
                                 <FaGithub className='social-icon' />
                             </a>
                         </Box>
@@ -113,7 +133,7 @@ function HeroDesktop({ renderTypewriter, width }) {
                     <span className='tagcloud'></span>
                 </motion.div>
             </Box>
-        </Flex>
+        </Flex >
     );
 }
 

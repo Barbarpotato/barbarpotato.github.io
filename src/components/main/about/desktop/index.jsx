@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Image, Button } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { primaryFontColor } from '../../../../theme/globalTheme'
+import { primaryFontColor, secondaryColor } from '../../../../theme/globalTheme'
 
 function AboutDesktop({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
     return (
@@ -22,8 +22,8 @@ function AboutDesktop({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}>
                     <Box my={5}>
-                        <Heading id='aboutme' opacity={0.8} color={primaryFontColor}><span>{"<"}
-                        </span>About Me<span>{'>'}</span>
+                        <Heading id='aboutme' opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+                        </span>About Me<span style={{ color: secondaryColor }}>{' />'}</span>
                         </Heading>
                     </Box>
                 </motion.div>

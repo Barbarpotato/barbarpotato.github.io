@@ -1,12 +1,12 @@
 import { Card, CardBody, Center, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
-import { primaryColor, primaryFontColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, secondaryColor } from '../../../../theme/globalTheme'
 import { Fragment } from 'react'
 
 function ProjectMobile({ contents, width, handleOnClickProjectCard }) {
     return (
         <Fragment>
-            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-            </span>My Projects<span>{'>'}</span>
+            <Heading id='myproject' my={20} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+            </span>Projects<span style={{ color: secondaryColor }}>{' />'}</span>
             </Heading>
             {
                 contents.map((object, idx) => (

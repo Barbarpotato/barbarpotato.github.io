@@ -1,13 +1,13 @@
 import { Heading, Flex, Box, Input, Textarea, Button, Text } from '@chakra-ui/react'
 import { Fragment } from 'react'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, ternaryColor, secondaryColor } from '../../../../theme/globalTheme'
 
 function Contact({ handleSendMessage, isLoading,
     contactMessage, setContactMessage, respMessage }) {
     return (
         <Fragment>
-            <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-            </span>Contact Me<span>{'>'}</span>
+            <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+            </span>Contact Me<span style={{ color: secondaryColor }}>{' />'}</span>
             </Heading>
             <Flex mx={1} px={5} pb={20} justifyContent={'center'}>
                 <Box p={4} className='lighting-effect-pink' borderRadius={'2xl'} alignItems={'center'} backgroundColor={primaryColor}>

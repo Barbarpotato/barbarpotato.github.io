@@ -11,6 +11,8 @@ import Contact from '../../components/main/contact/index'
 import Footer from '../../components/footer'
 import 'react-chatbot-kit/build/main.css'
 import useWindowSize from '../../hooks/useWindowSize'
+import LandingLab from '../../components/main/labs'
+import { useDataBlogLatest } from '../../api/blog'
 
 function Index() {
 
@@ -18,9 +20,10 @@ function Index() {
     const { data: typeWriter } = useTypeWriter();
     const { data: aboutMe, isLoading: isLoadingAboutMe } = useAboutme();
     const { data: projects, isLoading: isLoadingProject } = useProjects();
+    const { data: latestLabs, isLoading: isLoadingLabs } = useDataBlogLatest();
 
     // make sure all data is loaded before rendering
-    const isLoading = isLoadingAboutMe || isLoadingProject
+    const isLoading = isLoadingAboutMe || isLoadingProject || isLoadingLabs
 
     // centralizing the width hook state
     const { width } = useWindowSize()
@@ -37,6 +40,7 @@ function Index() {
                         :
                         <Fragment>
                             <About aboutMe={aboutMe} width={width} />
+                            <LandingLab width={width} blogs={latestLabs} />
                             <Project contents={projects} width={width} />
                             <Experience width={width} />
                             <Contact width={width} />

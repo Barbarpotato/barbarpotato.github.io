@@ -1,5 +1,5 @@
 import { Box, Heading, Image, Button, Center } from '@chakra-ui/react'
-import { primaryFontColor } from '../../../../theme/globalTheme'
+import { primaryFontColor, secondaryColor } from '../../../../theme/globalTheme'
 
 function AboutMobile({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
     return (
@@ -8,8 +8,8 @@ function AboutMobile({ aboutMe, contentStyle, avatarUrl, resumeUrl }) {
                 <Image loading='lazy' alt='Darmawan Avatar' className='mobile-avatar' w={'300px'} height={'300px'} src={avatarUrl} />
             </Center>
             <Box mt={20} justifyContent={'center'} mx={10} color={primaryFontColor}>
-                <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-                </span>About Me<span>{'>'}</span>
+                <Heading id='aboutme' mb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+                </span>About Me<span style={{ color: secondaryColor }}>{' />'}</span>
                 </Heading>
 
                 <Box mx={2}>

@@ -149,6 +149,12 @@
   box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
 }
 
+.avatar-labs {
+  border-radius: 91% 9% 91% 9% / 4% 95% 5% 96%;
+  border: 25px double #866bab;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+}
+
 /* 
   /** THE END OF ABOUT SCREEN CSS
 */
@@ -164,7 +170,7 @@
   transition: transform 1s ease 0s;
 
   &:hover {
-    transform: perspective(800px) rotateY(-4deg);
+    transform: perspective(800px) rotateY(-15deg);
   }
 }
 

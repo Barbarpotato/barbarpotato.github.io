@@ -1,7 +1,7 @@
 import { Heading, Flex, Box, Input, Textarea, Button, Text } from '@chakra-ui/react'
 import { Fragment } from 'react'
 import { motion } from 'framer-motion'
-import { primaryColor, primaryFontColor, ternaryColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, ternaryColor, secondaryColor } from '../../../../theme/globalTheme'
 
 function Contact({ width, handleSendMessage, isLoading,
     contactMessage, setContactMessage, respMessage }) {
@@ -13,8 +13,8 @@ function Contact({ width, handleSendMessage, isLoading,
                 transition={{ duration: 3 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}>
-                <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span>{"<"}
-                </span>Contact Me<span>{'>'}</span>
+                <Heading id='contact' pt={20} pb={10} textAlign={'center'} opacity={0.8} color={primaryFontColor}><span style={{ color: secondaryColor }}>{"<"}
+                </span>Contact Me<span style={{ color: secondaryColor }}>{' />'}</span>
                 </Heading>
                 <Flex mx={1} padding={5} justifyContent={'center'}>
                     <Flex mx={10} p={4} className='lighting-effect-pink' borderRadius={'2xl'} alignItems={'center'} backgroundColor={primaryColor}>

@@ -1,5 +1,5 @@
 import { Heading, Box, Flex, Image, Text, Badge } from '@chakra-ui/react'
-import { primaryFontColor } from '../../../../theme/globalTheme';
+import { primaryFontColor, secondaryColor } from '../../../../theme/globalTheme';
 import { useEffect } from 'react'
 import { Chrono } from 'react-chrono';
 import { motion } from 'framer-motion'
@@ -127,9 +127,9 @@ function Experience({ itemsTimeline }) {
                 opacity={0.8}
                 color={primaryFontColor}
             >
-                <span>{"<"}</span>
-                My Experience
-                <span>{'>'}</span>
+                <span style={{ color: secondaryColor }}>{"<"}</span>
+                Experience
+                <span style={{ color: secondaryColor }}>{' />'}</span>
             </Heading>
             <Chrono
                 parseDetailsAsHTML

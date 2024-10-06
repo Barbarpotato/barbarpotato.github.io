@@ -8,6 +8,7 @@ import Navigation from '../../components/navigation'
 import { Box, Center, Heading, Image, Text } from '@chakra-ui/react'
 import useWindowSize from '../../hooks/useWindowSize'
 import { primaryFontColor } from '../../theme/globalTheme'
+import ChatbotButton from '../../components/chatbot/ChatbotButton'
 
 function LabContentDetail() {
 
@@ -59,11 +60,8 @@ function LabContentDetail() {
         <Fragment>
             {isLoading ? <Loading /> :
                 <Fragment>
-                    <Navigation />
-                    <Link to={"/labs"} style={{ textDecoration: 'none' }}>
-                        <Heading color={primaryFontColor} size={width > 768 ? 'lg' : 'sm'} my={4} ml={'15%'} style={{ cursor: 'pointer' }}>⬅️ Back</Heading>
-                    </Link>
-
+                    <Navigation width={width} />
+                    <ChatbotButton />
                     <h1 style={{ paddingTop: width > 768 ? '40px' : '20px', textAlign: 'center', fontSize: width > 768 ? '2em' : '1.5em', color: 'whitesmoke', fontWeight: 'bold' }} color={'white'}>{blog?.title}</h1>
                     <Text style={{ textAlign: 'center', color: 'whitesmoke', marginBottom: '0.5em', paddingBottom: width > 768 ? '40px' : '20px' }}>{blog?.timestamp}</Text>
                     <Center pt={2} pb={10}>
@@ -72,7 +70,7 @@ function LabContentDetail() {
                     <Box mx="auto" w={width > 1024 ? '35%' : '70%'} display="flex" justifyContent="center" >
                         <div class='content' style={{ overflowX: 'auto', fontSize: width > 768 ? '1.3em' : '1em' }} dangerouslySetInnerHTML={{ __html: blog?.description }} />
                     </Box>
-                    <Footer />
+                    <Footer width={width} />
                 </Fragment>
 
             }

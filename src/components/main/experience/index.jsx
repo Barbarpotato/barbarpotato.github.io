@@ -25,7 +25,7 @@ function Experience({ width }) {
     return (
         <Suspense fallback={<Loading />}>
             {
-                width >= 768 ? <ExperienceDesktop itemsTimeline={itemsTimeline} /> : <ExperienceMobile itemsTimeline={itemsTimeline} />
+                width >= 1280 ? <ExperienceDesktop itemsTimeline={itemsTimeline} /> : <ExperienceMobile itemsTimeline={itemsTimeline} />
             }
         </Suspense>
     )
