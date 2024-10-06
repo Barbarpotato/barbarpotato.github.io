@@ -1,10 +1,10 @@
 import { Fragment } from 'react'
 import { motion } from 'framer-motion'
-import { Card, CardBody, Image, Flex, Heading, Text, Grid, Box, Button } from '@chakra-ui/react'
+import { Card, CardBody, Image, Flex, Heading, Text, Grid, Box } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import '../../../../styles/labs/paginate.css'
 import ReactPaginate from 'react-paginate';
-import { primaryColor, primaryFontColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, secondaryColor } from '../../../../theme/globalTheme'
 
 function Items({ blog, width }) {
 
@@ -43,7 +43,7 @@ function Items({ blog, width }) {
                                             ? `${item.short_description.slice(0, 200)}...` // Truncate the string
                                             : item.short_description}
                                     </Text>
-                                    <Button onClick={() => navigate(`/lab/${item.blog_id}`)} mt={5} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'2xl'} fontSize={'xs'}>Read More...</Button>
+                                    <Text cursor={'pointer'} onClick={() => navigate(`/lab/${item.blog_id}`)} mt={2} w={'auto'} color={secondaryColor} textDecoration={'underline'} fontSize={'md'}>Read More...</Text>
                                 </Flex>
                             </CardBody>
                         </Card>

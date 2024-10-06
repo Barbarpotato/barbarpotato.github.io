@@ -4,7 +4,7 @@ import { Card, CardBody, Image, Flex, Heading, Text, Box, Button } from '@chakra
 import { useNavigate } from 'react-router-dom'
 import '../../../../styles/labs/paginate.css'
 import ReactPaginate from 'react-paginate';
-import { primaryColor, primaryFontColor } from '../../../../theme/globalTheme'
+import { primaryColor, primaryFontColor, secondaryColor } from '../../../../theme/globalTheme'
 
 function Items({ blog }) {
 
@@ -42,7 +42,7 @@ function Items({ blog }) {
                                         ? `${item.short_description.slice(0, 200)}...` // Truncate the string
                                         : item.short_description}
                                 </Text>
-                                <Button onClick={() => navigate(`/lab/${item.blog_id}`)} mt={2} w={'100px'} colorScheme='purple' color={primaryFontColor} rounded={'xl'} fontSize={'xs'}>Read More...</Button>
+                                <Text onClick={() => navigate(`/lab/${item.blog_id}`)} mt={2} w={'auto'} color={secondaryColor} textDecoration={'underline'} fontSize={'md'}>Read More...</Text>
                             </Flex>
                         </CardBody>
                     </Card>

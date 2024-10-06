@@ -62,8 +62,10 @@ function LabContentDetail() {
                 <Fragment>
                     <Navigation width={width} />
                     <ChatbotButton />
-                    <h1 style={{ paddingTop: width > 768 ? '40px' : '20px', textAlign: 'center', fontSize: width > 768 ? '2em' : '1.5em', color: 'whitesmoke', fontWeight: 'bold' }} color={'white'}>{blog?.title}</h1>
-                    <Text style={{ textAlign: 'center', color: 'whitesmoke', marginBottom: '0.5em', paddingBottom: width > 768 ? '40px' : '20px' }}>{blog?.timestamp}</Text>
+                    <Box mx="auto" w={width > 1024 ? '35%' : '70%'}>
+                        <h1 style={{ paddingTop: width > 768 ? '40px' : '20px', fontSize: width > 768 ? '2em' : '1.5em', color: 'whitesmoke', fontWeight: 'bold' }} color={'white'}>{blog?.title}</h1>
+                        <Text style={{ color: 'whitesmoke', marginBottom: '0.5em', paddingBottom: width > 768 ? '40px' : '20px' }}>{blog?.timestamp}</Text>
+                    </Box>
                     <Center pt={2} pb={10}>
                         <Image borderRadius={'lg'} w={width > 1024 ? '35%' : '70%'} display={'flex'} justifyContent={'center'} src={blog?.image} />
                     </Center>
@@ -72,7 +74,6 @@ function LabContentDetail() {
                     </Box>
                     <Footer width={width} />
                 </Fragment>
-
             }
         </Fragment >
     )

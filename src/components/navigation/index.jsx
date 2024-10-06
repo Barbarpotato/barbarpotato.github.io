@@ -31,7 +31,7 @@ function Navigation({ width }) {
                 {location.pathname === '/labs' && (
                     <Fragment>
                         <Link to={'/'}>
-                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Back to Home</a></Heading>
+                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} style={{ fontSize: width > 768 ? '24px' : '14px' }}><a href='#myproject'>Home</a></Heading>
                         </Link>
                     </Fragment>
                 )}
@@ -39,7 +39,7 @@ function Navigation({ width }) {
                 {location.pathname.includes('/lab/') && (
                     <Fragment>
                         <Link to={'/labs'}>
-                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} size='md'><a href='#myproject'>Back to Labs</a></Heading>
+                            <Heading className='navbar' id="navigation" mx={6} fontWeight={'small'} color={primaryFontColor} style={{ fontSize: width > 768 ? '24px' : '14px' }}><a href='#myproject'>Labs</a></Heading>
                         </Link>
                     </Fragment>
                 )}
