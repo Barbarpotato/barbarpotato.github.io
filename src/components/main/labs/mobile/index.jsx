@@ -26,7 +26,7 @@ function LandingLabMobile({ blogs }) {
             </Heading>
 
 
-            <Text textAlign={'justify'} style={{
+            <Text color={primaryFontColor} textAlign={'justify'} style={{
                 textAlign: 'justify', whiteSpace: 'pre-wrap',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica',
                 fontSize: '20px'
