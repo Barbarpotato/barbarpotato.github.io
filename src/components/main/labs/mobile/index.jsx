@@ -39,16 +39,16 @@ function LandingLabMobile({ blogs }) {
                 {blogs.map((blog) => (
                     <Fragment key={`${blog.title}-${blog.timestamp}`}>
                         <AccordionItem>
-                            <h2>
+                            <h2 style={{ color: primaryFontColor }}>
                                 <AccordionButton _expanded={{ bg: secondaryColor, color: 'white' }}>
-                                    <Box as='span' flex='1' textAlign='left'>
+                                    <Box color={primaryFontColor} as='span' flex='1' textAlign='left'>
                                         {blog.title}
                                     </Box>
                                     <AccordionIcon />
                                 </AccordionButton>
                             </h2>
                             <AccordionPanel>
-                                <Text >{blog.short_description}
+                                <Text color={primaryFontColor} >{blog.short_description}
                                     <a onClick={() => navigate(`/lab/${blog.blog_id}`)} style={{
                                         marginLeft: '5px', cursor: 'pointer',
                                         textDecoration: 'underline', color: secondaryColor
