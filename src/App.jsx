@@ -21,8 +21,6 @@ const Project = lazy(() => import("CMS_Registry/Project"));
 const Experience = lazy(() => import("CMS_Registry/Experience"));
 const Contact = lazy(() => import("CMS_Registry/Contact"));
 const ChatbotButton = lazy(() => import("CMS_Registry/ChatbotButton"));
-const LabIndex = lazy(() => import("CMS_Registry/LabIndex"));
-const LabDetail = lazy(() => import("CMS_Registry/LabDetail"));
 
 // Main content component
 function Main() {
@@ -48,8 +46,6 @@ const App = () => (
           <ChatbotButton SecretKey={process.env.EXPOSE_SECRET_KEY} />
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/labs" element={<LabIndex SecretKey={process.env.EXPOSE_SECRET_KEY} />} />
-            <Route path='/lab/:blogId' element={<LabDetail SecretKey={process.env.EXPOSE_SECRET_KEY} />} />
           </Routes>
           <Footer SecretKey={process.env.EXPOSE_SECRET_KEY} />
         </Suspense>
