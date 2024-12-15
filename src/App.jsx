@@ -2,7 +2,6 @@ import React, { Fragment, lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ChakraProvider } from '@chakra-ui/react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Loading from './components/Loading'; // Ensure this component exists and is functional
 
@@ -39,18 +38,14 @@ function Main() {
 // App Component
 const App = () => (
   <ChakraProvider>
-    <HashRouter>
-      <QueryClientProvider client={queryClient}>
-        <Suspense fallback={<Loading />}>
-          <Header SecretKey={process.env.EXPOSE_SECRET_KEY} />
-          <ChatbotButton SecretKey={process.env.EXPOSE_SECRET_KEY} />
-          <Routes>
-            <Route path="/" element={<Main />} />
-          </Routes>
-          <Footer SecretKey={process.env.EXPOSE_SECRET_KEY} />
-        </Suspense>
-      </QueryClientProvider>
-    </HashRouter>
+    <QueryClientProvider client={queryClient}>
+      <Suspense fallback={<Loading />}>
+        <Header SecretKey={process.env.EXPOSE_SECRET_KEY} />
+        <ChatbotButton SecretKey={process.env.EXPOSE_SECRET_KEY} />
+        <Main />
+        <Footer SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      </Suspense>
+    </QueryClientProvider>
   </ChakraProvider>
 );
 
