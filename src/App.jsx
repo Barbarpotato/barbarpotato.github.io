@@ -18,6 +18,7 @@ const About = lazy(() => import("CMS_Registry/About"));
 const LabHome = lazy(() => import("CMS_Registry/LabHome"));
 const Project = lazy(() => import("CMS_Registry/Project"));
 const Experience = lazy(() => import("CMS_Registry/Experience"));
+const Badge = lazy(() => import("CMS_Registry/Badge"));
 const Contact = lazy(() => import("CMS_Registry/Contact"));
 const ChatbotButton = lazy(() => import("CMS_Registry/ChatbotButton"));
 
@@ -30,6 +31,7 @@ function Main() {
       <LabHome SecretKey={process.env.EXPOSE_SECRET_KEY} />
       <Project SecretKey={process.env.EXPOSE_SECRET_KEY} />
       <Experience SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      <Badge SecretKey={process.env.EXPOSE_SECRET_KEY} />
       <Contact SecretKey={process.env.EXPOSE_SECRET_KEY} />
     </Fragment>
   );
