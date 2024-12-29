@@ -65,7 +65,7 @@ module.exports = (_, argv) => ({
       name: "Portfolio",
       filename: "remoteEntry.js",
       remotes: {
-        CMS_Registry: "CMS_Registry@https://personal-blog-darmajr.web.app/remoteEntry.js",
+        CMS_Registry: "site_registry@https://personal-blog-darmajr.web.app/remoteEntry.js",
       },
       exposes: {},
       shared: {

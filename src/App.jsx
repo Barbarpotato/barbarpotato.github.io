@@ -11,7 +11,7 @@ import './index.css'; // Ensure this file exists and has valid styles
 // Initialize React Query Client
 const queryClient = new QueryClient();
 
-const Portfolio = lazy(() => import("CMS_Registry/Portfolio"));
+const Portfolio = lazy(() => import("site_registry/Portfolio"));
 
 // App Component
 function App() {
