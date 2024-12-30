@@ -1,10 +1,13 @@
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ChakraProvider } from '@chakra-ui/react';
+import { lazy, Suspense } from 'react';
 
-import Main from './pages/Main';
+import Loading from './components/Loading';
 
-import './index.css'; // Ensure this file exists and has valid styles
+const Portfolio = lazy(() => import("site_registry/Portfolio"));
+
+import './index.css';
 
 const queryClient = new QueryClient();
 
@@ -12,7 +15,9 @@ function App() {
   return (
     <ChakraProvider>
       <QueryClientProvider client={queryClient}>
-        <Main />
+        <Suspense fallback={<Loading />}>
+          <Portfolio />
+        </Suspense>
       </QueryClientProvider>
     </ChakraProvider>
   );
