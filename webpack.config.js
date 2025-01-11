@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 const deps = require("./package.json").dependencies;
@@ -61,6 +62,11 @@ module.exports = (_, argv) => ({
   },
 
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public', to: '' }, // Copies all files in public to the root of dist
+      ],
+    }),
     new ModuleFederationPlugin({
       name: "Portfolio",
       filename: "remoteEntry.js",
