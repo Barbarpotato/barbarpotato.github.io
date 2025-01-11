@@ -7,7 +7,6 @@ import Loading from './components/Loading';
 
 const Portfolio = lazy(() => import("site_registry/Portfolio"));
 
-import './index.css';
 
 const queryClient = new QueryClient();
 

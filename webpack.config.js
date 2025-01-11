@@ -84,6 +84,12 @@ module.exports = (_, argv) => ({
           singleton: true,
           requiredVersion: deps["react-dom"],
         },
+        "@chakra-ui/react": {
+          singleton: true,  // Chakra UI juga akan dibagikan sebagai shared dependency
+        },
+        "react-query": {
+          singleton: true,  // React Query juga akan dibagikan sebagai shared dependency
+        },
       },
     }),
     new HtmlWebPackPlugin({
