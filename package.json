@@ -2,8 +2,8 @@
   "name": "Portfolio",
   "version": "1.0.0",
   "scripts": {
-    "fetch": "node prefetch.js",
-    "build": "npm run fetch && webpack --mode production && cp -r public/* dist/",
+    "prefetch": "node prefetch.js",
+    "build": "npm run prefetch && webpack --mode production && cp -r public/* dist/",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=7999 npx serve",
     "start": "webpack serve --mode development",

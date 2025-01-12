@@ -9,6 +9,10 @@ const endpoint_list = [
     {
         "url": "https://hecate-cms.vercel.app/api/projects",
         "json_file_name": "projects.json"
+    },
+    {
+        "url": "https://hecate-cms.vercel.app/api/badges",
+        "json_file_name": "badges.json"
     }
 ]
 

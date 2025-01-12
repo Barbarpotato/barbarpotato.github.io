@@ -3,7 +3,10 @@ name: Deploy static content to Pages
 on:
   push:
     branches: ['main']  # Trigger on push to the main branch
-  workflow_dispatch:  # Allow manual trigger
+  repository_dispatch:
+    types:
+      - redeploy  # Trigger the workflow with a custom "redeploy" event
+  workflow_dispatch:
 
 # Set permissions for the GitHub Pages deployment
 permissions:
