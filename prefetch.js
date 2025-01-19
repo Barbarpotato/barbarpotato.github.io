@@ -24,7 +24,7 @@ async function prefetch() {
             const data = await response.json();
 
             // Determine the output path based on the json_file property
-            const outputPath = path.resolve('./public', endpoint.json_file_name);
+            const outputPath = path.resolve('./public/data', endpoint.json_file_name);
 
             // Save the fetched data into the respective JSON file
             fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
