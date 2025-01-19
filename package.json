@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "prefetch": "node prefetch.js",
+    "prefetch": "node Prefetch.js",
     "dev": "npm run prefetch && vite",
     "build": "npm run prefetch && vite build",
     "preview": "npm run prefetch && vite preview"

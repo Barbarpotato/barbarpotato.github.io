@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ResponsiveProvider } from './exposes/hooks/useResponsive';
+import { ResponsiveProvider } from './hooks/useResponsive';
 import { ChakraProvider } from '@chakra-ui/react';
 import { Suspense, lazy } from 'react';
 

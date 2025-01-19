@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, Fragment, useState } from 'react'
 
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
 
-import { useResponsive } from '../hooks/useResponsive';
+import { useResponsive } from '../../hooks/useResponsive';
 
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IconContext } from 'react-icons';

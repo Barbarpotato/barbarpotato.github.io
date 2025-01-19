@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react';
 import React, { Fragment, useEffect, useState } from 'react'
 import Loading from '../../components/Loading';
-import { useResponsive } from '../hooks/useResponsive';
+import { useResponsive } from '../../hooks/useResponsive';
 
 function Badges() {
 

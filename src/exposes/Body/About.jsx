@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Heading, Image, Button, Center, Flex } from '@chakra-ui/react';
-import { useResponsive } from '../hooks/useResponsive';
+import { useResponsive } from '../../hooks/useResponsive';
 
 function About() {
 
