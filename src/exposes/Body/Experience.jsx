@@ -95,8 +95,8 @@ function Experience() {
 
             <Heading
                 id="experience-heading" // ID for linking with aria-labelledby
-                pt={20}
-                pb={10}
+                mt={'10vh'}
+                mb={10}
                 textAlign={'center'}
                 opacity={0.8}
                 color={"#faf9ff"}

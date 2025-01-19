@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Heading, Image, Button, Center, Flex, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Heading, Image, Button, Center, Flex } from '@chakra-ui/react';
+import { useResponsive } from '../hooks/useResponsive';
 
 function About() {
 
     // Responsive control for layout
-    const isMobile = useBreakpointValue({ base: true, xl: false });
+    const { isMobile } = useResponsive();
 
     return (
 

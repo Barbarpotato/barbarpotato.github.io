@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ResponsiveProvider } from './exposes/hooks/useResponsive';
 import { ChakraProvider } from '@chakra-ui/react';
 import { Suspense, lazy } from 'react';
 
@@ -13,7 +14,9 @@ function App() {
     <ChakraProvider>
       <QueryClientProvider client={queryClient}>
         <Suspense fallback={<Loading />}>
-          <Portfolio />
+          <ResponsiveProvider>
+            <Portfolio />
+          </ResponsiveProvider>
         </Suspense>
       </QueryClientProvider>
     </ChakraProvider>

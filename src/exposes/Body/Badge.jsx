@@ -1,14 +1,14 @@
 import {
     Avatar, Box, Button, Center, Flex, Grid,
-    Heading, Spacer, Text, useBreakpointValue
+    Heading, Spacer, Text
 } from '@chakra-ui/react';
 import React, { Fragment, useEffect, useState } from 'react'
 import Loading from '../../components/Loading';
+import { useResponsive } from '../hooks/useResponsive';
 
 function Badges() {
 
-    // Responsive control for layout
-    const isMobile = useBreakpointValue({ base: true, xl: false });
+    const { isMobile } = useResponsive();
 
     const [data, setData] = useState([]); // Store fetched data
     const [loading, setLoading] = useState(true);
@@ -66,9 +66,8 @@ function Badges() {
 
     return (
         <Fragment>
-
-
             <Heading
+                mt={"10vh"}
                 id="Badges"
                 textAlign="center"
                 opacity={0.8}
