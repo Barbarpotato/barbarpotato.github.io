@@ -1,5 +1,7 @@
+// Core Modules
 import { Fragment } from 'react'
 
+// Expose Modules
 import ChatbotButton from './Chatbot/ChatbotButton'
 import Header from './Header'
 import Hero from './Body/Hero'

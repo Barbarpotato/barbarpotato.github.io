@@ -1,14 +1,14 @@
+// Core Modules
 import React, { useEffect, useCallback, Fragment, useState } from 'react'
-
-import { Box, Button, Flex, Text } from '@chakra-ui/react'
-
-import { useResponsive } from '../../hooks/useResponsive';
-
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import { IconContext } from 'react-icons';
-
 import Typewriter from 'typewriter-effect';
 import TagCloud from 'TagCloud';
+
+// Custom Hooks
+import { useResponsive } from '../../hooks/useResponsive';
+
 
 function Hero() {
 
@@ -132,7 +132,7 @@ function Hero() {
                 </Flex>
 
 
-                <Box width={{ xl: '50%' }} className='text-shpere'>
+                <Box height={{ base: "280px", md: "600px", lg: "auto" }} width={{ xl: '50%' }} className='text-shpere'>
 
                     <span className='tagcloud'></span>
                 </Box>

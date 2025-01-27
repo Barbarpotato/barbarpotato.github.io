@@ -1,3 +1,4 @@
+// Core Modules
 import { Fragment, useEffect, useState, memo } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";

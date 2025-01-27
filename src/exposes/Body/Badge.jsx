@@ -1,9 +1,14 @@
+// Core Modules
+import React, { Fragment, useEffect, useState } from 'react'
 import {
     Avatar, Box, Button, Center, Flex, Grid,
     Heading, Spacer, Text
 } from '@chakra-ui/react';
-import React, { Fragment, useEffect, useState } from 'react'
+
+// Custom Components
 import Loading from '../../components/Loading';
+
+// Custom Hooks
 import { useResponsive } from '../../hooks/useResponsive';
 
 function Badges() {

@@ -1,3 +1,4 @@
+// Core Modules
 import { useEffect, Fragment } from 'react'
 import { Chrono } from 'react-chrono'
 import { Heading, Box, Text, Badge } from '@chakra-ui/react'
@@ -90,9 +91,6 @@ function Experience() {
     return (
         <Fragment>
             {/* Stars Animation */}
-            <Box className='stars'></Box>
-            <Box className='stars2'></Box>
-
             <Heading
                 id="experience-heading" // ID for linking with aria-labelledby
                 mt={'10vh'}

@@ -1,13 +1,17 @@
-import { useDataBlogLatest } from '../../api/Cerberry/GET';
+// Core Modules
 import { Fragment } from 'react'
-
-import Loading from '../../components/Loading';
-
 import {
     Text, Flex, Heading, Accordion, AccordionItem, Box,
     AccordionButton, AccordionPanel, AccordionIcon, Image,
     Hide
 } from '@chakra-ui/react';
+
+// Custom Components
+import Loading from '../../components/Loading';
+
+// API Modules
+import { useDataBlogLatest } from '../../api/labs/GET';
+
 
 function LabHome() {
 
@@ -18,10 +22,7 @@ function LabHome() {
 
     return (
         <Fragment>
-            <Box className='stars'></Box>
-            <Box className='stars2'></Box>
-            <Box className='stars3'></Box>
-            <Flex style={{ paddingInline: "2rem" }} mt={{ xl: '10vh' }} direction={{ base: 'column', xl: 'row' }} justifyContent={{ xl: "center" }}>
+            <Flex style={{ paddingInline: "2rem" }} alignItems={'center'} mt={{ xl: '10vh' }} direction={{ base: 'column', xl: 'row' }} justifyContent={{ xl: "center" }}>
 
                 <Flex direction={{ "base": "column" }} width={{ xl: '50%' }} alignItems={{ "xl": "center" }} justifyContent={{ "xl": 'center' }}>
                     <Heading

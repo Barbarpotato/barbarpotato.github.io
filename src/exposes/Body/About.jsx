@@ -1,5 +1,8 @@
+// Core Modules
 import React from 'react';
 import { Box, Heading, Image, Button, Center, Flex } from '@chakra-ui/react';
+
+// Custom Modules
 import { useResponsive } from '../../hooks/useResponsive';
 
 function About() {
@@ -44,13 +47,14 @@ function About() {
                 </Box>
 
                 {/* Text Section */}
-                <Box mx={4} width={isMobile ? "100%" : "50%"}>
+                <Box mx={4} width={{ base: "100%", xl: "50%" }}>
                     {!isMobile && (
                         <Heading
                             id="aboutme"
                             opacity={0.8}
-                            mb={4}
+                            my={4}
                             color="#faf9ff"
+                            textAlign={{ base: "center", xl: "left" }}
                         >
                             <span style={{ color: "#bd93f9" }}>{"<"}</span>
                             About Me

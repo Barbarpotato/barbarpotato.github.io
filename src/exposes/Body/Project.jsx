@@ -1,14 +1,18 @@
+// Core Modules
 import { useState, useEffect, Fragment, Suspense, lazy } from 'react'
-
 import {
     useDisclosure, useBreakpointValue, Flex, Stack, Text, Image,
     Heading, Box, Center, Card, CardBody
 } from '@chakra-ui/react'
+
+// API Modules
+import { useDataProjects } from '../../api/Hecate/GET'
+
+// Custom Modules
 import { chunkArray, partitionArray } from '../../utils/PreprocessProjectData'
 
+// Custom Components    
 import Loading from '../../components/Loading'
-
-import { useDataProjects } from '../../api/Hecate/GET'
 
 // Lazy load the ProjectModal component
 const ProjectModal = lazy(() => import('../Modal/Project'));
@@ -74,8 +78,6 @@ function Project() {
     return (
         <Fragment>
             {/* Stars Animation */}
-            <Box className='stars'></Box>
-            <Box className='stars2'></Box>
             <Suspense fallback={<Loading />}>
                 <ProjectModal isOpen={isOpen} onClose={onClose} projectData={projectData} />
             </Suspense>
