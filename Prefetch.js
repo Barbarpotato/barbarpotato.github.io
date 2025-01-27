@@ -3,15 +3,15 @@ const path = require('path');
 
 const endpoint_list = [
     {
-        "url": "https://cerberry-backend.vercel.app/blog_latest",
+        "url": "https://api-barbarpotato.vercel.app/labs/latest",
         "json_file_name": "blog_latest.json"
     },
     {
-        "url": "https://hecate-cms.vercel.app/api/projects",
+        "url": "https://api-barbarpotato.vercel.app/projects",
         "json_file_name": "projects.json"
     },
     {
-        "url": "https://hecate-cms.vercel.app/api/badges",
+        "url": "https://api-barbarpotato.vercel.app/badges",
         "json_file_name": "badges.json"
     }
 ]
