@@ -2,9 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: "/",
   plugins: [react()],
-  base: '/', // Replace <repository> with the name of your repository
-  build: {
-    outDir: 'dist' // Change from 'dist' to 'build'
-  }
 });
