@@ -32,4 +32,5 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./dist  # Path to the build output
           publish_branch: main  # Branch to deploy to
+          publish_dir: docs  # Deploy inside docs/ directory
           keep_files: false  # Ensure the branch is cleaned before deployment
