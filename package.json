@@ -6,27 +6,30 @@
     "prefetch": "node Prefetch.js",
     "dev": "npm run prefetch && vite",
     "build": "npm run prefetch && vite build",
-    "preview": "npm run prefetch && vite preview"
+    "preview": "npm run prefetch && vite preview",
+    "predeploy": "npm run prefetch && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^11.0.3",
+    "react": "^18.2.0",
     "react-chatbot-kit": "^2.2.2",
+    "react-chrono": "^2.6.1",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
     "TagCloud": "^2.4.0",
-    "typewriter-effect": "^2.21.0",
-    "react-chrono": "^2.6.1"
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^6.3.0",
     "vite": "^4.2.0"
   }
 }
