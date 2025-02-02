@@ -8,7 +8,7 @@
     "build": "npm run prefetch && vite build",
     "preview": "npm run prefetch && vite preview",
     "predeploy": "npm run prefetch && npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
