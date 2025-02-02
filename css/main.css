@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #292b37 !important;
+    color: #faf9ff !important;
+}
+
+::selection {
+    color: #cc7bc9;
+    background-color: #866bab;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #282a36;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #866bab;
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cc7bc9;
+}
+
+
+section {
+    background-color: #292b37 !important;
+    color: #faf9ff !important;
+}
+
+.social-icon {
+    transition: transform 0.3s ease-in-out;
+    color: #866bab;
+}
+
+/* Animasi saat mengarahkan kursor ke ikon */
+.social-icon:hover {
+    transform: scale(1.3);
+    color: #cc7bc9;
+    /* Membuat ikon menjadi 20% lebih besar saat dihover */
+}
+
+.avatar {
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    border: 5px solid #866bab;
+    box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-avatar {
+    /* Adjust width as needed */
+    /* Adjust height as needed */
+
+    background-color: #866bab;
+    /* Adjust color as needed */
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    background: #866bab;
+    font-size: 32px;
+    display: grid;
+    place-items: center;
+    /* Adjust rotation as needed */
+}
+
+.avatar-labs {
+    border-radius: 91% 9% 91% 9% / 4% 95% 5% 96%;
+    border: 25px double #866bab;
+    box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+}
+
+
+.content p {
+    color: white;
+    /* Warna teks putih */
+    font-size: 1em;
+    /* Ukuran font default */
+    line-height: 1.5;
+    /* Jarak antara baris */
+    margin-bottom: 1em;
+    /* Jarak bawah */
+    color: whitesmoke;
+}
+
+.chakra-card {
+    background-color: #292b37 !important;
+}
+
+
+/* 
+    /** LOADING SCREEN CSS
+    */
+
+.lds-grid {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #866bab;
+    animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* 
+  /** THE END LOADING SCREEN CSS
+*/
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2560px) translateX(-2560px);
+    }
+}
+
+@keyframes animShootingStar {
+    from {
+        transform: translateY(0px) translateX(0px) rotate(-45deg);
+        opacity: 1;
+        height: 5px;
+    }
+
+    to {
+        transform: translateY(-2560px) translateX(-2560px) rotate(-45deg);
+        opacity: 1;
+        height: 800px;
+    }
+}
+
+.stars {
+    z-index: -10;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 1224px 215px #FFF, 1184px 1512px #FFF, 2191px 2416px #FFF, 1238px 698px #FFF, 1876px 2130px #FFF, 1554px 328px #FFF, 644px 1902px #FFF, 693px 1714px #FFF, 1407px 2177px #FFF, 607px 477px #FFF, 2252px 1512px #FFF, 904px 983px #FFF, 905px 2045px #FFF, 784px 428px #FFF, 1288px 1985px #FFF, 1416px 2239px #FFF, 306px 305px #FFF, 1495px 463px #FFF, 2393px 1814px #FFF, 1289px 845px #FFF, 1983px 2155px #FFF, 2145px 717px #FFF, 1001px 411px #FFF, 2206px 1675px #FFF, 373px 100px #FFF, 642px 1827px #FFF, 70px 455px #FFF, 1799px 1600px #FFF, 117px 494px #FFF, 1222px 2115px #FFF, 1369px 1323px #FFF, 616px 542px #FFF, 2015px 2007px #FFF, 340px 1344px #FFF, 2099px 724px #FFF, 1524px 1531px #FFF, 1885px 1189px #FFF, 1771px 1374px #FFF, 2119px 518px #FFF, 1434px 680px #FFF, 105px 1389px #FFF, 1454px 415px #FFF, 1759px 330px #FFF, 1144px 628px #FFF, 1791px 1559px #FFF, 2085px 503px #FFF, 542px 288px #FFF, 1511px 1663px #FFF, 1203px 1310px #FFF, 421px 329px #FFF, 835px 492px #FFF, 1849px 1598px #FFF, 917px 421px #FFF, 1243px 281px #FFF, 1326px 2056px #FFF, 2064px 1747px #FFF, 883px 1303px #FFF, 1118px 1633px #FFF, 1024px 365px #FFF, 1444px 234px #FFF, 1210px 1986px #FFF, 1199px 1245px #FFF, 1355px 2033px #FFF, 2057px 61px #FFF, 787px 731px #FFF, 1062px 2136px #FFF, 1478px 380px #FFF, 570px 2065px #FFF, 2151px 2090px #FFF, 1767px 743px #FFF, 1767px 663px #FFF, 1573px 1830px #FFF, 315px 75px #FFF, 1224px 885px #FFF, 1237px 1798px #FFF, 2324px 1259px #FFF, 847px 591px #FFF, 1942px 1069px #FFF, 2245px 539px #FFF, 1910px 288px #FFF, 1307px 1062px #FFF, 1915px 1633px #FFF, 1718px 419px #FFF, 1941px 776px #FFF, 257px 2297px #FFF, 489px 1057px #FFF, 694px 1763px #FFF, 2208px 363px #FFF, 474px 1811px #FFF, 1035px 63px #FFF, 2143px 1767px #FFF, 671px 998px #FFF, 1091px 1333px #FFF, 741px 1215px #FFF, 1155px 1342px #FFF, 948px 1510px #FFF, 258px 1075px #FFF, 1862px 616px #FFF, 1532px 276px #FFF, 2237px 1415px #FFF, 1184px 299px #FFF, 1296px 624px #FFF, 263px 2159px #FFF;
+    animation: animStar 60s linear infinite;
+}
+
+.stars2 {
+    z-index: -10;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 1224px 215px #FFF, 1184px 1512px #FFF, 2191px 2416px #FFF, 1238px 698px #FFF, 1876px 2130px #FFF, 1554px 328px #FFF, 644px 1902px #FFF, 693px 1714px #FFF, 1407px 2177px #FFF, 607px 477px #FFF, 2252px 1512px #FFF, 904px 983px #FFF, 905px 2045px #FFF, 784px 428px #FFF, 1288px 1985px #FFF, 1416px 2239px #FFF, 306px 305px #FFF, 1495px 463px #FFF, 2393px 1814px #FFF, 1289px 845px #FFF, 1983px 2155px #FFF, 2145px 717px #FFF, 1001px 411px #FFF, 2206px 1675px #FFF, 373px 100px #FFF, 642px 1827px #FFF, 70px 455px #FFF, 1799px 1600px #FFF, 117px 494px #FFF, 1222px 2115px #FFF, 1369px 1323px #FFF, 616px 542px #FFF, 2015px 2007px #FFF, 340px 1344px #FFF, 2099px 724px #FFF, 1524px 1531px #FFF, 1885px 1189px #FFF, 1771px 1374px #FFF, 2119px 518px #FFF, 1434px 680px #FFF, 105px 1389px #FFF, 1454px 415px #FFF, 1759px 330px #FFF, 1144px 628px #FFF, 1791px 1559px #FFF, 2085px 503px #FFF, 542px 288px #FFF, 1511px 1663px #FFF, 1203px 1310px #FFF, 421px 329px #FFF, 835px 492px #FFF, 1849px 1598px #FFF, 917px 421px #FFF, 1243px 281px #FFF, 1326px 2056px #FFF, 2064px 1747px #FFF, 883px 1303px #FFF, 1118px 1633px #FFF, 1024px 365px #FFF, 1444px 234px #FFF, 1210px 1986px #FFF, 1199px 1245px #FFF, 1355px 2033px #FFF, 2057px 61px #FFF, 787px 731px #FFF, 1062px 2136px #FFF, 1478px 380px #FFF, 570px 2065px #FFF, 2151px 2090px #FFF, 1767px 743px #FFF, 1767px 663px #FFF, 1573px 1830px #FFF, 315px 75px #FFF, 1224px 885px #FFF, 1237px 1798px #FFF, 2324px 1259px #FFF, 847px 591px #FFF, 1942px 1069px #FFF, 2245px 539px #FFF, 1910px 288px #FFF, 1307px 1062px #FFF, 1915px 1633px #FFF, 1718px 419px #FFF, 1941px 776px #FFF, 257px 2297px #FFF, 489px 1057px #FFF, 694px 1763px #FFF, 2208px 363px #FFF, 474px 1811px #FFF, 1035px 63px #FFF, 2143px 1767px #FFF, 671px 998px #FFF, 1091px 1333px #FFF, 741px 1215px #FFF, 1155px 1342px #FFF, 948px 1510px #FFF, 258px 1075px #FFF, 1862px 616px #FFF, 1532px 276px #FFF, 2237px 1415px #FFF, 1184px 299px #FFF, 1296px 624px #FFF, 263px 2159px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+.stars3 {
+    z-index: -10;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 229px 1503px #fff, 1815px 1635px #fff, 1801px 1987px #fff, 232px 76px #fff, 1135px 276px #fff, 1028px 1229px #fff, 490px 1533px #fff, 1089px 1072px #fff, 486px 297px #fff, 2092px 354px #fff, 1320px 489px #fff, 1426px 538px #fff, 1257px 418px #fff, 458px 282px #fff, 870px 1284px #fff, 1585px 1974px #fff, 274px 306px #fff, 1412px 1734px #fff, 1030px 533px #fff, 925px 1899px #fff, 1376px 635px #fff, 907px 277px #fff, 1184px 1830px #fff, 2139px 1215px #fff, 251px 1805px #fff, 1514px 572px #fff, 1619px 1155px #fff, 274px 1109px #fff, 753px 1422px #fff, 1470px 768px #fff, 1646px 1964px #fff, 1908px 1119px #fff, 2093px 1311px #fff, 1434px 1790px #fff, 350px 1797px #fff, 328px 1202px #fff, 2315px 730px #fff, 1397px 466px #fff, 167px 1869px #fff, 1496px 1421px #fff, 48px 1410px #fff, 2062px 1150px #fff, 2194px 1516px #fff, 315px 1786px #fff, 602px 44px #fff, 377px 748px #fff, 404px 81px #fff, 1955px 255px #fff, 1526px 329px #fff, 1319px 993px #fff, 1516px 615px #fff, 788px 1951px #fff, 1080px 1049px #fff, 319px 1846px #fff, 217px 1210px #fff, 251px 1243px #fff, 2051px 767px #fff, 329px 229px #fff, 1884px 694px #fff, 418px 1467px #fff, 669px 407px #fff, 624px 1074px #fff, 1187px 1896px #fff, 606px 113px #fff, 646px 1291px #fff, 1999px 1332px #fff, 746px 1141px #fff, 84px 1194px #fff, 117px 137px #fff, 1995px 1657px #fff, 635px 1000px #fff, 141px 1363px #fff, 678px 684px #fff, 696px 1790px #fff, 797px 1922px #fff, 1861px 788px #fff, 494px 1259px #fff, 459px 242px #fff, 1996px 249px #fff, 131px 556px #fff, 1003px 1181px #fff, 1414px 288px #fff, 1712px 674px #fff, 426px 1483px #fff, 1371px 1052px #fff, 567px 576px #fff, 1970px 1459px #fff, 2067px 1969px #fff, 1107px 1793px #fff, 270px 1071px #fff, 1338px 484px #fff, 347px 1111px #fff, 2194px 460px #fff, 1931px 1625px #fff, 239px 1131px #fff, 1400px 1541px #fff, 944px 1138px #fff, 370px 1444px #fff, 2220px 322px #fff, 642px 619px #fff, 1346px 1523px #fff, 1000px 364px #fff, 2051px 1670px #fff, 373px 1510px #fff;
+    animation: animStar 200s linear infinite;
+}
+
+.tagcloud {
+    z-index: 0;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.0625em;
+    font-size: 1.3em;
+}
+
+@media (max-width: 767px) {
+    .tagcloud {
+        font-size: 12px;
+    }
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item {
+    color: #bd93f9;
+}
+
+.tagcloud--item:hover {
+    color: #cc7bc9;
+}
