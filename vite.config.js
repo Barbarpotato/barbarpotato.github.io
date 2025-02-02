@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/', // Replace <repository> with the name of your repository
   build: {
-    outDir: 'build' // Change from 'dist' to 'build'
+    outDir: 'dist' // Change from 'dist' to 'build'
   }
 });
