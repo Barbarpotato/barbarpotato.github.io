@@ -3,27 +3,26 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+
+permissions:
+  contents: write  # ✅ Grant permission to push to gh-pages
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # adjust if you're using a different version of Node.js
-
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build the React app
+      - name: Build Project
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        run: npm run deploy
+      - name: Deploy 🚀
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # GitHub Actions automatically generates this token
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # ✅ Use GitHub token for authentication
+        run: npx gh-pages -d dist -u "github-actions-bot <github-actions@github.com>"
