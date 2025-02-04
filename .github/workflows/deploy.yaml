@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types:
+      - redeploy  # Trigger the workflow with a custom "redeploy" event
 
 permissions:
   contents: write
