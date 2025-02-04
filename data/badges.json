@@ -1,5 +1,14 @@
 [
   {
+    "badges_id": "f0f6a49e-acd8-4e89-b156-d89b2744f43b",
+    "title": "Elastic Google Cloud Infrastructure: Scaling and Automation",
+    "description": "I have learned how to connect infrastructure to Google Cloud, including setting up VPNs or interconnects for secure communication. I can configure load balancing and autoscaling for VM instances using Google Cloud Load Balancing and Instance Groups with Autoscaler to optimize resource allocation. Additionally, I have experience automating infrastructure deployment with tools like Terraform or Deployment Manager to provision resources efficiently. ",
+    "company_name": "Google",
+    "date": "2025-02-04",
+    "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fgoogle-cloud.png?alt=media&token=756e1696-5a19-4662-a522-c570f8fda8ce",
+    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/B7IYB9XXH5SQ"
+  },
+  {
     "badges_id": "78eb249f-87d5-48c7-98b3-4bbd1bcf4289",
     "title": "Monitoring and Observability for Development and DevOps",
     "description": "I learned the importance of Golden Signals (latency, traffic, errors, saturation) and explored the pillars of observability—logs, metrics, and traces—for maintaining system health",
@@ -81,6 +90,15 @@
     "credential_url": "https://www.coursera.org/account/accomplishments/certificate/OTLJLMGZJ297"
   },
   {
+    "badges_id": "bb63465d-493e-4188-b80e-9a3d29bbd18b",
+    "title": "Application Development using Microservices and Serverless",
+    "description": "Learn the fundamentals of Microservices, their advantages, and contrast with monolithic architectures, Create, and deploy microservices using Docker containers and serverless technologies like IBM Code Engine.",
+    "company_name": "By IBM",
+    "date": "2023-12-28",
+    "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/ED7ELN8ZN4Z8"
+  },
+  {
     "badges_id": "9d883e1b-50cb-4bdb-a7c9-ce95258b12bc",
     "title": "Containers w/ Docker, Kubernetes & OpenShift",
     "description": "Learn Using containers, how to move applications quickly across any environment. Build cloud native applications using Docker, Kubernetes, OpenShift, Describe and leverage Kubernetes architecture to set up and use an entire lifecycle-based container management system. Create and leverage a YAML deployment file to configure and create resources such as pods, services, replicasets, and others in a declarative way.",
@@ -124,23 +142,5 @@
     "date": "2022-07-10",
     "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fhongkong_university_logo.jfif?alt=media&token=75f305db-71e4-4163-9168-4f25d2bd432d",
     "credential_url": "https://coursera.org/share/c92cc32c7c6dc8249a93b9ef6aec1114"
-  },
-  {
-    "badges_id": "bb63465d-493e-4188-b80e-9a3d29bbd18b",
-    "title": "Application Development using Microservices and Serverless",
-    "description": "Learn the fundamentals of Microservices, their advantages, and contrast with monolithic architectures, Create, and deploy microservices using Docker containers and serverless technologies like IBM Code Engine.",
-    "company_name": "By IBM",
-    "date": "2023-12-28",
-    "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
-    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/ED7ELN8ZN4Z8"
-  },
-  {
-    "badges_id": "f0f6a49e-acd8-4e89-b156-d89b2744f43b",
-    "title": "Elastic Google Cloud Infrastructure: Scaling and Automation",
-    "description": "I have learned how to connect infrastructure to Google Cloud, including setting up VPNs or interconnects for secure communication. I can configure load balancing and autoscaling for VM instances using Google Cloud Load Balancing and Instance Groups with Autoscaler to optimize resource allocation. Additionally, I have experience automating infrastructure deployment with tools like Terraform or Deployment Manager to provision resources efficiently. ",
-    "company_name": "Google",
-    "date": "2025-04-02",
-    "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fgoogle-cloud.png?alt=media&token=756e1696-5a19-4662-a522-c570f8fda8ce",
-    "credential_url": "https://www.coursera.org/account/accomplishments/certificate/B7IYB9XXH5SQ"
   }
 ]
