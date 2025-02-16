@@ -5,15 +5,6 @@
   "total_projects": 5,
   "data": [
     {
-      "project_id": "f7d285b2-5660-4352-8ac9-06358ba47fe4",
-      "heading": "Solopreneurs AI",
-      "text": "AI Cutting-edge Technology Tools Dashboard",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects%2FSolopreneurs%20AI.webp?alt=media&token=ab488b8f-a965-4d9c-86d9-2bc16747cdc0",
-      "skillsUrl": "https://skillicons.dev/icons?i=react,javascript,aws,fastapi,github,python,vite,nginx,cloudflare",
-      "htmlContent": "SolopreneursAI is a tech-based company that offers cutting-edge AI tools designed to help solopreneurs, freelancers, founders, and small business owners win global clients. Our technology leverages social selling to expand our clients' reach, grow their client base, and thrive in today's competitive business landscape.SolopreneursAI's AI technology assists users by enhancing their personal branding and social selling efforts. This allows them to save time and simplify their operations, eliminating the need to spend hours on content creation, branding, or lead generation. Instead, users can focus on building relationships and taking care of their clients.I developed a comprehensive dashboard for SolopreneursAI to aid clients in generating content ideas, expanding their connections, and managing their ecommerce databases. This project was built using React for the front-end, Kontenbase for storage solutions, and Amazon EC2 for scalable server infrastructure.",
-      "htmlImage": "<img src='https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects-detail%2FSolopreneurs%20AI%2FRegister%20-%20Auth.webp?alt=media&token=d2b87790-a3a5-49b1-a5b5-0ca61bab4900' width='920px'/><img src='https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects-detail%2FSolopreneurs%20AI%2FRegistration%20-%20Step%204%20-%20Select%20Plan%20(IDR).webp?alt=media&token=ccac79de-e28b-4f38-8ee7-57b025bcd7be' width='920px'/><img src='https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects-detail%2FSolopreneurs%20AI%2FPayment%20B%20-%20Stripe%20-%20desktop%20-%20_1280px.webp?alt=media&token=b87bac5a-5368-4f47-9711-a921041d5651' width='920px'/><img src='https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects-detail%2FSolopreneurs%20AI%2FHomepage%20(1)%20-%20desktop.webp?alt=media&token=368a378f-a88e-4464-8cca-cc5d6aeeab86' width='920px'/><img src='https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects-detail%2FSolopreneurs%20AI%2FTool%20-%20Generate%20Linkedin%20Profile%20Recommendations.webp?alt=media&token=d126ca7b-6682-46de-b454-32dd1fa5a96c' width='920px'/><img src='https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fprojects-detail%2FSolopreneurs%20AI%2FEcommerce%20My%20Contacts%20Dekstop.webp?alt=media&token=7430cf15-1117-479b-92e4-bf4f3a040eff' width='920px'/>"
-    },
-    {
       "project_id": "fa2a3744-87e7-471e-9487-31770ad0980a",
       "heading": "TBC Prediction",
       "text": "Tuberculosis Disease Prediction in Makassar City",
@@ -41,7 +32,16 @@
       "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/darwin-main.png\" width=\"600px\" height=\"600px\"/>"
     },
     {
-      "project_id": "488a74af-34c4-4707-9d8b-5a57403c5e5b",
+      "project_id": "547b1e9f-346e-4658-a3fd-55326bdc1323",
+      "heading": "Solopreneurs AI",
+      "text": "AI Cutting-edge Technology Tools Dashboard",
+      "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20AI.webp",
+      "skillsUrl": "https://skillicons.dev/icons?i=react,javascript,aws,fastapi,github,python,vite,nginx,cloudflare",
+      "htmlContent": "SolopreneursAI is a tech-based company that offers cutting-edge AI tools designed to help solopreneurs, freelancers, founders, and small business owners win global clients. Our technology leverages social selling to expand our clients' reach, grow their client base, and thrive in today's competitive business landscape.SolopreneursAI's AI technology assists users by enhancing their personal branding and social selling efforts. This allows them to save time and simplify their operations, eliminating the need to spend hours on content creation, branding, or lead generation. Instead, users can focus on building relationships and taking care of their clients.I developed a comprehensive dashboard for SolopreneursAI to aid clients in generating content ideas, expanding their connections, and managing their ecommerce databases. This project was built using React for the front-end, Kontenbase for storage solutions, and Amazon EC2 for scalable server infrastructure.",
+      "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Register%20-%20Auth.webp\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Registration%20-%20Step%204%20-%20Select%20Plan%20(IDR).webp\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Payment%20B%20-%20Stripe%20-%20desktop%20-%20_1280px.webp\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Soloprenerus%20Homepage%20-%20desktop.webp\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Tool%20-%20Generate%20Linkedin%20Profile%20Recommendations.webp\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Ecommerce%20My%20Contacts%20Dekstop.webp\" width=\"600px\" height=\"600px\"/>"
+    },
+    {
+      "project_id": "3e43b27a-6d83-4eac-bbce-3e03c89f55fa",
       "heading": "Coretify",
       "text": "Centralized Login Account Management System",
       "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Coretify.webp",
