@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react'
 
 // API Modules
-import { sendContactMessage } from '../../api/Hecate/POST'
+import { sendContactMessage } from '../../api/contact/POST'
 
 // Custom Hooks
 import { useResponsive } from '../../hooks/useResponsive'

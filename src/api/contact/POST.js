@@ -7,7 +7,7 @@
  */
 export const sendContactMessage = async (reqBody) => {
 
-    const url = `https://hecate-cms.vercel.app/api/forms`;
+    const url = `https://api-barbarpotato.vercel.app/contact`;
 
     const response = await fetch(url, {
         method: 'POST',
