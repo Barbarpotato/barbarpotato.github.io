@@ -34,7 +34,7 @@ function Badges() {
                     throw new Error("Failed to fetch data");
                 }
                 const result = await response.json();
-                setData(result);
+                setData(result.data);
             } catch (err) {
                 setError(err.message);
             } finally {

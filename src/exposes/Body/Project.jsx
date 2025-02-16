@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react'
 
 // API Modules
-import { useDataProjects } from '../../api/Hecate/GET'
+import { useDataProjects } from '../../api/projects/GET'
 
 // Custom Modules
 import { chunkArray, partitionArray } from '../../utils/PreprocessProjectData'

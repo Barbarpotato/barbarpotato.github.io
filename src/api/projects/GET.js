@@ -14,6 +14,7 @@ const fetchProjects = async () => {
 export const useDataProjects = () => {
     return useQuery("projects", () => fetchProjects(), {
         cacheTime: 3600000,
-        staleTime: 1800000
+        staleTime: 1800000,
+        select: (data) => data.data
     })
 }
