@@ -45,7 +45,7 @@ function Contact() {
         sendContactMessage(contactMessage)
             .then((data) => {
                 onOpen()
-                if (data.hasOwnProperty('message') && data.message == 'Successfully sent message!') {
+                if (data.hasOwnProperty('message') && data.message == 'Contact message sent successfully.') {
                     setRespMessage({ title: "Hooray!", description: "You Successfully Send a Message. We Will Get Back To You Soon." })
                 } else setRespMessage({ title: "Oops!", description: "Something Went Wrong. Please Try Again Later." })
                 setContactMessage({ name: '', email: '', message: '' })
