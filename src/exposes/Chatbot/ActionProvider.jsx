@@ -6,15 +6,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
     const handleComplexQuestions = async (message) => {
         try {
-
             if (!message) return;
 
-            const url = "https://darwin-assistant.vercel.app/conversation";
+            const url = "https://darwin-assistant.vercel.app/api/v1/conversation/portfolio";
 
             const payload = {
                 history: darwinMessage,
                 message: message
             };
+
+            // Show loading message
+            const loadingMessage = createChatBotMessage("Typing...", { withAvatar: false });
+            setState((prev) => ({
+                ...prev,
+                messages: [...prev.messages, loadingMessage],
+            }));
 
             const response = await fetch(url, {
                 method: 'POST',
@@ -24,30 +30,38 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                 body: JSON.stringify(payload)
             });
 
-            // handle properly if response is not ok
             if (!response.ok) {
-                handleHello();
+                throw new Error("Failed to fetch response");
             }
 
             let darwinResp = await response.json();
-
             darwinResp = darwinResp.response;
 
             const botMessage = createChatBotMessage(darwinResp, { withAvatar: false, widget: 'stopPlaying' });
 
-            // appending the history converstation with user
-            setDarwinMessage([...darwinMessage, { role: 'user', parts: message }, { role: 'model', parts: darwinResp }]);
+            // Append the conversation history
+            setDarwinMessage([...darwinMessage,
+            { role: 'user', parts: [{ text: message }] },
+            { role: 'model', parts: [{ text: darwinResp }] }
+            ]);
 
-            // caching all the messages for react chatbot kit lib
+            // Update messages: remove loading and add response
             setState((prev) => ({
                 ...prev,
-                messages: [...prev.messages, botMessage],
+                messages: [...prev.messages.slice(0, -1), botMessage], // Remove last (loading) message
             }));
 
         } catch (error) {
-            handleHello();
+            console.error("Error fetching response:", error);
+
+            // Replace loading message with an error message
+            const errorMessage = createChatBotMessage("Sorry, I'm having trouble responding. Please try again.", { withAvatar: false });
+            setState((prev) => ({
+                ...prev,
+                messages: [...prev.messages.slice(0, -1), errorMessage], // Remove last (loading) message
+            }));
         }
-    }
+    };
 
 
     const handleHello = () => {
