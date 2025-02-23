@@ -43,7 +43,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.react-chatbot-kit-chat-input-form {
+.react-chatbot-kit-chat-input {
+  background-color: #292b37;
   color: white;
 }
 
