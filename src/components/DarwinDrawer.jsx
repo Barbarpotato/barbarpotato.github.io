@@ -83,7 +83,7 @@ function DarwinDrawer({ isOpen, onClose, btnRef }) {
                                     mb={4}
                                     p={3}
                                     borderRadius="md"
-                                    bg={message.role === "model" ? "#292b37" : "#4A5568"}
+                                    bg={message.role === "model" ? "#2D3748" : "#4A5568"}
                                     color="white"
                                     width="85%"
                                     transition="all 0.2s ease-in-out"

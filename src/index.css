@@ -22,6 +22,11 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.chakra-slide {
+  background-color: #292b37 !important;
+  color: #faf9ff !important;
+}
+
 /*
   /** THE END Chatbot kit CSS
 */
