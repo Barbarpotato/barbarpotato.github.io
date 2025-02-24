@@ -2,7 +2,7 @@
 import { Fragment } from 'react'
 
 // Expose Modules
-import ChatbotButton from './Chatbot/ChatbotButton'
+import Darwin from './Body/Darwin'
 import Header from './Header'
 import Hero from './Body/Hero'
 import About from './Body/About'
@@ -17,7 +17,7 @@ function Portfolio() {
 
     return (
         <Fragment>
-            <ChatbotButton />
+            <Darwin />
             <Header />
             <Hero />
             <About />

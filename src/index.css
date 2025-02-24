@@ -2,27 +2,6 @@
   /** Chatbot kit CSS
 */
 
-.react-chatbot-kit-chat-container {
-  z-index: 1;
-  position: fixed !important;
-  bottom: 100px;
-  right: 20px;
-  max-width: 300px;
-  background-color: #282a36;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-.react-chatbot-kit-chat-message-container {
-  overflow-x: none;
-  background-color: #292b37;
-}
-
-.react-chatbot-kit-chat-header {
-  background-color: #ff79c6 !important;
-  color: aliceblue !important;
-}
 
 .chatbot-toggle-button {
   opacity: 70%;
@@ -41,21 +20,6 @@
   font-size: 30px;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.react-chatbot-kit-chat-input {
-  background-color: #292b37;
-  color: white;
-}
-
-.react-chatbot-kit-chat-bot-message {
-  background-color: #f1f0f0;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px 0;
-  max-width: 100%;
-  align-self: flex-start;
-  /* Add any other styles you want for the bot message */
 }
 
 /*
