@@ -64,7 +64,7 @@ function DarwinDrawer({ isOpen, onClose, btnRef }) {
     };
 
     return (
-        <Drawer blockScrollOnMount={false} size={{ base: "full", md: "lg" }} isOpen={isOpen} placement='right' onClose={onClose} finalFocusRef={btnRef}>
+        <Drawer blockScrollOnMount={false} size={"lg"} isOpen={isOpen} placement='right' onClose={onClose} finalFocusRef={btnRef}>
             <DrawerOverlay />
             <DrawerContent>
                 <DrawerCloseButton />
