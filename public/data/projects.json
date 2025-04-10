@@ -23,15 +23,6 @@
       "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1739712492234_Metrics%20-%20Admin.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1739712488725_Deployment%20-Admin.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1739712484756_Labs%20-%20Admin.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1739712481130_Add%20Lab%20-%20Admin.png\" width=\"600px\" height=\"600px\"/>"
     },
     {
-      "project_id": "4935d388-70ae-4af8-a7a8-550d8ab05d64",
-      "heading": "Darwin",
-      "text": "Virtual Chat Assistant",
-      "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Darwin.webp",
-      "skillsUrl": "https://skillicons.dev/icons?i=flask,python,vercel,redis,gcp,bootstrap,github",
-      "htmlContent": "Darwin is a Retrieval-Augmented Generation (RAG) backend service that build to improve question-answering capabilities by integrating external knowledge sources such as databases, cloud storage, and document files. The project involves creating a data pipeline where information from various sources is extracted, preprocessed, and converted into vector embeddings using state-of-the-art models. These embeddings are stored in a specialized vector database, enabling efficient similarity searches. When a user submits a question, the system retrieves relevant data from the database, combines it with a generative model, and produces contextually accurate and insightful answers. This approach enhances the system’s ability to respond dynamically, leveraging both static knowledge and real-time external data.",
-      "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/darwin-main.png\" width=\"600px\" height=\"600px\"/>"
-    },
-    {
       "project_id": "547b1e9f-346e-4658-a3fd-55326bdc1323",
       "heading": "Solopreneurs AI",
       "text": "AI Cutting-edge Technology Tools Dashboard",
@@ -48,6 +39,15 @@
       "skillsUrl": "https://skillicons.dev/icons?i=bootstrap,docker,express,mysql,javascript,githubactions,github,vercel,prisma",
       "htmlContent": "Coretify is a centralized login account management system designed to simplify and secure user authentication processes across multiple applications. Built with Bun for high-performance server-side JavaScript execution and Express for routing and middleware management, Coretify ensures efficient handling of API requests. The project leverages JWT (JSON Web Tokens) to implement secure and stateless authentication, making it easy for users to log in and manage their accounts across various services. Coretify aims to be a robust, scalable, and secure solution for centralized user account management.",
       "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/hero-coretify.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/demo-coretify.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/admin-coretify.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/support-coretify.png\" width=\"600px\" height=\"600px\"/>"
+    },
+    {
+      "project_id": "796af3a7-2096-49c8-a43b-af9f0c49b6b0",
+      "heading": "Darwin",
+      "text": "Virtual Chat Assistant",
+      "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Darwin.webp",
+      "skillsUrl": "https://skillicons.dev/icons?i=flask,python,vercel,redis,gcp,bootstrap,github",
+      "htmlContent": "Darwin is a Retrieval-Augmented Generation (RAG) backend service that build to improve question-answering capabilities by integrating external knowledge sources such as databases, cloud storage, and document files. The project involves creating a data pipeline where information from various sources is extracted, preprocessed, and converted into vector embeddings using state-of-the-art models. These embeddings are stored in a specialized vector database, enabling efficient similarity searches. When a user submits a question, the system retrieves relevant data from the database, combines it with a generative model, and produces contextually accurate and insightful answers. This approach enhances the system’s ability to respond dynamically, leveraging both static knowledge and real-time external data.",
+      "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1741506542533_Darwin-2.webp\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/darwin-main.png\" width=\"600px\" height=\"600px\"/><img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1741506546661_Darwin-3.webp\" width=\"600px\" height=\"600px\"/>"
     }
   ]
 }

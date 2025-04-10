@@ -60,7 +60,7 @@ function LabHome() {
                                     </h2>
                                     <AccordionPanel>
                                         <Text color={"#faf9ff"} >{blog.short_description}
-                                            <a href={`https://barbarpotato.github.io/Labs/${blog.slug}`} style={{
+                                            <a href={`https://barbarpotato.github.io/Labs-${blog.index}/${blog.slug}`} style={{
                                                 marginLeft: '5px', cursor: 'pointer',
                                                 textDecoration: 'underline', color: "#bd93f9"
                                             }}>See More Details...</a>
