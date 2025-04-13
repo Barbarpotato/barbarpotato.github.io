@@ -40,7 +40,7 @@ const About = () => {
     const skills = [
         { name: 'Programming & Development', level: 90, color: 'yellow.400' },
         { name: 'Software Development Practices', level: 85, color: 'blue.600' },
-        { name: 'System Design & Architecture', level: 80, color: 'blue.500' },
+        { name: 'System Design & Architecture', level: 80, color: 'red.500' },
         { name: 'DevOps and Infrastructure', level: 75, color: 'green.500' },
         { name: 'Data and AI', level: 70, color: 'purple.500' },
     ];
@@ -164,7 +164,7 @@ const About = () => {
                                         Problem Solving
                                     </Badge>
                                     <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">
-                                        Architect
+                                        Software Architect
                                     </Badge>
                                     <Badge colorScheme="red" px={3} py={1} borderRadius="full">
                                         System Design
