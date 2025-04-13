@@ -53,10 +53,10 @@ const About = () => {
             description: 'Diving deep into the world of artificial intelligence and machine learning, where I explore algorithms, neural networks, and data-driven models to create systems that can learn, adapt, and make intelligent decisions to solve complex real-world problems.'
         },
         {
-            icon: FaRocket,
-            name: 'Keep Learning',
-            color: 'blue',
-            description: 'Committing to a lifelong journey of personal and professional growth by constantly seeking out new skills, perspectives, and knowledge across diverse fields, ensuring I stay curious and adaptable in an ever-evolving technological landscape.'
+            icon: FaStar,
+            name: 'Software Architecture',
+            color: 'pink',
+            description: 'Exploring and building scalable, maintainable systems by understanding how different services interact, I focus on designing robust software architectures that balance performance, reliability, and simplicity.'
         },
         {
             icon: FaLightbulb,
@@ -65,10 +65,10 @@ const About = () => {
             description: 'Fueling progress by embracing bold ideas and thinking outside the box, I strive to develop groundbreaking solutions that challenge conventional approaches and spark transformative change in technology and beyond.'
         },
         {
-            icon: FaStar,
-            name: 'Cyber Security',
-            color: 'pink',
-            description: 'Safeguarding the digital world by mastering the art and science of cyber security, I focus on protecting systems, networks, and data from threats through advanced techniques, ethical hacking, and proactive strategies to ensure trust and resilience in an interconnected age.'
+            icon: FaRocket,
+            name: 'Keep Learning',
+            color: 'blue',
+            description: 'Committing to a lifelong journey of personal and professional growth by constantly seeking out new skills, perspectives, and knowledge across diverse fields, ensuring I stay curious and adaptable in an ever-evolving technological landscape.'
         }
     ];
 
