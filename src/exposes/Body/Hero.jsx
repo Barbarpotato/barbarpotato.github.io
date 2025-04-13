@@ -71,7 +71,7 @@ function Hero() {
             <Box className='stars'></Box>
             <Box className='stars2'></Box>
             <Box className='stars3'></Box>
-            <Flex height={{ xl: '80vh' }} direction={{ base: 'column', xl: 'row' }} alignItems={'center'} textAlign={{ base: 'center', xl: 'left' }}>
+            <Flex id='home' height={{ xl: '80vh' }} direction={{ base: 'column', xl: 'row' }} alignItems={'center'} textAlign={{ base: 'center', xl: 'left' }}>
                 <Flex direction={'column'} width={{ xl: '50%' }} alignItems={{ xl: 'center' }}>
 
                     <Flex direction={'column'}>

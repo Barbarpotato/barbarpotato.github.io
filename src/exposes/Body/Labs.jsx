@@ -22,7 +22,7 @@ function LabHome() {
 
     return (
         <Fragment>
-            <Flex style={{ paddingInline: "2rem" }} alignItems={'center'} mt={{ xl: '10vh' }} direction={{ base: 'column', xl: 'row' }} justifyContent={{ xl: "center" }}>
+            <Flex id='labs' style={{ paddingInline: "2rem" }} alignItems={'center'} mt={{ xl: '10vh' }} direction={{ base: 'column', xl: 'row' }} justifyContent={{ xl: "center" }}>
 
                 <Flex direction={{ "base": "column" }} width={{ xl: '50%' }} alignItems={{ "xl": "center" }} justifyContent={{ "xl": 'center' }}>
                     <Heading

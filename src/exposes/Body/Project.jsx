@@ -83,7 +83,7 @@ function Project() {
             </Suspense>
 
 
-            <Box mt={'10vh'}>
+            <Box id='projects' mt={'10vh'}>
                 <Heading id='myproject' mb={10} textAlign={'center'} opacity={0.8} color={"#faf9ff"}><span style={{ color: "#bd93f9" }}>{"<"}
                 </span>Projects<span style={{ color: "#bd93f9" }}>{' />'}</span>
                 </Heading>

@@ -12,7 +12,7 @@ function About() {
 
     return (
 
-        <Flex style={{ marginBottom: "5rem", paddingInline: "2rem" }} width={"100%"}>
+        <Flex id='about' style={{ marginBottom: "5rem", paddingInline: "2rem" }} width={"100%"}>
             <Flex
                 direction={{ base: "column", xl: "row" }}
                 mt={20}

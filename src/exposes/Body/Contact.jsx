@@ -75,7 +75,7 @@ function Contact() {
                 </ModalContent>
             </Modal>
 
-            <Box mt={'10vh'}>
+            <Box id='contact' mt={'10vh'}>
                 <Heading id='contact' mb={10} textAlign={'center'} opacity={0.8} color={"#faf9ff"}><span style={{ color: "#bd93f9" }}>{"<"}
                 </span>Contact Me<span style={{ color: "#bd93f9" }}>{' />'}</span>
                 </Heading>

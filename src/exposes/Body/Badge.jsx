@@ -84,7 +84,7 @@ function Badges() {
                 <span style={{ color: "#bd93f9" }}>{' />'}</span>
             </Heading>
 
-            <Flex direction={{ base: 'column', xl: 'row' }} paddingInline={{ base: "2rem", xl: "15%" }} justifyContent={{ xl: "center" }} >
+            <Flex id='badges' direction={{ base: 'column', xl: 'row' }} paddingInline={{ base: "2rem", xl: "15%" }} justifyContent={{ xl: "center" }} >
                 {isMobile ? (
                     <Fragment>
                         {currentItems?.map((item, index) => (

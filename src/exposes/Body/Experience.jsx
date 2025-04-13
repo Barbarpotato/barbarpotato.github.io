@@ -92,7 +92,7 @@ function Experience() {
         <Fragment>
             {/* Stars Animation */}
             <Heading
-                id="experience-heading" // ID for linking with aria-labelledby
+                id="experience" // ID for linking with aria-labelledby
                 mt={'10vh'}
                 mb={10}
                 textAlign={'center'}
