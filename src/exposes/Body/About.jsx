@@ -145,7 +145,7 @@ const About = () => {
                                     as="h3"
                                     size="lg"
                                     mb={2}
-
+                                    color={'white'}
                                 >
                                     Darmawan
                                 </Heading>
@@ -397,7 +397,7 @@ const About = () => {
                                         <Box bg="blue.100" p={2} borderRadius="lg" color="blue.600">
                                             <Icon as={FaCode} boxSize={5} />
                                         </Box>
-                                        <Heading as="h3" size="md">
+                                        <Heading color={'white'} as="h3" size="md">
                                             Web Development
                                         </Heading>
                                     </HStack>
@@ -420,7 +420,7 @@ const About = () => {
                                         <Box bg="purple.100" p={2} borderRadius="lg" color="purple.600">
                                             <Icon as={FaServer} boxSize={5} />
                                         </Box>
-                                        <Heading as="h3" size="md">
+                                        <Heading color={'white'} as="h3" size="md">
                                             Backend Solutions
                                         </Heading>
                                     </HStack>
@@ -443,7 +443,7 @@ const About = () => {
                                         <Box bg="green.100" p={2} borderRadius="lg" color="green.600">
                                             <Icon as={FaMobileAlt} boxSize={5} />
                                         </Box>
-                                        <Heading as="h3" size="md">
+                                        <Heading color={'white'} as="h3" size="md">
                                             Mobile Development
                                         </Heading>
                                     </HStack>
@@ -465,7 +465,7 @@ const About = () => {
                                         <Box bg="orange.100" p={2} borderRadius="lg" color="orange.600">
                                             <Icon as={FaChartBar} boxSize={5} />
                                         </Box>
-                                        <Heading as="h3" size="md">
+                                        <Heading color={'white'} as="h3" size="md">
                                             Technical Leadership
                                         </Heading>
                                     </HStack>
@@ -478,7 +478,7 @@ const About = () => {
                         </Grid>
                     </GridItem>
                 </Grid>
-            </Container>
+            </Container >
         </Box >
     );
 };
