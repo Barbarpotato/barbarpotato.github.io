@@ -1,5 +1,15 @@
 [
   {
+    "blog_id": "aa6d33ed-f439-4fa4-9109-38427155b685",
+    "title": "Creating a Reusable React Layout Package via GitHub (Without npm Publish)",
+    "short_description": "If you often reuse the same Navbar, Footer, or other layout components across multiple React projects, maintaining them in each repo becomes redundant and error-prone. A better approach is to extract them into a shared GitHub package.",
+    "timestamp": "2025-05-04 02:42:53",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1746326014972_Github%20Packages.webp",
+    "image_alt": "Github Packaging",
+    "slug": "Creating-a-Reusable-React-Layout-Package-via-GitHub-Without-npm-Publish",
+    "index": "d4735e3a265e1"
+  },
+  {
     "blog_id": "06780cd8-d961-479f-90aa-8ce6ffdcfffa",
     "title": "MySQL Migration with Connection Pooling: A Simple Guide",
     "short_description": "Imagine standing in line at a coffee shop where each customer needs to fill out a membership form before ordering and then tears it up after getting their coffee. Sounds inefficient, right? This is exactly what happens when your application connects to a database without connection pooling.",
@@ -37,16 +47,6 @@
     "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1741948558177_circuit_breaker.png",
     "image_alt": "Circuit breaker",
     "slug": "Understanding-Circuit-Breakers-in-Software-Engineering-From-Traditional-to-Serverless",
-    "index": "6b86b273ff34f"
-  },
-  {
-    "blog_id": "19882a74-d1c2-4b31-837e-99cdc1846fcf",
-    "title": "Apache Cassandra: The NoSQL Powerhouse",
-    "short_description": "In today's world of big data, scalability and performance are crucial. Apache Cassandra, an open-source NoSQL database, is a top choice for handling large-scale, distributed data. Used by giants like Facebook, Netflix, and Twitter, Cassandra offers high availability, fault tolerance, and seamless scalability. Let’s dive into its architecture and key concepts!",
-    "timestamp": "2025-03-14 01:26:37",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1741944106846_apache_cassandra.png",
-    "image_alt": "Apache Cassandra",
-    "slug": "Apache-Cassandra-The-NoSQL-Powerhouse",
     "index": "6b86b273ff34f"
   }
 ]
