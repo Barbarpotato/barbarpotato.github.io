@@ -1,0 +1,52 @@
+[
+  {
+    "blog_id": "aa6d33ed-f439-4fa4-9109-38427155b685",
+    "title": "Creating a Reusable React Layout Package via GitHub (Without npm Publish)",
+    "short_description": "If you often reuse the same Navbar, Footer, or other layout components across multiple React projects, maintaining them in each repo becomes redundant and error-prone. A better approach is to extract them into a shared GitHub package.",
+    "timestamp": "2025-05-04 02:42:53",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1746326014972_Github%20Packages.webp",
+    "image_alt": "Github Packaging",
+    "slug": "Creating-a-Reusable-React-Layout-Package-via-GitHub-Without-npm-Publish",
+    "index": "d4735e3a265e1"
+  },
+  {
+    "blog_id": "06780cd8-d961-479f-90aa-8ce6ffdcfffa",
+    "title": "MySQL Migration with Connection Pooling: A Simple Guide",
+    "short_description": "Imagine standing in line at a coffee shop where each customer needs to fill out a membership form before ordering and then tears it up after getting their coffee. Sounds inefficient, right? This is exactly what happens when your application connects to a database without connection pooling.",
+    "timestamp": "2025-04-28 13:27:45",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1745838714722_connection%20pool%20Bg.png",
+    "image_alt": "Connection Pool Labs Content",
+    "slug": "MySQL-Migration-with-Connection-Pooling-A-Simple-Guide",
+    "index": "d4735e3a265e1"
+  },
+  {
+    "blog_id": "6234fef8-1547-46f7-ae10-33d577a1d168",
+    "title": "Understanding RabbitMQ: A Favorite Simple Messaging Service!",
+    "short_description": "RabbitMQ is a robust, open-source message broker that facilitates communication between applications by sending and receiving messages. Whether you're building a microservices architecture or a distributed system, RabbitMQ ensures reliable, scalable, and asynchronous messaging. In this blog, we’ll walk through its core components and concepts, from producers to consumers, and dive into some advanced features like round-robin dispatching and virtual hosts.",
+    "timestamp": "2025-03-15 19:44:13",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1742090540692_rabbitmq.webp",
+    "image_alt": "rabbit mq",
+    "slug": "Understanding-RabbitMQ-A-Favorite-Simple-Messaging-Service",
+    "index": "6b86b273ff34f"
+  },
+  {
+    "blog_id": "1465bd4a-b953-4b4a-90bd-4cb93d97395c",
+    "title": "Supercharge Your AI with MCP: The Future of Custom AI Tools",
+    "short_description": "What if your AI assistant could do exactly what you need it to—like count words in a sentence, fetch live data, or even control smart devices—without waiting for the developers to add those features? That’s where the Model Context Protocol (MCP) comes in. It’s a powerful new framework from Anthropic that lets you extend AI models like Claude with custom tools you build yourself. In this blog, I’ll break down the concept of MCP, share how I used it to create a simple word-counting tool for Claude Desktop, and explore why this technology is so exciting for the future of AI.",
+    "timestamp": "2025-03-15 02:15:00",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1742033609624_MCP.png",
+    "image_alt": "Model Context Protocol",
+    "slug": "Supercharge-Your-AI-with-MCP-The-Future-of-Custom-AI-Tools",
+    "index": "6b86b273ff34f"
+  },
+  {
+    "blog_id": "86f7440f-033f-4459-b0a5-09f74d7c34ba",
+    "title": "Understanding Circuit Breakers in Software Engineering: From Traditional to Serverless",
+    "short_description": "Imagine you’re using electricity at home, and a short circuit occurs. The circuit breaker in your electrical panel cuts the power to prevent a fire. In software, the concept is similar: it’s a design pattern that protects your system from repeated failures when calling external services",
+    "timestamp": "2025-03-14 02:46:27",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1741948558177_circuit_breaker.png",
+    "image_alt": "Circuit breaker",
+    "slug": "Understanding-Circuit-Breakers-in-Software-Engineering-From-Traditional-to-Serverless",
+    "index": "6b86b273ff34f"
+  }
+]

@@ -1,0 +1,152 @@
+{
+  "current_page": 1,
+  "per_page": 90,
+  "last_page": 1,
+  "total_badges": 16,
+  "data": [
+    {
+      "badges_id": "0f2ead30-0a95-47c1-a78c-2292481f6405",
+      "title": "Full-Stack Web Development with React",
+      "description": "Learn to Design a full-fledged Web client application using Bootstrap 4 and React and Develop server-side support for the web application using Node.js, ExpressJS together with database support using MongoDB",
+      "company_name": "By Hongkong University",
+      "date": "2022-07-10",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fhongkong_university_logo.jfif?alt=media&token=75f305db-71e4-4163-9168-4f25d2bd432d",
+      "credential_url": "https://coursera.org/share/c92cc32c7c6dc8249a93b9ef6aec1114"
+    },
+    {
+      "badges_id": "177e95dc-10f7-450a-8aa5-8447c6e0a729",
+      "title": "Databases - Back-End Development",
+      "description": "Learn to Identify and explain the different types of core technology and management systems used in databases, Identify and interpret SQL statements and commands, Manipulate records in a database with the use of SQL statements and commands, Outline alternatives to SQL and plan and design a simple relational database system.",
+      "company_name": "By Meta",
+      "date": "2023-10-26",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fmeta_logo.jfif?alt=media&token=13128493-688c-442a-b4d5-34a8fad69c2b",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/BDFWWZ8FFRCK"
+    },
+    {
+      "badges_id": "66bd16c3-6543-4c70-b733-e1255d9322a8",
+      "title": "DevOps on AWS",
+      "description": "Learn to use the combination of DevOps philosophies, practices and tools to develop, deploy, and maintain applications in the AWS Cloud. Benefits of adopting DevOps include: rapid delivery, reliability, scalability, security and improved collaboration.",
+      "company_name": "By AWS",
+      "date": "2023-11-12",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Faws_logo.jfif?alt=media&token=7e6536f1-b5d2-4ca3-8c6b-2663ae93c507",
+      "credential_url": "https://www.coursera.org/account/accomplishments/specialization/GJ57WV7MTBSL?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=s12n"
+    },
+    {
+      "badges_id": "77f45732-2214-4881-9013-acb8b61bb005",
+      "title": "Introduction to Big Data with Spark and Hadoop",
+      "description": "I’ve learned about big data concepts and their industry impact, focusing on tools like Apache Hadoop and Spark. I explored Hadoop’s architecture, including HDFS and MapReduce, and its ecosystem with Hive and HBase. In Spark, I mastered DataFrames, Datasets, and RDDs, along with optimization techniques. I also developed skills in SQL operations and data manipulation, preparing me to analyze and manage big data effectively.",
+      "company_name": "By IBM",
+      "date": "2024-10-09",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/QU0THIQ0OMC0"
+    },
+    {
+      "badges_id": "78eb249f-87d5-48c7-98b3-4bbd1bcf4289",
+      "title": "Monitoring and Observability for Development and DevOps",
+      "description": "I learned the importance of Golden Signals (latency, traffic, errors, saturation) and explored the pillars of observability—logs, metrics, and traces—for maintaining system health",
+      "company_name": "By IBM",
+      "date": "2025-01-18",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/4CW26IV2R6TR"
+    },
+    {
+      "badges_id": "83782cd8-78a5-4eec-95df-a9c4d285476d",
+      "title": "Fundamentals Of Microfrontends",
+      "description": "I’ve learned that MicroFrontends can greatly improve scalability and modularity in web applications by breaking them into smaller, independent pieces. Setting them up involves careful integration and communication between parts to ensure they work seamlessly. Following best practices and prioritizing security are key to building a reliable and efficient system.",
+      "company_name": "By Board Infinity",
+      "date": "2024-11-17",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fboard%20infinity%20logo.jfif?alt=media&token=1f8f8bb8-b81c-4430-bab9-0becbfedda32",
+      "credential_url": "https://www.coursera.org/account/accomplishments/verify/1A4GU3D3FOAE"
+    },
+    {
+      "badges_id": "8964e9fd-35f7-47f2-bc52-12dfa0a38e92",
+      "title": "Introduction to Agile Development and Scrum",
+      "description": "Learn to embrace the Agile concepts of adaptive planning, iterative development, and continuous improvement - resulting in early deliveries and value to customers.",
+      "company_name": "By IBM",
+      "date": "2024-03-05",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/66FETL4KFCRF"
+    },
+    {
+      "badges_id": "8ed10d6d-1687-4ba6-90e7-7efd852b9629",
+      "title": "Fundamentals of Kubernetes Deployment",
+      "description": "In Kubernetes, I learned that a Deployment manages my app’s desired state, including replicas, updates, and rollbacks for easy scaling and version control. I also learned to use a Service to route traffic to my app, whether for internal or external access, making sure it reaches the right pods. This setup keeps my app scalable, resilient, and accessible in the cluster.",
+      "company_name": "By LearnQuest",
+      "date": "2024-01-27",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Flearnquest%20logo.jfif?alt=media&token=8687b144-5524-4d6a-8afd-f0c69a6ca49e",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/OTLJLMGZJ297"
+    },
+    {
+      "badges_id": "9d883e1b-50cb-4bdb-a7c9-ce95258b12bc",
+      "title": "Containers w/ Docker, Kubernetes & OpenShift",
+      "description": "Learn Using containers, how to move applications quickly across any environment. Build cloud native applications using Docker, Kubernetes, OpenShift, Describe and leverage Kubernetes architecture to set up and use an entire lifecycle-based container management system. Create and leverage a YAML deployment file to configure and create resources such as pods, services, replicasets, and others in a declarative way.",
+      "company_name": "By IBM",
+      "date": "2023-11-16",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/QY39B2JKZF6W"
+    },
+    {
+      "badges_id": "a4804f5a-f1eb-407b-a331-786f396c5562",
+      "title": "Test and Behavior Driven Development",
+      "description": "Learn the importance of testing, Develop unit tests with test assertions and test fixtures and then run the tests, Improve unit testing through advanced TDD methods including coverage reports, factories, fakes, and mock objects, etc",
+      "company_name": "By IBM",
+      "date": "2024-01-27",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/PG3JY3LQXKKR"
+    },
+    {
+      "badges_id": "bb63465d-493e-4188-b80e-9a3d29bbd18b",
+      "title": "Application Development using Microservices and Serverless",
+      "description": "Learn the fundamentals of Microservices, their advantages, and contrast with monolithic architectures, Create, and deploy microservices using Docker containers and serverless technologies like IBM Code Engine.",
+      "company_name": "By IBM",
+      "date": "2023-12-28",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/ED7ELN8ZN4Z8"
+    },
+    {
+      "badges_id": "bd3af7d5-4b03-43b1-9b62-c9b3506cf2ef",
+      "title": "Fundamentals of AI Agents Using RAG and LangChain",
+      "description": "I Have been learning about Retrieval-Augmented Generation (RAG) and its practical implementation using LangChain to create a robust question-answering system, explored how RAG works by retrieving relevant information from a vector database, such as FAISS, and combining it with several language model to generate accurate answers. Also learned the importance of embeddings, where raw text is converted into numerical representations (vectors), enabling similarity searches in a vector database.",
+      "company_name": "By IBM",
+      "date": "2024-12-16",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://coursera-certificate-images.s3.amazonaws.com/YHL9F04HL00C"
+    },
+    {
+      "badges_id": "d21e7765-9ab9-44e6-9eae-3d6345ac7be5",
+      "title": "ETL and Data Pipelines with Shell, Airflow and Kafka",
+      "description": "Experienced in designing and implementing ETL (Extract, Transform, Load) and ELT (Extract, Load, Transform) data pipelines, optimizing workflows for both batch and concurrent execution. Skilled in automating ETL processes using Bash and Python, and proficient in leveraging tools like Apache Kafka, Airflow, and cloud platforms (AWS, GCP) for scalable data processing. Strong understanding of data pipeline components, including data extraction, transformation, and loading, with a focus on efficiency and real-time data processing.",
+      "company_name": "By IBM",
+      "date": "2024-07-31",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/verify/2GVXDZMVIHYM"
+    },
+    {
+      "badges_id": "d8df0920-8c46-4b1e-90b8-0610418b1546",
+      "title": "Computer Networks and Network Security",
+      "description": "Learn the about Local Area Networks, TCP/IP, the OSI Framework and routing basics and learn about database vulnerabilities and the tools/knowledge needed to research a database vulnerability",
+      "company_name": "By IBM",
+      "date": "2024-05-17",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2FIBM%20LOGO.jfif?alt=media&token=0ac4b655-f515-48e0-b50a-b35fd306ce0d",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/E6Y6YWB738VL"
+    },
+    {
+      "badges_id": "d9431984-1420-41cf-8bd7-207d98ff423c",
+      "title": "Advanced React - Frontend Development",
+      "description": "Learn to Create robust and reusable components with advanced techniques and learn different patterns to reuse common behavior, Interact with a remote server and fetch and post data via an API, Seamlessly test React applications with React Testing Library and Integrate commonly used React libraries to streamline your application development",
+      "company_name": "By Meta",
+      "date": "2023-02-14",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fmeta_logo.jfif?alt=media&token=13128493-688c-442a-b4d5-34a8fad69c2b",
+      "credential_url": "https://coursera.org/share/9ce2e690b51e138c5bc042b3e10d84ba"
+    },
+    {
+      "badges_id": "f0f6a49e-acd8-4e89-b156-d89b2744f43b",
+      "title": "Elastic Google Cloud Infrastructure: Scaling and Automation",
+      "description": "I have learned how to connect infrastructure to Google Cloud, including setting up VPNs or interconnects for secure communication. I can configure load balancing and autoscaling for VM instances using Google Cloud Load Balancing and Instance Groups with Autoscaler to optimize resource allocation. Additionally, I have experience automating infrastructure deployment with tools like Terraform or Deployment Manager to provision resources efficiently. ",
+      "company_name": "Google",
+      "date": "2025-02-04",
+      "logo_url": "https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fbadges%2Fgoogle-cloud.png?alt=media&token=756e1696-5a19-4662-a522-c570f8fda8ce",
+      "credential_url": "https://www.coursera.org/account/accomplishments/certificate/B7IYB9XXH5SQ"
+    }
+  ]
+}
