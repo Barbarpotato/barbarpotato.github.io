@@ -86,7 +86,7 @@ const Labs = () => {
 
                     <Button
                         as="a"
-                        href="/blog"
+                        href="/Labs"
                         variant="outline"
                         rightIcon={<FiArrowRight />}
                         mt={{ base: 4, md: 0 }}
