@@ -2,8 +2,18 @@
   "current_page": 1,
   "per_page": 90,
   "last_page": 1,
-  "total_projects": 5,
+  "total_projects": 6,
   "data": [
+    {
+      "project_id": "3b14e259-e2ad-446d-8218-8e3daf0dc5bc",
+      "heading": "Node Modelling",
+      "slug": "node-modelling",
+      "text": "Lightweight Business Process Model and Notation",
+      "skillsUrl": "https://skillicons.dev/icons?i=css,react,javascript,next,sqlite,gcp,docker",
+      "htmlContent": "This project offers tools to visualize complex data structures and dependencies as node-based graphs using React Flow. It aims to convert intricate code dependencies and data models into intuitive visual representations, simplifying understanding, memorization, and planning for future development. The system includes two main modules: the Dependency Flow Builder, which visualizes function dependencies and execution order from APIs, and the Model Builder, which generates node-edge models from structured data, such as Lindsey data. Both modules persist their output in localStorage and return data compatible with React Flow.\n\nThis visualization approach supports memorization by creating a mental map of relationships through spatial layout—such as placing main nodes centrally with dependencies above or below—and by clearly illustrating execution sequences (e.g., “calls #1”) to reduce cognitive load. It also enhances decision-making by exposing gaps or bottlenecks in the architecture, helping developers identify missing code, optimize execution order, and plan subsequent tasks. Designed with extensibility in mind, the localStorage-backed outputs enable incremental updates and seamless integration with a React Flow frontend.",
+      "htmlImage": "<img src=\"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/project-content%2Fnode-model-ex1.png?alt=media&token=c4c61bb1-fc5c-47ff-a5a3-65d599224bd8\" width=\"600px\" height=\"600px\"/><img src=\"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/project-content%2Fnode-model-ex2.png?alt=media&token=088871e2-3de4-45b9-aa7e-97332e5df6e5\" width=\"600px\" height=\"600px\"/><img src=\"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/project-content%2Fnode-model-ex3.png?alt=media&token=1242233d-6174-4e16-9ac5-89f9292ee4c6\" width=\"600px\" height=\"600px\"/><img src=\"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/project-content%2Fnode-model-ex4.png?alt=media&token=fe40130c-709d-40a7-a73b-1769c36f7f01\" width=\"600px\" height=\"600px\"/><img src=\"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/project-content%2Fnode-model-ex5.png?alt=media&token=10376786-0d28-4ec2-a406-a39a7f37c526\" width=\"600px\" height=\"600px\"/><img src=\"https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/project-content%2Fnode-model-ex6.png?alt=media&token=d9c35e13-7327-404d-8b71-d6d500b1a815\" width=\"600px\" height=\"600px\"/>",
+      "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1746707437828_Node%20Model.png"
+    },
     {
       "project_id": "3e43b27a-6d83-4eac-bbce-3e03c89f55fa",
       "heading": "Coretify",
