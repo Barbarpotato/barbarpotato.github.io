@@ -75,13 +75,13 @@ const Labs = () => {
                             size={{ base: '2xl', sm: '3xl', md: 'xl' }} // Adjusting heading size based on screen size
                             mb={2}
                         >
-                            Latest Articles
+                            Latest Labs Content
                         </Heading>
                         <Text
                             color="#c0c0c0"
                             fontSize={{ base: 'lg', sm: 'xl', md: 'lg' }} // Adjusting text size based on screen size
                         >
-                            Technical insights and development tutorials
+                            It's About Technical insights and development tutorials
                         </Text>
                     </Box>
 
@@ -95,7 +95,7 @@ const Labs = () => {
                         color="#faf9ff"
                         _hover={{ bg: '#383a4a' }}
                     >
-                        Read All Articles
+                        See More Contents
                     </Button>
                 </Flex>
             </motion.div>
