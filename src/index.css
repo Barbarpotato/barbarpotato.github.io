@@ -42,7 +42,7 @@
 /* Scale the element on hover */
 .project-card:hover {
   transform: scale(1.02);
-  box-shadow: 0px 10px 25px #cc7bc9;
+  box-shadow: 0px 0px 25px #cc7bc9;
 }
 
 .zoom-container {

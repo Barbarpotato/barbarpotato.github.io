@@ -9,6 +9,7 @@ import Hero from './Body/Hero'
 import Labs from './Body/Labs'
 
 import { Navigation, Footer, Darwin } from 'personal-shared-layout'
+import Projects from './Body/Projects'
 
 function Portfolio() {
 
@@ -28,6 +29,10 @@ function Portfolio() {
             <Hero />
             <OnBoarding />
             <Labs />
+            <Projects />
+
+
+
             <Footer />
         </Fragment>
     )

@@ -1,20 +1,13 @@
-import { Handle, Position } from '@xyflow/react';
+import { ReactFlow, Background, addEdge, applyNodeChanges, applyEdgeChanges } from '@xyflow/react';
 import { Container, Flex, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 import { useState, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Box } from "@chakra-ui/react";
-import {
-    ReactFlow,
-    Controls,
-    Background,
-    addEdge,
-    applyNodeChanges,
-    applyEdgeChanges
-} from '@xyflow/react';
 
-import CustomNode from '../../components/CustomNode';
+import MainNode from '../../components/MainNode';
+import SubNode from '../../components/SubNode';
 
-const nodeTypes = { CustomNode: CustomNode };
+const nodeTypes = { MainNode: MainNode, SubNode: SubNode };
 
 import '@xyflow/react/dist/style.css';
 
@@ -22,8 +15,9 @@ export default function OnBoarding() {
     const isMobile = useBreakpointValue({ base: true, xl: false });
 
     const [nodes, setNodes] = useState([]);
-    const [selectedNodeId, setSelectedNodeId] = useState(null);
+    const [_selectedNodeId, setSelectedNodeId] = useState(null);
     const [edges, setEdges] = useState([]);
+    const [mainNodeTrigger, setMainNodeTrigger] = useState(0); // Trigger for typewriter effect
 
     const onNodesChange = useCallback(
         (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
@@ -51,42 +45,45 @@ export default function OnBoarding() {
     );
 
     const onNodeClick = useCallback((event, node) => {
-        setSelectedNodeId(node.id);
-        const updatedNodes = nodes.map((n) => {
-            // Update the "related" node's data
-            if (n.id === 'related') {
+        if (node.type === 'SubNode') {
+            setSelectedNodeId(node.id);
+            const updatedNodes = nodes.map((n) => {
+                if (n.id === 'related') {
+                    return {
+                        ...n,
+                        data: {
+                            ...n.data,
+                            label: node.data.label,
+                            description: node.data.description,
+                            url: node.data.url,
+                            trigger: mainNodeTrigger + 1 // Update trigger
+                        }
+                    };
+                }
                 return {
                     ...n,
-                    data: {
-                        ...n.data,
-                        label: `${node.data.label}`,
-                        description: `${node.data.description}`,
-                        url: `${node.data.url}`
+                    style: n.type === 'MainNode' ? {} : {
+                        background: '#866bab',
+                        color: '#fff',
+                        border: n.id === node.id ? '2px solid #ff79c6' : '1px solid #777',
+                        borderRadius: '10px',
+                        padding: '10px',
+                        boxShadow: n.id === node.id
+                            ? '0 0 15px #ff79c6, 0 4px 8px rgba(0, 0, 0, 0.1)'
+                            : '0 4px 8px rgba(0, 0, 0, 0.1)'
                     }
                 };
-            }
-            // Update styles for all nodes
-            return {
-                ...n,
-                style: n.type === 'CustomNode' ? {} : {
-                    background: '#866bab',
-                    color: '#fff',
-                    border: n.id === node.id ? '2px solid #ff79c6' : '1px solid #777',
-                    borderRadius: '10px',
-                    padding: '10px',
-                    boxShadow: n.id === node.id
-                        ? '0 0 15px #ff79c6, 0 4px 8px rgba(0, 0, 0, 0.1)'
-                        : '0 4px 8px rgba(0, 0, 0, 0.1)'
-                }
-            };
-        });
-        setNodes(updatedNodes);
-    }, [nodes]);
+            });
+            setNodes(updatedNodes);
+            setMainNodeTrigger((prev) => prev + 1); // Increment trigger to restart typewriter
+        }
+    }, [nodes, mainNodeTrigger]);
 
     useEffect(() => {
         const initialNodes = [
             {
                 id: 'about',
+                type: 'SubNode',
                 data: {
                     label: 'About',
                     main: true,
@@ -98,6 +95,7 @@ export default function OnBoarding() {
             },
             {
                 id: 'labs',
+                type: 'SubNode',
                 data: {
                     label: 'Labs',
                     main: true,
@@ -109,6 +107,7 @@ export default function OnBoarding() {
             },
             {
                 id: 'projects',
+                type: 'SubNode',
                 data: {
                     label: 'Projects',
                     main: true,
@@ -120,6 +119,7 @@ export default function OnBoarding() {
             },
             {
                 id: 'badge',
+                type: 'SubNode',
                 data: {
                     label: 'Badges',
                     main: true,
@@ -131,6 +131,7 @@ export default function OnBoarding() {
             },
             {
                 id: 'experiences',
+                type: 'SubNode',
                 data: {
                     label: 'Experiences',
                     main: true,
@@ -142,18 +143,19 @@ export default function OnBoarding() {
             },
             {
                 id: 'related',
-                type: 'CustomNode',
+                type: 'MainNode',
                 data: {
                     label: 'Hello Visitors👋',
                     description: 'These Section Allows You to Understand the sitemap of my Portfolio',
-                    url: "https://barbarpotato.github.io/"
+                    url: "https://barbarpotato.github.io/",
+                    trigger: 0
                 },
-                position: { x: 270, y: 280 },
+                position: { x: 270, y: 220 },
                 targetPosition: 'left'
             }
         ].map(node => ({
             ...node,
-            style: node.type === 'CustomNode' ? {} : {
+            style: node.type === 'MainNode' ? {} : {
                 background: '#866bab',
                 color: '#fff',
                 border: '1px solid #777',
@@ -176,10 +178,11 @@ export default function OnBoarding() {
 
         setNodes(initialNodes);
         setEdges(initialEdges);
-    }, []); // No dependencies, runs only once
+    }, []);
 
     return (
-        <Container maxW="7xl" bg="#292b37" color="#faf9ff" pt={20}>
+        <Container maxW="7xl" color="#faf9ff" pt={20}>
+            <Box className='stars3'></Box>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -216,8 +219,7 @@ export default function OnBoarding() {
                                 zoomOnScroll={isMobile}
                                 nodeTypes={nodeTypes}
                             >
-                                <Controls />
-                                <Background variant='dots' />
+                                <Background variant="lines" color='#c0c0c0' style={{ opacity: 0.2 }} />
                             </ReactFlow>
                         </div>
                     </Box>

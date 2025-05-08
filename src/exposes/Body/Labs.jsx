@@ -45,7 +45,7 @@ const Labs = () => {
         if (process.env.NODE_ENV === 'production') {
             url = 'https://api-barbarpotato.vercel.app/labs/latest';
         } else {
-            url = '/public/data/blog_latest.json';
+            url = '/data/blog_latest.json';
         }
 
         fetch(url)
@@ -60,7 +60,8 @@ const Labs = () => {
 
     return (
         <Container maxW="7xl" bg="#292b37" color="#faf9ff" pt={20}>
-
+            <Box className='stars'></Box>
+            <Box className='stars2'></Box>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -117,12 +118,12 @@ const Labs = () => {
                                     transition={{ duration: 0.6 }} // Duration of animation
                                 >
                                     <Box
+                                        className='project-card'
                                         bg="#383a4a"
                                         p={6}
                                         borderRadius="xl"
                                         shadow="md"
                                         transition="all 0.2s"
-                                        _hover={{ shadow: 'lg' }}
                                         display="flex"
                                         flexDirection="column"
                                     >

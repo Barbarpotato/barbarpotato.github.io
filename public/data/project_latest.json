@@ -1,0 +1,26 @@
+[
+  {
+    "project_id": "3e43b27a-6d83-4eac-bbce-3e03c89f55fa",
+    "heading": "Coretify",
+    "text": "Centralized Login Account Management System",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Coretify.webp",
+    "htmlImage": "\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/hero-coretify.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/demo-coretify.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/admin-coretify.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/support-coretify.png\" width=\"600px\" height=\"600px\"/\u003E",
+    "slug": "coretify"
+  },
+  {
+    "project_id": "547b1e9f-346e-4658-a3fd-55326bdc1323",
+    "heading": "Solopreneurs AI",
+    "text": "AI Cutting-edge Technology Tools Dashboard",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20AI.webp",
+    "htmlImage": "\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Register%20-%20Auth.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Registration%20-%20Step%204%20-%20Select%20Plan%20(IDR).webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Payment%20B%20-%20Stripe%20-%20desktop%20-%20_1280px.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Soloprenerus%20Homepage%20-%20desktop.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Tool%20-%20Generate%20Linkedin%20Profile%20Recommendations.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Ecommerce%20My%20Contacts%20Dekstop.webp\" width=\"600px\" height=\"600px\"/\u003E",
+    "slug": "solopreneurs-ai"
+  },
+  {
+    "project_id": "796af3a7-2096-49c8-a43b-af9f0c49b6b0",
+    "heading": "Darwin",
+    "text": "Virtual Chat Assistant",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Darwin.webp",
+    "htmlImage": "\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1741506542533_Darwin-2.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/darwin-main.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1741506546661_Darwin-3.webp\" width=\"600px\" height=\"600px\"/\u003E",
+    "slug": "darwin"
+  }
+]

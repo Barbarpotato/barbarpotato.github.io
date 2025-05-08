@@ -28,25 +28,5 @@
     "image_alt": "rabbit mq",
     "slug": "Understanding-RabbitMQ-A-Favorite-Simple-Messaging-Service",
     "index": "6b86b273ff34f"
-  },
-  {
-    "blog_id": "1465bd4a-b953-4b4a-90bd-4cb93d97395c",
-    "title": "Supercharge Your AI with MCP: The Future of Custom AI Tools",
-    "short_description": "What if your AI assistant could do exactly what you need it to—like count words in a sentence, fetch live data, or even control smart devices—without waiting for the developers to add those features? That’s where the Model Context Protocol (MCP) comes in. It’s a powerful new framework from Anthropic that lets you extend AI models like Claude with custom tools you build yourself. In this blog, I’ll break down the concept of MCP, share how I used it to create a simple word-counting tool for Claude Desktop, and explore why this technology is so exciting for the future of AI.",
-    "timestamp": "2025-03-15 02:15:00",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1742033609624_MCP.png",
-    "image_alt": "Model Context Protocol",
-    "slug": "Supercharge-Your-AI-with-MCP-The-Future-of-Custom-AI-Tools",
-    "index": "6b86b273ff34f"
-  },
-  {
-    "blog_id": "86f7440f-033f-4459-b0a5-09f74d7c34ba",
-    "title": "Understanding Circuit Breakers in Software Engineering: From Traditional to Serverless",
-    "short_description": "Imagine you’re using electricity at home, and a short circuit occurs. The circuit breaker in your electrical panel cuts the power to prevent a fire. In software, the concept is similar: it’s a design pattern that protects your system from repeated failures when calling external services",
-    "timestamp": "2025-03-14 02:46:27",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1741948558177_circuit_breaker.png",
-    "image_alt": "Circuit breaker",
-    "slug": "Understanding-Circuit-Breakers-in-Software-Engineering-From-Traditional-to-Serverless",
-    "index": "6b86b273ff34f"
   }
 ]
