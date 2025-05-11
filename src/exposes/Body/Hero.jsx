@@ -49,12 +49,12 @@ function Hero() {
         const container = '.tagcloud';
         const texts = [
             'Frontend', 'Backend', 'Mobile App', 'Web App', 'Web Service',
-            'SQL', 'NoSQL', 'Cache', 'API', 'Object Storage',
-            'Orchestration', 'Container', 'AWS', 'Google Cloud', 'CI/CD',
-            'TDD', 'BDD', 'ML', 'LLM', 'Security',
+            'SQL', 'NoSQL', 'Caching', 'API', 'Object Storage', "Distributed",
+            'Orchestration', 'Container', 'AWS', 'Google Cloud', 'CI/CD', "Loadbalancing",
+            'TDD', 'BDD', 'ML', 'LLM', 'Security', "IAC", "Observability", "Throttling", "Debugging",
             'MVC', 'gRPC', 'WebSockets', 'SOAP', 'RESTful APIs', 'GraphQL', 'MQTT',
-            'Microservices', 'Serverless', 'Monolithic',
-            'Event-Driven', 'CQRS',
+            'Microservices', 'Serverless', 'Monolithic', "Sharding", "Partitioning", "Replication",
+            'Event-Driven', 'CQRS', "CAP", "AI", "Scalability", "Monitoring", "Automation",
         ];
 
         const options = {
