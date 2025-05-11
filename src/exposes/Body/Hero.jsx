@@ -127,7 +127,7 @@ function Hero() {
                 initial="hidden"
                 animate="visible"
                 position="relative"
-                zIndex={1}
+                zIndex={0}
             >
                 <MotionFlex direction="column" maxW="80%" variants={itemVariants}>
                     <Text

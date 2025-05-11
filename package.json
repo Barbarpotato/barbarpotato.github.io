@@ -6,7 +6,7 @@
   "scripts": {
     "prefetch": "node Prefetch.js",
     "dev": "npm run prefetch && vite",
-    "build": "npm run prefetch && vite build",
+    "build": "vite build",
     "preview": "npm run prefetch && vite preview"
   },
   "dependencies": {
