@@ -1,5 +1,15 @@
 [
   {
+    "blog_id": "88f64bfc-b14a-41f7-bae2-e90c59fb9811",
+    "title": "The Lifeline of Modern Data: A Deep Dive into Database Replication",
+    "short_description": "In the always-on digital world, users don’t tolerate downtime. A single second of unavailability can translate into thousands in lost revenue or trust. So how do platforms like Amazon, Netflix, or financial services ensure their data is always available, always consistent—or at least consistent enough?",
+    "timestamp": "2025-05-09 11:28:00",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1746788498356_Database%20Replica%20Background.png",
+    "image_alt": "Database Replication",
+    "slug": "The-Lifeline-of-Modern-Data-A-Deep-Dive-into-Database-Replication",
+    "index": "d4735e3a265e1"
+  },
+  {
     "blog_id": "aa6d33ed-f439-4fa4-9109-38427155b685",
     "title": "Creating a Reusable React Layout Package via GitHub (Without npm Publish)",
     "short_description": "If you often reuse the same Navbar, Footer, or other layout components across multiple React projects, maintaining them in each repo becomes redundant and error-prone. A better approach is to extract them into a shared GitHub package.",
@@ -18,15 +28,5 @@
     "image_alt": "Connection Pool Labs Content",
     "slug": "MySQL-Migration-with-Connection-Pooling-A-Simple-Guide",
     "index": "d4735e3a265e1"
-  },
-  {
-    "blog_id": "6234fef8-1547-46f7-ae10-33d577a1d168",
-    "title": "Understanding RabbitMQ: A Favorite Simple Messaging Service!",
-    "short_description": "RabbitMQ is a robust, open-source message broker that facilitates communication between applications by sending and receiving messages. Whether you're building a microservices architecture or a distributed system, RabbitMQ ensures reliable, scalable, and asynchronous messaging. In this blog, we’ll walk through its core components and concepts, from producers to consumers, and dive into some advanced features like round-robin dispatching and virtual hosts.",
-    "timestamp": "2025-03-15 19:44:13",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1742090540692_rabbitmq.webp",
-    "image_alt": "rabbit mq",
-    "slug": "Understanding-RabbitMQ-A-Favorite-Simple-Messaging-Service",
-    "index": "6b86b273ff34f"
   }
 ]
