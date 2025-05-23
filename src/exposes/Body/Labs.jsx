@@ -144,7 +144,7 @@ const Labs = () => {
                                         <Heading size="md" noOfLines={2} mb={2}>
                                             <ChakraLink
                                                 as="a"
-                                                href={`/blog/${article.slug}`}
+                                                href={`/Labs-${article.index}/${article.slug}`}
                                                 _hover={{ color: '#866bab' }}
                                             >
                                                 {article.title}
