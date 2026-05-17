@@ -155,9 +155,9 @@ function Hero() {
                         <Typewriter
                             options={{
                                 strings: [
-                                    "I'm currently working at PT. Samamaju Prima",
-                                    "I'm currently working a 3PL Project",
-                                    "Check out my latest labs for new updates",
+                                    "Currently focused on creating educational content about developer mindset",
+                                    "Working on the “Personal Developer Notebook” e-book",
+                                    "Don’t forget to check out the lab section on this site for fresh insights",
                                 ],
                                 autoStart: true,
                                 loop: true,

@@ -8,14 +8,13 @@ import OnBoarding from './Body/Onboarding'
 import Hero from './Body/Hero'
 import Labs from './Body/Labs'
 
-import { Navigation, Footer, Darwin } from 'personal-shared-layout'
+import { Navigation, Footer } from 'personal-shared-layout'
 import Projects from './Body/Projects'
 
 function Portfolio() {
 
     return (
         <Fragment>
-            <Darwin />
 
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
