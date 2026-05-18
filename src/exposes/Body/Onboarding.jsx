@@ -82,6 +82,18 @@ export default function OnBoarding() {
     useEffect(() => {
         const initialNodes = [
             {
+                id: 'home',
+                type: 'SubNode',
+                data: {
+                    label: 'Home',
+                    main: true,
+                    url: 'https://barbarpotato.github.io/Labs/',
+                    description: "Homepage of my personal website. You are currently on the homepage"
+                },
+                position: { x: -30, y: 240 },
+                sourcePosition: 'right'
+            },
+            {
                 id: 'about',
                 type: 'SubNode',
                 data: {
@@ -102,43 +114,7 @@ export default function OnBoarding() {
                     url: 'https://barbarpotato.github.io/Labs/',
                     description: "Technical articles, tutorials, and insights about web development and software engineering."
                 },
-                position: { x: 0, y: 200 },
-                sourcePosition: 'right'
-            },
-            {
-                id: 'projects',
-                type: 'SubNode',
-                data: {
-                    label: 'Projects',
-                    main: true,
-                    url: 'https://barbarpotato.github.io/Projects/',
-                    description: "A mix of things I’ve built—some for fun, some for work, all focused on making ideas come to life with clean and solid code."
-                },
-                position: { x: -120, y: 280 },
-                sourcePosition: 'right'
-            },
-            {
-                id: 'badge',
-                type: 'SubNode',
-                data: {
-                    label: 'Badges',
-                    main: true,
-                    url: 'https://barbarpotato.github.io/Badges/',
-                    description: "These badges represent the certificates I’ve earned through my journey of learning across a variety of online platforms."
-                },
-                position: { x: 0, y: 370 },
-                sourcePosition: 'right'
-            },
-            {
-                id: 'experiences',
-                type: 'SubNode',
-                data: {
-                    label: 'Experiences',
-                    main: true,
-                    url: 'https://barbarpotato.github.io/Experiences/',
-                    description: "Explore some of my past experiences, where I’ve consistently tracked and evaluated my progress."
-                },
-                position: { x: -120, y: 470 },
+                position: { x: -100, y: 400 },
                 sourcePosition: 'right'
             },
             {
@@ -167,10 +143,8 @@ export default function OnBoarding() {
 
         const initialEdges = [
             { id: 'e2', source: 'labs', target: 'related', animated: true },
-            { id: 'e4', source: 'projects', target: 'related', animated: true },
-            { id: 'e5', source: 'badge', target: 'related', animated: true },
+            { id: 'e3', source: 'home', target: 'related', animated: true },
             { id: 'e6', source: 'about', target: 'related', animated: true },
-            { id: 'e8', source: 'experiences', target: 'related', animated: true },
         ].map(edge => ({
             ...edge,
             style: { stroke: '#ff79c6', strokeWidth: 2 }
