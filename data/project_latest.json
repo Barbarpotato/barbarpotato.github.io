@@ -1,26 +1,32 @@
 [
   {
-    "project_id": "3e43b27a-6d83-4eac-bbce-3e03c89f55fa",
-    "heading": "Coretify",
-    "text": "Centralized Login Account Management System",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Coretify.webp",
-    "htmlImage": "\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/hero-coretify.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/demo-coretify.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/admin-coretify.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/support-coretify.png\" width=\"600px\" height=\"600px\"/\u003E",
-    "slug": "coretify"
+    "text": "test",
+    "skillsUrl": "https://vt.tiktok.com/ZSxpb34DD",
+    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp\" width=\"600px\" height=\"600px\"/>",
+    "htmlContent": "dulu saya juga malas ikut meeting karena merasa buang waktu dan pekerjaan terhambat karena tidak mengerjakan task.\ndidalam ruangan meeting juga tidak banyak terlibat hanya sekedar bilang progress masih on track kadang mikir kapan selesainya.\nkalau ada revisi malah jadi beban pikiran. akhirnya banyak produk mangkrak hanya setengah perjalanan atau sudah jadi tapi lama-lama gak kepakai. \n\nini jadi pelajaran buat gue karena kontributif dalam meeting bahkan bukan hak kita untuk mengetahui keputusan bisnis.\nsetidaknya kita bisa bertanya dan memahami konteks masalah yang ada. \nbukannya kita sebagai developer ingin memecahkan masalah kan?\n\nSejak itu, gue lihat meeting sebagai tempat ngerti konteks, bertanya, dan bahkan mengajukan untuk perubahan keputusan\nkarena satu pertanyaan bisa mencegah kita bikin hal yang salah berbulan-bulan.",
+    "slug": "skill-coding-bukan-lagi-pembeda",
+    "heading": "Skill Coding bukan lagi pembeda!",
+    "project_id": "43817871-f29b-473b-babe-5979afae836f",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp"
   },
   {
-    "project_id": "547b1e9f-346e-4658-a3fd-55326bdc1323",
-    "heading": "Solopreneurs AI",
-    "text": "AI Cutting-edge Technology Tools Dashboard",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20AI.webp",
-    "htmlImage": "\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Register%20-%20Auth.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Registration%20-%20Step%204%20-%20Select%20Plan%20(IDR).webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Payment%20B%20-%20Stripe%20-%20desktop%20-%20_1280px.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Soloprenerus%20Homepage%20-%20desktop.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Tool%20-%20Generate%20Linkedin%20Profile%20Recommendations.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Solopreneurs%20Ecommerce%20My%20Contacts%20Dekstop.webp\" width=\"600px\" height=\"600px\"/\u003E",
-    "slug": "solopreneurs-ai"
+    "skillsUrl": "https://vt.tiktok.com/ZSxpgFQPh",
+    "text": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?",
+    "heading": "Masih ada gak developer nurutin semua request user?",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp",
+    "slug": "masih-ada-gak-developer-nurutin-semua-request-user",
+    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp\" width=\"600px\" height=\"600px\"/>",
+    "project_id": "beaa6cbb-dbe9-469c-9a5e-d394163b5fab",
+    "htmlContent": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?"
   },
   {
-    "project_id": "796af3a7-2096-49c8-a43b-af9f0c49b6b0",
-    "heading": "Darwin",
-    "text": "Virtual Chat Assistant",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/Darwin.webp",
-    "htmlImage": "\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1741506542533_Darwin-2.webp\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/darwin-main.png\" width=\"600px\" height=\"600px\"/\u003E\u003Cimg src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1741506546661_Darwin-3.webp\" width=\"600px\" height=\"600px\"/\u003E",
-    "slug": "darwin"
+    "htmlContent": "Bosen sama JavaScript dan pengen coba backend lain? 🤔  Di platform lain kayak Vercel atau GitHub Pages, kamu gak bisa deploy Golang atau Rust. Tapi ternyata ada platform gratis yang bisa!  Free tier-nya juga gak main-main: 3 vCPU, 4GB RAM, custom domain + SSL, logs, dan bahkan PostgreSQL GRATIS 🔥  Udah cukup banget buat deploy backend serius, bukan cuma testing.  Ada yang pernah coba juga? 👇",
+    "project_id": "c96d1445-d9da-4872-8bbb-778e771641f9",
+    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064226736_Tiktok-1.webp\" width=\"600px\" height=\"600px\"/>",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064226736_Tiktok-1.webp",
+    "slug": "udah-saatnya-move-on-dari-vercel",
+    "text": ".",
+    "heading": "Udah saatnya Move On dari Vercel?",
+    "skillsUrl": "https://vt.tiktok.com/ZSxpXjLY5"
   }
 ]
