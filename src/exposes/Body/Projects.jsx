@@ -24,9 +24,8 @@ const Projects = () => {
                 const mappedData = data.map(project => ({
                     id: project.project_id,
                     title: project.heading,
-                    description: project.text,
-                    image: project.imageUrl,
-                    slug: project.slug // Assuming slug is available in the data
+                    skillsUrl: project.skillsUrl,
+                    image: project.imageUrl
                 }));
                 setProjects(mappedData);
             } catch (error) {
@@ -45,34 +44,66 @@ const Projects = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
             >
-                <Flex direction={{ base: 'column', md: 'row' }} height={'100%'} justify="space-between" mb={8}>
-                    <Box>
+                <Flex direction={{ base: 'column', md: 'row' }} height={'100%'} justify="space-between">
+                    <Box mb={{ base: 6, md: 0 }}>
                         <Heading
-                            size={{ base: '2xl', sm: '3xl', md: 'xl' }}
                             mb={2}
                             color="#faf9ff"
+                            lineHeight="1.1"
                         >
-                            Recent Projects
+                            <Text
+                                as="span"
+                                display="block"
+                                fontFamily="'Outfit', sans-serif"
+                                fontWeight="300"
+                                fontSize={{ base: "2xl", md: "3xl" }}
+                                letterSpacing="wide"
+                                color="#c0c0c0"
+                            >
+                                Lihat
+                            </Text>
+                            <Box
+                                as="span"
+                                display="inline-block"
+                                position="relative"
+                                fontFamily="'Playfair Display', serif"
+                                fontWeight="800"
+                                fontSize={{ base: "4xl", md: "5xl" }}
+                                color="#faf9ff"
+                                mt={1}
+                                px={4}
+                            >
+                                Konten Saya
+                                <svg
+                                    style={{
+                                        position: 'absolute',
+                                        top: '-15%',
+                                        left: '-5%',
+                                        width: '110%',
+                                        height: '130%',
+                                        pointerEvents: 'none',
+                                    }}
+                                    viewBox="0 0 100 50"
+                                    preserveAspectRatio="none"
+                                >
+                                    <path
+                                        d="M 5,25 C 10,5 95,2 97,25 C 99,48 5,48 3,30 C 1,12 85,8 95,20"
+                                        fill="none"
+                                        stroke="#cc7bc9"
+                                        strokeWidth="2.5"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                            </Box>
                         </Heading>
                         <Text
                             color="#c0c0c0"
                             fontSize={{ base: 'lg', sm: 'xl', md: 'lg' }}
                         >
-                            A showcase of my development work, side projects, and experiments.
+                            Seputar edukasi mengenai dunia development dan teknologi.
                         </Text>
                     </Box>
-                    <Button
-                        as="a"
-                        href="/Projects/"
-                        variant="outline"
-                        rightIcon={<FiArrowRight />}
-                        mt={{ base: 4, md: 0 }}
-                        borderColor="#faf9ff"
-                        color="#faf9ff"
-                        _hover={{ bg: '#383a4a' }}
-                    >
-                        See All Projects
-                    </Button>
                 </Flex>
             </motion.div>
 
@@ -98,7 +129,7 @@ const Projects = () => {
                                 color="#faf9ff"
                                 borderRadius="xl"
                             >
-                                <Box overflow="hidden" aspectRatio={16 / 9}>
+                                <Box h={{ base: "260px", md: "360px" }} overflow="hidden">
                                     <Image
                                         src={project.image}
                                         alt={project.title}
@@ -110,22 +141,32 @@ const Projects = () => {
                                     />
                                 </Box>
                                 <CardHeader>
-                                    <Heading as="h3" size="md" color="#faf9ff">
+                                    <Heading
+                                        as="h3"
+                                        fontSize="2xl"
+                                        fontFamily="'Playfair Display', serif"
+                                        fontWeight="700"
+                                        lineHeight="1.2"
+                                        letterSpacing="-0.02em"
+                                        color="#faf9ff"
+                                        transition="color 0.2s ease-in-out"
+                                        _hover={{ color: "#cc7bc9" }}
+                                    >
                                         {project.title}
                                     </Heading>
                                 </CardHeader>
-                                <CardBody flex="1">
-                                    <Text color="#d0d0d0">{project.description}</Text>
+                                <CardBody>
+
                                     <Button
                                         as="a"
-                                        href={`/Projects/${project.slug}`}
+                                        target='_blank'
+                                        href={`${project.skillsUrl}`}
                                         variant="link"
                                         color="#866bab"
                                         alignSelf="flex-start"
-                                        mt={4}
                                         rightIcon={<FiArrowRight />}
                                     >
-                                        See Details
+                                        Lihat Konten
                                     </Button>
                                 </CardBody>
                             </Card>
