@@ -46,7 +46,7 @@ const Projects = () => {
     };
 
     return (
-        <Box bg="#292b37" color="#faf9ff" pt={20} pb={16} overflow="hidden">
+        <Box bg="#292b37" color="#faf9ff" pt={0} pb={16} overflow="hidden">
             <Container maxW="7xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -63,14 +63,15 @@ const Projects = () => {
                         {/* Left: Heading block */}
                         <Box mb={{ base: 6, md: 0 }}>
                             <Text
-                                fontFamily="'Outfit', sans-serif"
-                                fontWeight="300"
-                                fontSize={{ base: '3xl', md: '4xl' }}
+                                fontFamily="'Playfair Display', serif"
+                                fontWeight="800"
+                                fontStyle="italic"
+                                fontSize={{ base: '5xl', md: '6xl' }}
                                 letterSpacing="wide"
-                                color="#c0c0c0"
+                                color="#faf9ff"
                                 lineHeight="1.2"
                             >
-                                Lihat
+                                Tentang
                             </Text>
 
                             {/* Bold italic serif line with purple underline accent */}
@@ -84,7 +85,7 @@ const Projects = () => {
                                 color="#faf9ff"
                                 mt={1}
                             >
-                                Konten Saya
+                                Konten Kreator
                                 <svg
                                     style={{
                                         position: 'absolute',
@@ -107,14 +108,6 @@ const Projects = () => {
                                 </svg>
                             </Box>
 
-                            <Text
-                                color="#c0c0c0"
-                                fontSize={{ base: 'md', md: 'lg' }}
-                                fontFamily="'Outfit', sans-serif"
-                                mt={6}
-                            >
-                                Seputar edukasi mengenai dunia development dan teknologi.
-                            </Text>
                         </Box>
 
                         {/* Right: Prev / Next circular nav buttons */}

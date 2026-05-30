@@ -28,5 +28,15 @@
     "image_alt": "bulkhead arch pattern",
     "slug": "How-to-Stop-Microservices-Failures-from-Spreading-with-the-Bulkhead-Pattern",
     "index": "d4735e3a265e1"
+  },
+    {
+    "blog_id": "0d80371b-0fdf-4b5c-9b51-ee540ced9ab5",
+    "title": "Scalable Video Upload Architecture Using Pre-Signed URLs",
+    "short_description": "Handling large video files (e.g., 100MB or more) for uploads can strain backend servers, causing performance bottlenecks, increased latency, and storage challenges. A scalable and efficient solution is to use pre-signed URLs with cloud storage services like AWS S3 or Google Cloud Storage (GCS). This architecture offloads the heavy lifting of file uploads to the cloud, reduces backend load, and ensures secure and optimized handling of large video files. Below is a detailed breakdown of the architecture, including components, workflow, security considerations, and implementation details.",
+    "timestamp": "2025-07-05 12:27:43",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1751717376607_presigned_url.jpg",
+    "image_alt": "presigned url AWS",
+    "slug": "Scalable-Video-Upload-Architecture-Using-Pre-Signed-URLs",
+    "index": "d4735e3a265e1"
   }
 ]
