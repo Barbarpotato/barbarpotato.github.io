@@ -1,92 +1,23 @@
 [
   {
-    "text": "test",
-    "skillsUrl": "https://vt.tiktok.com/ZSxpb34DD",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp\" width=\"600px\" height=\"600px\"/>",
-    "htmlContent": "dulu saya juga malas ikut meeting karena merasa buang waktu dan pekerjaan terhambat karena tidak mengerjakan task.\ndidalam ruangan meeting juga tidak banyak terlibat hanya sekedar bilang progress masih on track kadang mikir kapan selesainya.\nkalau ada revisi malah jadi beban pikiran. akhirnya banyak produk mangkrak hanya setengah perjalanan atau sudah jadi tapi lama-lama gak kepakai. \n\nini jadi pelajaran buat gue karena kontributif dalam meeting bahkan bukan hak kita untuk mengetahui keputusan bisnis.\nsetidaknya kita bisa bertanya dan memahami konteks masalah yang ada. \nbukannya kita sebagai developer ingin memecahkan masalah kan?\n\nSejak itu, gue lihat meeting sebagai tempat ngerti konteks, bertanya, dan bahkan mengajukan untuk perubahan keputusan\nkarena satu pertanyaan bisa mencegah kita bikin hal yang salah berbulan-bulan.",
-    "slug": "skill-coding-bukan-lagi-pembeda",
-    "heading": "Skill Coding bukan lagi pembeda!",
     "project_id": "43817871-f29b-473b-babe-5979afae836f",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp"
+    "heading": "Skill Coding bukan lagi pembeda!",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp",
+    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp\" width=\"600px\" height=\"600px\"/>",
+    "skillsUrl": "https://vt.tiktok.com/ZSxpb34DD"
   },
   {
-    "skillsUrl": "https://vt.tiktok.com/ZSxpgFQPh",
-    "text": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?",
+    "project_id": "beaa6cbb-dbe9-469c-9a5e-d394163b5fab",
     "heading": "Masih ada gak developer nurutin semua request user?",
     "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp",
-    "slug": "masih-ada-gak-developer-nurutin-semua-request-user",
     "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp\" width=\"600px\" height=\"600px\"/>",
-    "project_id": "beaa6cbb-dbe9-469c-9a5e-d394163b5fab",
-    "htmlContent": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?"
+    "skillsUrl": "https://vt.tiktok.com/ZSxpgFQPh"
   },
   {
-    "htmlContent": "Bosen sama JavaScript dan pengen coba backend lain? 🤔  Di platform lain kayak Vercel atau GitHub Pages, kamu gak bisa deploy Golang atau Rust. Tapi ternyata ada platform gratis yang bisa!  Free tier-nya juga gak main-main: 3 vCPU, 4GB RAM, custom domain + SSL, logs, dan bahkan PostgreSQL GRATIS 🔥  Udah cukup banget buat deploy backend serius, bukan cuma testing.  Ada yang pernah coba juga? 👇",
     "project_id": "c96d1445-d9da-4872-8bbb-778e771641f9",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064226736_Tiktok-1.webp\" width=\"600px\" height=\"600px\"/>",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064226736_Tiktok-1.webp",
-    "slug": "udah-saatnya-move-on-dari-vercel",
-    "text": ".",
     "heading": "Udah saatnya Move On dari Vercel?",
+    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064226736_Tiktok-1.webp",
+    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064226736_Tiktok-1.webp\" width=\"600px\" height=\"600px\"/>",
     "skillsUrl": "https://vt.tiktok.com/ZSxpXjLY5"
-  },
-  {
-    "text": "test",
-    "skillsUrl": "https://vt.tiktok.com/ZSxpb34DD",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp\" width=\"600px\" height=\"600px\"/>",
-    "htmlContent": "dulu saya juga malas ikut meeting karena merasa buang waktu dan pekerjaan terhambat karena tidak mengerjakan task.\ndidalam ruangan meeting juga tidak banyak terlibat hanya sekedar bilang progress masih on track kadang mikir kapan selesainya.\nkalau ada revisi malah jadi beban pikiran. akhirnya banyak produk mangkrak hanya setengah perjalanan atau sudah jadi tapi lama-lama gak kepakai. \n\nini jadi pelajaran buat gue karena kontributif dalam meeting bahkan bukan hak kita untuk mengetahui keputusan bisnis.\nsetidaknya kita bisa bertanya dan memahami konteks masalah yang ada. \nbukannya kita sebagai developer ingin memecahkan masalah kan?\n\nSejak itu, gue lihat meeting sebagai tempat ngerti konteks, bertanya, dan bahkan mengajukan untuk perubahan keputusan\nkarena satu pertanyaan bisa mencegah kita bikin hal yang salah berbulan-bulan.",
-    "slug": "skill-coding-bukan-lagi-pembeda",
-    "heading": "Skill Coding bukan lagi pembeda!",
-    "project_id": "43817871-f29b-473b-babe-5979afae836f",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp"
-  },
-  {
-    "skillsUrl": "https://vt.tiktok.com/ZSxpgFQPh",
-    "text": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?",
-    "heading": "Masih ada gak developer nurutin semua request user?",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp",
-    "slug": "masih-ada-gak-developer-nurutin-semua-request-user",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp\" width=\"600px\" height=\"600px\"/>",
-    "project_id": "beaa6cbb-dbe9-469c-9a5e-d394163b5fab",
-    "htmlContent": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?"
-  },
-  {
-    "text": "test",
-    "skillsUrl": "https://vt.tiktok.com/ZSxpb34DD",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp\" width=\"600px\" height=\"600px\"/>",
-    "htmlContent": "dulu saya juga malas ikut meeting karena merasa buang waktu dan pekerjaan terhambat karena tidak mengerjakan task.\ndidalam ruangan meeting juga tidak banyak terlibat hanya sekedar bilang progress masih on track kadang mikir kapan selesainya.\nkalau ada revisi malah jadi beban pikiran. akhirnya banyak produk mangkrak hanya setengah perjalanan atau sudah jadi tapi lama-lama gak kepakai. \n\nini jadi pelajaran buat gue karena kontributif dalam meeting bahkan bukan hak kita untuk mengetahui keputusan bisnis.\nsetidaknya kita bisa bertanya dan memahami konteks masalah yang ada. \nbukannya kita sebagai developer ingin memecahkan masalah kan?\n\nSejak itu, gue lihat meeting sebagai tempat ngerti konteks, bertanya, dan bahkan mengajukan untuk perubahan keputusan\nkarena satu pertanyaan bisa mencegah kita bikin hal yang salah berbulan-bulan.",
-    "slug": "skill-coding-bukan-lagi-pembeda",
-    "heading": "Skill Coding bukan lagi pembeda!",
-    "project_id": "43817871-f29b-473b-babe-5979afae836f",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp"
-  },
-  {
-    "skillsUrl": "https://vt.tiktok.com/ZSxpgFQPh",
-    "text": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?",
-    "heading": "Masih ada gak developer nurutin semua request user?",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp",
-    "slug": "masih-ada-gak-developer-nurutin-semua-request-user",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp\" width=\"600px\" height=\"600px\"/>",
-    "project_id": "beaa6cbb-dbe9-469c-9a5e-d394163b5fab",
-    "htmlContent": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?"
-  },
-  {
-    "text": "test",
-    "skillsUrl": "https://vt.tiktok.com/ZSxpb34DD",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp\" width=\"600px\" height=\"600px\"/>",
-    "htmlContent": "dulu saya juga malas ikut meeting karena merasa buang waktu dan pekerjaan terhambat karena tidak mengerjakan task.\ndidalam ruangan meeting juga tidak banyak terlibat hanya sekedar bilang progress masih on track kadang mikir kapan selesainya.\nkalau ada revisi malah jadi beban pikiran. akhirnya banyak produk mangkrak hanya setengah perjalanan atau sudah jadi tapi lama-lama gak kepakai. \n\nini jadi pelajaran buat gue karena kontributif dalam meeting bahkan bukan hak kita untuk mengetahui keputusan bisnis.\nsetidaknya kita bisa bertanya dan memahami konteks masalah yang ada. \nbukannya kita sebagai developer ingin memecahkan masalah kan?\n\nSejak itu, gue lihat meeting sebagai tempat ngerti konteks, bertanya, dan bahkan mengajukan untuk perubahan keputusan\nkarena satu pertanyaan bisa mencegah kita bikin hal yang salah berbulan-bulan.",
-    "slug": "skill-coding-bukan-lagi-pembeda",
-    "heading": "Skill Coding bukan lagi pembeda!",
-    "project_id": "43817871-f29b-473b-babe-5979afae836f",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064607898_Dev%20For%20Everybody.webp"
-  },
-  {
-    "skillsUrl": "https://vt.tiktok.com/ZSxpgFQPh",
-    "text": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?",
-    "heading": "Masih ada gak developer nurutin semua request user?",
-    "imageUrl": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp",
-    "slug": "masih-ada-gak-developer-nurutin-semua-request-user",
-    "htmlImage": "<img src=\"https://storage.googleapis.com/personal-blog-darmajr.appspot.com/project-content/1780064803537_content-2.webp\" width=\"600px\" height=\"600px\"/>",
-    "project_id": "beaa6cbb-dbe9-469c-9a5e-d394163b5fab",
-    "htmlContent": "Nurutin semua permintaan user nggak selalu bikin hasilnya bagus. Kadang malah bikin aplikasi jadi nggak jelas dan nggak fokus. Menurut aku, penting banget buat developer ngerti akar masalahnya, bukan cuma sekadar ngasih solusi cepat. Kalau nggak, yang ada cuma solusi sementara yang nggak nyelesain masalah asli. Kalau kalian gimana?"
   }
 ]
