@@ -1,32 +1,32 @@
 [
   {
-    "blog_id": "3220132c-99f8-4c68-ab7b-0e4b1f942065",
-    "title": "Building a Web3 DApp A Detailed Step-by-Step Guide with Code Samples",
-    "short_description": "Web3 decentralized applications (DApps) combine blockchain-based smart contracts, data indexing, off-chain storage, and user-friendly frontends to create powerful, decentralized experiences. In this comprehensive guide, we’ll walk through the full workflow for building a Web3 DApp, using an e-commerce escrow system as an example. We’ll provide detailed explanations and sample code for each step to make the process interactive and actionable. Whether you’re a beginner or an experienced developer, this guide will help you understand how to build a DApp from scratch.",
-    "timestamp": "2025-07-16 07:29:19",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1752650055841_DAppBackground.jpg",
-    "image_alt": "DApp Background Cover",
-    "slug": "Building-a-Web3-DApp-A-Detailed-Step-by-Step-Guide-with-Code-Samples",
-    "index": "d4735e3a265e1"
+    "blog_id": "170ad858-739b-4006-b807-38645720e20b",
+    "title": "MVP Sebagai Alat Belajar",
+    "short_description": "Banyak developer salah paham tentang MVP. Pelajari bagaimana MVP seharusnya digunakan untuk validasi cepat, bukan untuk membangun produk sempurna.",
+    "timestamp": "2026-06-03 13:27:49",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780492804372_Lean-startup-Part-3.png",
+    "image_alt": "lean-startup-part-3",
+    "slug": "MVP-Sebagai-Alat-Belajar",
+    "index": "6b86b273ff34f"
   },
   {
-    "blog_id": "0d80371b-0fdf-4b5c-9b51-ee540ced9ab5",
-    "title": "Scalable Video Upload Architecture Using Pre-Signed URLs",
-    "short_description": "Handling large video files (e.g., 100MB or more) for uploads can strain backend servers, causing performance bottlenecks, increased latency, and storage challenges. A scalable and efficient solution is to use pre-signed URLs with cloud storage services like AWS S3 or Google Cloud Storage (GCS). This architecture offloads the heavy lifting of file uploads to the cloud, reduces backend load, and ensures secure and optimized handling of large video files. Below is a detailed breakdown of the architecture, including components, workflow, security considerations, and implementation details.",
-    "timestamp": "2025-07-05 12:27:43",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1751717376607_presigned_url.jpg",
-    "image_alt": "presigned url AWS",
-    "slug": "Scalable-Video-Upload-Architecture-Using-Pre-Signed-URLs",
-    "index": "d4735e3a265e1"
+    "blog_id": "b2cfe482-6a22-413e-b29e-4a128d9c4a4a",
+    "title": "Memahami Analog, Antilog dan Arketipe",
+    "short_description": "Belajar bagaimana ide produk terbentuk dari referensi yang ada, lalu berkembang menjadi inovasi melalui diferensiasi dan pemahaman mendalam terhadap pengguna.",
+    "timestamp": "2026-06-03 13:10:22",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780491675092_Lean%20startup-part-2.png",
+    "image_alt": "lean-startup-part-2",
+    "slug": "Memahami-Analog-Antilog-dan-Arketipe",
+    "index": "6b86b273ff34f"
   },
   {
-    "blog_id": "1da46d18-64b6-4ce0-9a1c-314992d3c75e",
-    "title": "How to Stop Microservices Failures from Spreading with the Bulkhead Pattern",
-    "short_description": "Microservices are awesome for building apps that scale and evolve quickly. But as your system grows, a small problem in one service can snowball into a disaster, taking down your entire application. This is called a cascading failure, and it’s a big challenge in microservices. The Bulkhead Pattern is a smart way to prevent this by isolating parts of your system so one failure doesn’t sink everything else.",
-    "timestamp": "2025-06-22 02:12:50",
-    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1750557410651_bulkhead%20arch%20pattern%202.png",
-    "image_alt": "bulkhead arch pattern",
-    "slug": "How-to-Stop-Microservices-Failures-from-Spreading-with-the-Bulkhead-Pattern",
-    "index": "d4735e3a265e1"
+    "blog_id": "ad0781e3-a9af-4748-b0ad-e29bd3c3e55d",
+    "title": "Build, Measure & Learn",
+    "short_description": "Belajar cara membangun produk dengan cepat tanpa kehilangan arah melalui konsep Build–Measure–Learn dari Lean Startup. Cocok untuk developer yang ingin naik level dari sekadar ngoding ke product thinking.",
+    "timestamp": "2026-06-03 12:52:48",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780489841756_Lean%20startup.png",
+    "image_alt": "Learn-Startup-Part-1",
+    "slug": "Build-Measure--Learn",
+    "index": "6b86b273ff34f"
   }
 ]

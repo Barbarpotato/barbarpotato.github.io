@@ -161,11 +161,13 @@ const Projects = () => {
                 gap={5}
                 pl={{ base: '1rem', md: 'max(1rem, calc((100vw - 80rem) / 2 + 1rem))' }}
                 pr={4}
-                pb={4}
+                pt={8}
+                pb={10}
                 sx={{
                     '&::-webkit-scrollbar': { display: 'none' },
                     scrollbarWidth: 'none',
                     msOverflowStyle: 'none',
+                    touchAction: 'pan-y',
                 }}
             >
                 {projects.map((project, index) => (
@@ -254,7 +256,7 @@ const Projects = () => {
                     </motion.div>
                 ))}
             </Box>
-        </Box>
+        </Box >
     );
 };
 
