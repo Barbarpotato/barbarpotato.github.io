@@ -1,5 +1,15 @@
 [
   {
+    "blog_id": "e43a15bc-478a-4f73-9012-6cd8ca3e4e87",
+    "title": "Innovation Accounting",
+    "short_description": "Tidak semua pertumbuhan itu nyata. Melalui innovation accounting, kamu akan memahami cara mengukur kemajuan startup secara lebih akurat, dari MVP hingga keputusan pivot atau bertahan.",
+    "timestamp": "2026-06-06 14:33:38",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780493396321_Lean-startup-part-4.png",
+    "image_alt": "lean-startup-part-4",
+    "slug": "Innovation-Accounting",
+    "index": "6b86b273ff34f"
+  },
+  {
     "blog_id": "170ad858-739b-4006-b807-38645720e20b",
     "title": "MVP Sebagai Alat Belajar",
     "short_description": "Banyak developer salah paham tentang MVP. Pelajari bagaimana MVP seharusnya digunakan untuk validasi cepat, bukan untuk membangun produk sempurna.",

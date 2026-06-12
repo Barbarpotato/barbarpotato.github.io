@@ -1,123 +1,102 @@
 import { Handle, Position } from '@xyflow/react';
-import { Box, Text, VStack, Link, useColorModeValue } from '@chakra-ui/react';
-import Typewriter from 'typewriter-effect';
+import { Box, Heading, Text, Link } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+
+const MotionBox = motion(Box);
 
 export default function MainNode({ data }) {
-    const bgColor = useColorModeValue('#1A202C', '#2D3748');
-    const keyColor = '#569CD6'; // Blue for JSON keys
-    const stringColor = '#CE9178'; // Orange for JSON strings
-    const punctuationColor = '#D4D4D4'; // White for braces and commas
-
-    const renderJsonContent = (typewriter) => {
-        typewriter
-            .typeString('<span style="color: #D4D4D4">{\n</span>')
-            .typeString(
-                `<span style="color: #569CD6">"label"</span><span style="color: #D4D4D4">: </span>` +
-                `<span style="color: #CE9178">"${data.label || 'node@related'}"</span>` +
-                `<span style="color: #D4D4D4">,\n</span>`
-            )
-            .typeString(
-                `<span style="color: #569CD6">"description"</span><span style="color: #D4D4D4">: </span>` +
-                `<span style="color: #CE9178">"${data.description || 'Custom Chakra UI Node'}"</span>` +
-                `<span style="color: #D4D4D4">,\n</span>`
-            )
-            .typeString(
-                `<span style="color: #569CD6">"url"</span><span style="color: #D4D4D4">: </span>` +
-                `<a href="${data.url || '#'}" ` +
-                `style="color: #CE9178; text-decoration: underline;" ` +
-                `onmouseover="this.style.color='#e9967a'" ` +
-                `onmouseout="this.style.color='#CE9178'">${data.url || 'no url provided'}</a>` +
-                `<span style="color: #D4D4D4">\n}</span>`
-            )
-            .start();
-    };
+    const accent = data.color || '#cc7bc9';
 
     return (
-        <Box
-            bg={bgColor}
-            borderRadius="md"
-            border="1px solid"
-            borderColor="gray.600"
-            boxShadow="0 0 10px rgba(86, 156, 214, 0.2)"
-            p={4}
-            w="300px"
-            fontFamily="'Fira Code', 'Consolas', monospace"
+        <MotionBox
+            key={data.trigger || 0} // replay the reveal whenever the topic changes
+            initial={{ opacity: 0, scale: 0.94, y: 8 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+            w="340px"
+            p="2px"
+            borderRadius="20px"
+            bgGradient="linear(135deg, #cc7bc9, #6c8cff, #50e3c2)"
+            boxShadow={`0 0 34px ${accent}55`}
             position="relative"
-            transition="all 0.2s ease-in-out"
-            boxSizing="border-box"
-            _hover={{ boxShadow: '0 0 15px rgba(86, 156, 214, 0.3)' }}
         >
             <Box
-                bg="gray.700"
-                borderTopRadius="md"
-                h="20px"
-                mb={3}
-                display="flex"
-                alignItems="center"
-                px={2}
+                bg="#1f1b2e"
+                borderRadius="18px"
+                px={6}
+                py={5}
+                position="relative"
+                overflow="hidden"
             >
-                <Box w="10px" h="10px" borderRadius="full" bg="red.400" mr={1} />
-                <Box w="10px" h="10px" borderRadius="full" bg="yellow.400" mr={1} />
-                <Box w="10px" h="10px" borderRadius="full" bg="green.400" />
-            </Box>
+                {/* soft glow blob for depth */}
+                <Box
+                    position="absolute"
+                    top="-40px"
+                    right="-40px"
+                    w="120px"
+                    h="120px"
+                    borderRadius="full"
+                    bg={accent}
+                    opacity={0.18}
+                    filter="blur(30px)"
+                    pointerEvents="none"
+                />
 
-            <Box
-                maxH="300px"
-                overflowY="auto"
-                overflowX="hidden"
-                pr={4}
-                pl={2}
-                maxW="100%"
-                boxSizing="border-box"
-                css={{
-                    cursor: "pointer !important",
-                    '&::-webkit-scrollbar': {
-                        width: '10px',
-                    },
-                    '&::-webkit-scrollbar-track': {
-                        background: '#292b37',
-                        borderRadius: '5px',
-                    },
-                    '&::-webkit-scrollbar-thumb': {
-                        background: '#866bab',
-                        borderRadius: '5px',
-                        border: '2px solid #292b37',
-                    },
-                    '&::-webkit-scrollbar-thumb:hover': {
-                        background: '#cc7bc9',
-                    },
-                }}
-            >
-                <VStack align="start" spacing={1} maxW="100%">
-                    <Text
+                <Text
+                    fontFamily="'Outfit', sans-serif"
+                    fontWeight="600"
+                    fontSize="11px"
+                    letterSpacing="0.18em"
+                    textTransform="uppercase"
+                    color={accent}
+                    mb={2}
+                >
+                    Rangkuman Topik
+                </Text>
+
+                <Heading
+                    fontFamily="'Playfair Display', serif"
+                    fontWeight="800"
+                    fontStyle="italic"
+                    fontSize="2xl"
+                    lineHeight="1.25"
+                    color="#faf9ff"
+                    mb={3}
+                >
+                    {data.label}
+                </Heading>
+
+                <Text
+                    fontFamily="'Outfit', sans-serif"
+                    color="#d0d0d0"
+                    fontSize="sm"
+                    lineHeight="1.7"
+                >
+                    {data.description}
+                </Text>
+
+                {data.url && (
+                    <Link
+                        href={data.url}
+                        isExternal
+                        fontFamily="'Outfit', sans-serif"
+                        fontWeight="500"
                         fontSize="sm"
-                        whiteSpace="pre-wrap"
-                        overflowWrap="break-word"
-                        wordBreak="break-word"
-                        maxW="100%"
-                        color={punctuationColor}
+                        color={accent}
+                        mt={3}
+                        display="inline-block"
+                        _hover={{ textDecoration: 'underline' }}
                     >
-                        <Typewriter
-                            key={data.trigger || 0} // Use trigger to force re-render
-                            onInit={renderJsonContent}
-                            options={{
-                                delay: 50,
-                                cursor: '|',
-                                autoStart: true,
-                                loop: false,
-                                wrapperClassName: 'typewriter-wrapper',
-                                cursorClassName: 'typewriter-cursor',
-                            }}
-                        />
-                    </Text>
-                </VStack>
+                        {data.url}
+                    </Link>
+                )}
             </Box>
 
             <Handle
                 type="target"
                 position={Position.Left}
-                style={{ background: keyColor, border: '1px solid #000' }}
+                style={{ background: accent, border: '1px solid #000' }}
             />
-        </Box>
+        </MotionBox>
     );
 }
